@@ -1,0 +1,30 @@
+/*
+ *  Grid System
+ */
+
+@max-width: 1200px;
+@min-width: 960px;
+@gutter-width: 20px;
+@columns: 12;
+
+.row {
+	max-width: @max-width; min-width: @min-width;
+	margin: auto;
+}
+
+[class^="col-"] {
+	float: left;
+	margin: 0 @gutter-width;
+	&[class$="1"] { width: ( 100% / @columns ) * 1; }
+	&[class$="2"] { width: ( 100% / @columns ) * 2; }
+	&[class$="3"] { width: ( 100% / @columns ) * 3; }
+	&[class$="4"] { width: ( 100% / @columns ) * 4; }
+	&[class$="5"] { width: ( 100% / @columns ) * 5; }
+	&[class$="6"] { width: ( 100% / @columns ) * 6; }
+	&[class$="7"] { width: ( 100% / @columns ) * 7; }
+	&[class$="8"] { width: ( 100% / @columns ) * 8; }
+	&[class$="9"] { width: ( 100% / @columns ) * 9; }
+	&[class$="10"] { width: ( 100% / @columns ) * 10; }
+	&[class$="11"] { width: ( 100% / @columns ) * 11; }
+	&[class$="12"] { width: ( 100% / @columns ) * 12; }
+}

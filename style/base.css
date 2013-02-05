@@ -54,7 +54,6 @@ html,body{background-color:#f0f0f0;color:#222222;}
 #header .line-container > div:nth-of-type(3){-webkit-transform:rotate(9deg);-moz-transform:rotate(9deg);-o-transform:rotate(9deg);-ms-transform:rotate(9deg);transform:rotate(9deg);}
 #header .line-container > div:nth-of-type(2){-webkit-transform:rotate(6deg);-moz-transform:rotate(6deg);-o-transform:rotate(6deg);-ms-transform:rotate(6deg);transform:rotate(6deg);}
 #header .line-container > div:nth-of-type(1){-webkit-transform:rotate(3deg);-moz-transform:rotate(3deg);-o-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg);}
-#animation{position:absolute;top:6em;right:0;width:33.333333333333336%;height:200px;}
 #subheader{text-align:center;}#subheader .row{padding:2.6em 0 2.9em;}
 #subheader i{color:#cacaca;font-size:4em;}
 #subheader h3{font-weight:normal;font-size:1.5em;margin:1.1em 0 0.2em;}

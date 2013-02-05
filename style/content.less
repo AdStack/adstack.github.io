@@ -3,9 +3,10 @@
  */
 
 @body-color: #222;
+@bg-color: #242424;
 
 html, body {
-	background-color: #f0f0f0;
+	background-color: @bg-color;
 	color: @body-color;
 }
 
@@ -17,7 +18,7 @@ html, body {
 		background-color: #4a5eca; color: #fff;
 	}
 	&.yellow {
-		background-color: #ebdc4f; color: #151515;
+		background-color: @yellow-color; color: #151515;
 	}
 	&.clear {
 		border-top-color: transparent;

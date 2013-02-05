@@ -2,10 +2,14 @@
  *  Typography
  */
 
-.body-font { font-family: sans-serif; }
-.alt-font { font-family: serif; }
+.body-font { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.alt-font { font-family: Georgia, "Times New Roman", serif; }
+
+@body-size: 15px;
 
 html, body {
 	.body-font;
-	font-size: 16px;
+	font-size: @body-size;
+	line-height: 1.5em;
 }
+a { color: inherit; text-decoration: inherit; }

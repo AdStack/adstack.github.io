@@ -2,19 +2,20 @@
  *  Grid System
  */
 
-@max-width: 1200px;
+@max-width: 1140px;
 @min-width: 960px;
 @gutter-width: 20px;
 @columns: 12;
 
 .row {
+	.cf; position: relative;
 	max-width: @max-width; min-width: @min-width;
 	margin: auto;
 }
 
 [class^="col-"] {
-	float: left;
-	margin: 0 @gutter-width;
+	float: left; position: relative;
+	padding: 0 @gutter-width;
 	&[class$="1"] { width: ( 100% / @columns ) * 1; }
 	&[class$="2"] { width: ( 100% / @columns ) * 2; }
 	&[class$="3"] { width: ( 100% / @columns ) * 3; }

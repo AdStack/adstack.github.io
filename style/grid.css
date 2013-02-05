@@ -1,5 +1,5 @@
 .row{max-width:1200px;min-width:960px;margin:auto;}
-[class^="col-"]{float:left;margin:0 20px;}[class^="col-"][class$="1"]{width:8.333333333333334%;}
+[class^="col-"]{float:left;position:relative;padding:0 20px;}[class^="col-"][class$="1"]{width:8.333333333333334%;}
 [class^="col-"][class$="2"]{width:16.666666666666668%;}
 [class^="col-"][class$="3"]{width:25%;}
 [class^="col-"][class$="4"]{width:33.333333333333336%;}

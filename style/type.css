@@ -1,3 +1,4 @@
-.body-font{font-family:sans-serif;}
-.alt-font{font-family:serif;}
-html,body{font-family:sans-serif;font-size:16px;}
+.body-font{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;}
+.alt-font{font-family:Georgia,"Times New Roman",serif;}
+html,body{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5em;}
+a{color:inherit;text-decoration:inherit;}

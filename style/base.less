@@ -20,7 +20,8 @@
 	overflow: hidden;
 	.row {
 		&:first-of-type { padding: 2em 0 0; }
-		&:last-of-type { padding: 0 0 8em; }
+		&:last-of-type { padding: 0 0 8.6em; text-align: center; }
+		.col-2 { width: 100% / 5; }
 	}
 	h1 {
 		color: rgba(255,255,255,0.9); letter-spacing: -0.04em;
@@ -41,10 +42,10 @@
 		margin: 1.9em @gutter-width 0.7em; font-size: 4em; line-height: 1.2em;
 	}
 	.cta {
-		margin-left: @gutter-width; font-size: 1.6em; line-height: 2.3em;
+		margin: 0 @gutter-width; font-size: 1.6em; line-height: 2.3em;
 		font-weight: normal; text-transform: uppercase;
 		border-radius: 4px; padding: 0 0.9em;
-		i { margin-left: 0.4em; }
+		i { margin-left: 0.7em; }
 	}
 	hr {
 		.clear;
@@ -67,18 +68,7 @@
 		.line {
 			position: absolute; bottom: 0; left: 0;
 			width: 1px; height: 1000px;
-			.linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0));
-			@deg: 3deg;
-			&:nth-of-type(1) { .rotation(@deg * 1); }
-			&:nth-of-type(2) { .rotation(@deg * 2); }
-			&:nth-of-type(3) { .rotation(@deg * 3); }
-			&:nth-of-type(4) { .rotation(@deg * 4); }
-			&:nth-of-type(5) { .rotation(@deg * 5); }
-			&:nth-of-type(6) { .rotation(@deg * 6); }
-			&:nth-of-type(7) { .rotation(@deg * 7); }
-			&:nth-of-type(8) { .rotation(@deg * 8); }
-			&:nth-of-type(9) { .rotation(@deg * 9); }
-			&:nth-of-type(10) { .rotation(@deg * 10); }
+			.linear-gradient(rgba(255,255,255,0.09),rgba(255,255,255,0));
 		}
 		&.x {
 			.rotation(52deg);
@@ -89,13 +79,40 @@
 			.rotation(6deg);
 			.line { .transform-origin(0 0%); }
 		}
+		@deg: 3deg;
+		@iterations: 10;
+		.loop(@index) when (@index > 0) {
+			(~"> div:nth-of-type(@{index})") { .rotation(@deg * @index); }
+			.loop(@index - 1);
+		}
+		.loop(0) {}
+		.loop(@iterations);
 	}
 }
 
+#animation {
+	position: absolute; top: 6em; right: 0;
+	width: 100% / 3; height: 200px;
+}
+
 #subheader {
-	border-bottom: 1px #ddd solid;
+	text-align: center;
 	.row {
-		height: 240px;
+		padding: 2.6em 0 2.9em;
+	}
+	i {
+		color: lighten(@body-color,66%); font-size: 4em;
+	}
+	h3 {
+		font-weight: normal; font-size: 1.5em;
+		margin: 1.1em 0 0.2em;
+	}
+	p {
+		color: lighten(@body-color,32%);
+		&:before {
+			content: "\2014"; display: block;
+			color: lighten(@body-color,45%);
+		}
 	}
 }
 

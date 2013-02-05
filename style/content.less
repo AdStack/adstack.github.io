@@ -3,6 +3,21 @@
  */
 
 html, body {
-	background-color: #eee;
+	background-color: #f0f0f0;
 	color: #222;
+}
+
+.button {
+	line-height: 2em; padding: 0 0.8em; border-radius: 3px;
+	border-top: 1px rgba(255,255,255,0.2) solid;
+	font-weight: bold; display: inline-block;
+	&.blue {
+		background-color: #4a5eca; color: #fff;
+	}
+	&.yellow {
+		background-color: #ebdc4f; color: #151515;
+	}
+	&.clear {
+		border-top-color: transparent;
+	}
 }

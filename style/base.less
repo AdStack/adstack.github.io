@@ -11,29 +11,16 @@
 @import "content.less";
 @import "mixins.less";
 @import "assets.less";
+@import "fonts.less";
 //@import "header.less";
 
-.button {
-	line-height: 2em; padding: 0 0.8em; border-radius: 3px;
-	border-top: 1px rgba(255,255,255,0.2) solid;
-	font-weight: bold; display: inline-block;
-	&.blue {
-		background-color: #4a5eca; color: #fff;
-	}
-	&.yellow {
-		background-color: #ebdc4f; color: #151515;
-	}
-	&.clear {
-		border-top-color: transparent;
-	}
-}
 
 #header {
 	background-color: #151515;
 	overflow: hidden;
 	.row {
 		&:first-of-type { padding: 2em 0 0; }
-		&:last-of-type { padding: 0 0 11em; }
+		&:last-of-type { padding: 0 0 8em; }
 	}
 	h1 {
 		color: rgba(255,255,255,0.9); letter-spacing: -0.04em;
@@ -42,18 +29,22 @@
 			position: absolute; top: 1em; right: @gutter-width;
 			font-size: @body-size; letter-spacing: 0; font-weight: normal;
 			font-size: @body-size - 1px;
-			&.clear { right: 94px; }
-			&.yellow { border: 1px #ebdc4f solid; color: #ebdc4f; background: none; }
+			&.clear { right: 8.1em; }
+			&.yellow {
+				border: 1px #ebdc4f solid; color: #ebdc4f; background: none;
+				i { margin-right: 0.5em; }
+			}
 		}
 	}
 	h2 {
 		color: rgba(255,255,255,0.9); letter-spacing: -0.02em;
-		margin: 2em @gutter-width 0.6em; font-size: 4em; line-height: 1.2em;
+		margin: 1.9em @gutter-width 0.7em; font-size: 4em; line-height: 1.2em;
 	}
 	.cta {
-		margin-left: @gutter-width; font-size: 1.6em; line-height: 2.2em;
+		margin-left: @gutter-width; font-size: 1.6em; line-height: 2.3em;
 		font-weight: normal; text-transform: uppercase;
 		border-radius: 4px; padding: 0 0.9em;
+		i { margin-left: 0.4em; }
 	}
 	hr {
 		.clear;
@@ -72,7 +63,7 @@
 		}
 	}
 	.line-container {
-		position: absolute; bottom: -20px; left: 41%;
+		position: absolute; bottom: -20px; left: 42%;
 		.line {
 			position: absolute; bottom: 0; left: 0;
 			width: 1px; height: 1000px;
@@ -98,6 +89,13 @@
 			.rotation(6deg);
 			.line { .transform-origin(0 0%); }
 		}
+	}
+}
+
+#subheader {
+	border-bottom: 1px #ddd solid;
+	.row {
+		height: 240px;
 	}
 }
 

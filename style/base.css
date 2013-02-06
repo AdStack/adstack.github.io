@@ -44,7 +44,7 @@ body,#feature{background-image:url('../media/noise.png');background-position:cen
 #header h1{color:#151515;letter-spacing:-0.02em;font-size:3em;padding-bottom:0.4em;line-height:1.3em;}#header h1 .button{position:absolute;top:1em;right:20px;font-size:15px;letter-spacing:0;font-weight:normal;font-size:14px;}#header h1 .button.clear{right:8.1em;}
 #header h1 .button.yellow{border:1px #c8c8c8 solid;color:#151515;background:none;}#header h1 .button.yellow i{margin-right:0.5em;}
 #header h1 .button.yellow:hover{border-color:#ebdc4f;}
-#header hr{clear:both;opacity:0.2;height:7px;margin:0 20px 1.6em;}
+#header hr{clear:both;opacity:0.2;height:8px;margin:0 20px 1.6em;}
 #header .col-2 a{color:#151515;display:block;font-weight:bold;padding-bottom:0.7em;margin-bottom:1.1em;border-bottom:1px #c8c8c8 solid;}#header .col-2 a:hover{border-bottom-color:#ebdc4f;}
 #header .col-2 a:before{color:#aeaeae;display:block;line-height:1.3em;content:"\2014";font-weight:normal;}
 #logo{display:inline-block;padding:0 0.5em 0 0;color:transparent;}
@@ -66,12 +66,12 @@ body,#feature{background-image:url('../media/noise.png');background-position:cen
 #feature .line-container > div:nth-of-type(1){-webkit-transform:rotate(3deg);-moz-transform:rotate(3deg);-o-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg);}
 #engine{position:absolute;top:-56px;right:-52px;width:660px;height:608px;opacity:0.08;}
 #subheader{background-color:#151515;}#subheader .row{padding-bottom:2.8em;}
-#subheader hr{height:7px;opacity:0.25;margin-bottom:2.4em;}
+#subheader hr{height:8px;opacity:0.25;margin-bottom:2.4em;}
 #subheader i{vertical-align:middle;margin:0 0.4em 0 0;color:#555555;font-size:1.8em;}
 #subheader h3{font-weight:normal;font-size:1.5em;margin:0 0 0.2em;color:#f0f0f0;}
-#subheader p{color:#7b7b7b;padding-top:1em;margin-top:1.1em;border-top:1px #434343 solid;}
+#subheader p{color:#7b7b7b;padding-top:1em;margin-top:1.1em;border-top:1px #3b3b3b solid;}
 #footer{color:#7b7b7b;}#footer .row{padding-top:2.8em;padding-bottom:2.8em;}
-#footer h3{border-top:1px #434343 solid;font-size:1em;padding-top:0.7em;}#footer h3:after{content:"\2014";display:block;font-weight:normal;line-height:1.3em;color:#555555;}
+#footer h3{border-top:1px #3b3b3b solid;font-size:1em;padding-top:0.7em;}#footer h3:after{content:"\2014";display:block;font-weight:normal;line-height:1.3em;color:#555555;}
 #footer ul{list-style-type:none;}#footer ul li{margin:0.1em 0;}
 #footer ul i{margin:0 0.6em 0 0;}
 #footer a:hover{color:#f0f0f0;}

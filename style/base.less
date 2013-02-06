@@ -13,6 +13,7 @@
 @import "assets.less";
 @import "fonts.less";
 @import "header.less";
+@import "footer.less";
 
 #feature {
 	background-color: @white-color;
@@ -72,7 +73,7 @@
 		padding-bottom: 2.8em;
 	}
 	hr {
-		height: 8px; opacity: 0.25;
+		height: 7px; opacity: 0.25;
 		margin-bottom: 2.4em;
 	}
 	i {
@@ -80,7 +81,7 @@
 		color: lighten(@black-color,25%); font-size: 1.8em;
 	}
 	h3 {
-		font-weight: normal; font-size: 1.5em;
+		font-weight: bold; font-size: 1.5em;
 		margin: 0 0 0.2em; color: @white-color;
 	}
 	p {
@@ -88,26 +89,4 @@
 		padding-top: 1em; margin-top: 1.1em;
 		border-top: 1px lighten(@black-color,15%) solid;
 	}
-}
-
-#footer {
-	color: lighten(@black-color,40%);
-	.row {
-		padding-top: 2.8em; padding-bottom: 2.8em;
-	}
-	h3 {
-		border-top: 1px lighten(@black-color,15%) solid;
-		font-size: 1em; padding-top: 0.7em;
-		&:after {
-			content: "\2014"; display: block;
-			font-weight: normal; line-height: 1.3em;
-			color: lighten(@black-color,25%);
-		}
-	}
-	ul {
-		list-style-type: none;
-		li { margin: 0.1em 0; }
-		i { margin: 0 0.6em 0 0; }
-	}
-	a:hover { color: @white-color; }
 }

@@ -2,10 +2,10 @@
 
 This is the full source for the public-facing site of AdStack. 
 
-## Build Process
+## Build Process and Development
 
-Grunt is used to concatenate and minify all JavaScript. 
+Grunt is used to concatenate and minify all JavaScript and compile LESS files. While developing, use `grunt watch` to let grunt automagically compile production assets when files change. 
 
 ## Styles and Layout
 
-LESS is used to author CSS files, with the Less2Css Sublime Text 2 plugin. The layout uses a custom grid system. 
+The layout uses a custom grid system. 

@@ -1,0 +1,25 @@
+/*
+ *  Footer
+ */
+
+#footer {
+	color: lighten(@black-color,40%);
+	.row {
+		padding-top: 2.8em; padding-bottom: 2.8em;
+	}
+	h3 {
+		border-top: 1px lighten(@black-color,15%) solid;
+		font-size: 1em; padding-top: 0.7em;
+		&:after {
+			content: "\2014"; display: block;
+			font-weight: normal; line-height: 1.3em;
+			color: lighten(@black-color,25%);
+		}
+	}
+	ul {
+		list-style-type: none;
+		li { margin: 0.1em 0; }
+		i { margin: 0 0.6em 0 0; }
+	}
+	a:hover { color: @white-color; }
+}

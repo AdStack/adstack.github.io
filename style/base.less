@@ -12,57 +12,12 @@
 @import "mixins.less";
 @import "assets.less";
 @import "fonts.less";
-//@import "header.less";
-
-#header {
-	background-color: #fff;
-	.row {
-		padding: 2em 0 0;
-	}
-	h1 {
-		color: @black-color; letter-spacing: -0.02em;
-		font-size: 3em; padding-bottom: 0.4em; line-height: 1.3em;
-		.button {
-			position: absolute; top: 1em; right: @gutter-width;
-			font-size: @body-size; letter-spacing: 0; font-weight: normal;
-			font-size: @body-size - 1px;
-			&.clear {
-				right: 8.1em;
-			}
-			&.yellow {
-				border: 1px lighten(@black-color,70%) solid; color: @black-color; background: none;
-				i { margin-right: 0.5em; }
-				&:hover { border-color: @yellow-color; }
-			}
-		}
-	}
-	hr {
-		.clear; opacity: 0.2;
-		height: 7px; margin: 0 @gutter-width 1.6em;
-	}
-	.col-2 a {
-		color: @black-color;
-		display: block; font-weight: bold;
-		padding-bottom: 0.7em; margin-bottom: 1.1em;
-		border-bottom: 1px lighten(@black-color,70%) solid;
-		&:hover { border-bottom-color: @yellow-color; }
-		&:before {
-			color: lighten(@black-color,60%);
-			display: block; line-height: 1.3em;
-			content: "\2014"; font-weight: normal;
-		}
-	}
-}
-
-#logo {
-	display: inline-block; padding: 0 0.5em 0 0;
-	color: transparent;
-}
+@import "header.less";
 
 #feature {
 	background-color: @white-color;
 	overflow: hidden;
-	.row { padding: 0 0 6.8em; text-align: center; }
+	.row { padding: 0 0 6.8em; text-align: left; }
 	h2 {
 		color: @black-color; letter-spacing: -0.02em;
 		margin: 1.4em @gutter-width 0.7em; font-size: 4em; line-height: 1.2em;
@@ -105,7 +60,11 @@
 #subheader {
 	background-color: @black-color;
 	.row {
-		padding: 2.6em 0 2.8em;
+		padding: 0 0 2.8em;
+	}
+	hr {
+		height: 7px; opacity: 0.25;
+		margin-bottom: 2.4em;
 	}
 	i {
 		vertical-align: middle; margin: 0 0.4em 0 0;
@@ -123,7 +82,23 @@
 }
 
 #footer {
+	color: lighten(@black-color,40%);
 	.row {
-		height: 200px;
+		padding: 2.8em 0;
 	}
+	h3 {
+		border-top: 1px lighten(@black-color,18%) solid;
+		font-size: 1em; padding-top: 0.7em;
+		&:after {
+			content: "\2014"; display: block;
+			font-weight: normal; line-height: 1.3em;
+			color: lighten(@black-color,25%);
+		}
+	}
+	ul {
+		list-style-type: none;
+		li { margin: 0.1em 0; }
+		i { margin: 0 0.6em 0 0; }
+	}
+	a:hover { color: @white-color; }
 }

@@ -11,8 +11,8 @@ module.exports = function ( grunt ) {
 	grunt.initConfig( {
 		min: {
 			dist: {
-				src: [ '../dist/adstack.js' ],
-				dest: '../dist/adstack.js'
+				src: [ 'dist/adstack.js' ],
+				dest: 'dist/adstack.js'
 			}
 		},
 		less: {
@@ -21,27 +21,33 @@ module.exports = function ( grunt ) {
 					yuicompress: true
 				},
 				files: {
-					"../dist/base.css": "../style/base.less"
+					"dist/base.css": "style/base.less"
 				}
 			}
 		},
 		coffee: {
 			app: {
-				src: [ '*.coffee' ],
-				dest: '../dist/adstack.js',
+				src: [ 'js/*.coffee' ],
+				dest: 'dist/adstack.js',
 				options: {
 					bare: false
 				}
 			}
 		},
 		watch: {
-			src: {
-				files: [ '*.js', '../style/*.less' ],
-				tasks: [ 'default' ]
+			less: {
+				files: [ 'style/*.less' ],
+				tasks: [ 'compile-less' ]
+			},
+			js: {
+				files: [ 'js/*.js' ],
+				tasks: [ 'compile-coffee' ]
 			}
 		}
 	} );
 
 	grunt.registerTask('default', 'less coffee min');
+	grunt.registerTask('compile-less', 'less');
+	grunt.registerTask('compile-coffee', 'coffee min');
 
 };

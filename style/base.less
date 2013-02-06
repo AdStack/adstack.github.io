@@ -17,25 +17,28 @@
 #feature {
 	background-color: @white-color;
 	overflow: hidden;
-	.row { padding: 0 0 6.8em; text-align: left; }
+	.row {
+		padding-bottom: 5.8em;
+	}
 	h2 {
 		color: @black-color; letter-spacing: -0.02em;
-		margin: 1.4em @gutter-width 0.7em; font-size: 4em; line-height: 1.2em;
-		position: relative; z-index: 1;
+		margin: 1.2em @gutter-width 0.7em; font-size: 4em; line-height: 1.3em;
+		position: relative; z-index: 3;
 	}
 	.cta {
 		margin: 0 @gutter-width; font-size: 1.6em; line-height: 2.3em;
 		font-weight: normal; text-transform: uppercase;
 		border-radius: 5px; padding: 0 0.9em;
-		position: relative; z-index: 1;
+		position: relative; z-index: 3;
 		i { margin-left: 0.7em; }
 	}
 	.line-container {
+		display: none;
 		position: absolute; bottom: -20px; left: 42%; z-index: 0;
 		.line {
 			position: absolute; bottom: 0; left: 0;
 			width: 1px; height: 1000px;
-			.linear-gradient(rgba(0,0,0,0.08),rgba(0,0,0,0));
+			.linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0));
 		}
 		&.x {
 			.rotation(52deg);
@@ -57,10 +60,16 @@
 	}
 }
 
+#engine {
+	//display: none;
+	position: absolute; top: -56px; right: -52px;
+	width: 660px; height: 608px; opacity: 0.08;
+}
+
 #subheader {
 	background-color: @black-color;
 	.row {
-		padding: 0 0 2.8em;
+		padding-bottom: 2.8em;
 	}
 	hr {
 		height: 7px; opacity: 0.25;
@@ -84,7 +93,7 @@
 #footer {
 	color: lighten(@black-color,40%);
 	.row {
-		padding: 2.8em 0;
+		padding-top: 2.8em; padding-bottom: 2.8em;
 	}
 	h3 {
 		border-top: 1px lighten(@black-color,18%) solid;

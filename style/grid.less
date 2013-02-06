@@ -2,7 +2,7 @@
  *  Grid System
  */
 
-@max-width: 1140px;
+@max-width: 1170px;
 @min-width: 960px;
 @gutter-width: 20px;
 @columns: 12;
@@ -16,6 +16,7 @@
 [class^="col-"] {
 	float: left; position: relative;
 	padding: 0 @gutter-width;
+	min-height: 1px;
 }
 
 .grid(@index) when (@index > 0) {

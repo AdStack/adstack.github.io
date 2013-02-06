@@ -40,7 +40,7 @@ module.exports = function ( grunt ) {
 				tasks: [ 'compile-less' ]
 			},
 			js: {
-				files: [ 'js/*.js' ],
+				files: [ 'js/*.coffee' ],
 				tasks: [ 'compile-coffee' ]
 			}
 		}

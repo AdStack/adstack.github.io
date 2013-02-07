@@ -59,10 +59,10 @@
 
 #icon-collage {
 	position: absolute; right: @gutter-width; bottom: -0.62em;
-	font-size: 1.15em;
+	font-size: 1.15em; pointer-events: none;
 	i {
 		position: absolute;
-		color: darken(@white-color,8%);
+		color: rgba(0,0,0,0.08);
 	}
 	.icon-camera { top: -1.3em; right: 0; font-size: 7em; }
 	.icon-pig { top: -2.87em; right: 0; font-size: 5em; .rotation(-90deg); }
@@ -92,7 +92,7 @@
 	}
 	i {
 		vertical-align: middle; margin: 0 0.4em 0 0;
-		color: lighten(@black-color,25%); font-size: 1.5em;
+		color: lighten(@black-color,40%); font-size: 1.5em;
 	}
 	h3 {
 		.cutoff;

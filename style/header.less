@@ -31,8 +31,8 @@
 	}
 	.nav {
 		margin-top: 0.6em;
-		a {
-			color: @black-color;
+		.col-2 > a, .link {
+			color: @black-color; cursor: pointer;
 			display: block; font-weight: bold;
 			padding-bottom: 0.7em; margin-bottom: 1.1em;
 			border-bottom: 1px lighten(@black-color,70%) solid;
@@ -41,6 +41,32 @@
 				color: lighten(@black-color,60%);
 				display: block; line-height: 1.3em;
 				content: "\2014"; font-weight: normal;
+			}
+		}
+		.link a { display: none; }
+		i {
+			float: right; font-size: 1.5em;
+			position: relative; top: 0.06em;
+			color: lighten(@black-color,50%);
+			&:before { content: "\e017"; }
+		}
+		.dropdown {
+			&.open {
+				@padding: 8px; cursor: default;
+				padding-left: @padding; padding-right: @padding;
+				margin-left: -@padding; margin-right: -@padding;
+				border-bottom: 0; margin-bottom: -10em;
+				background-color: rgba(0,0,0,0.9);
+				border-radius: 3px; padding-bottom: @padding;
+				color: @white-color;
+				i:before { content: "\e018"; }
+				a {
+					display: block; position: relative; z-index: 10; font-weight: normal;
+					padding: 0.7em 0; border-bottom: 1px rgba(255,255,255,0.12) solid;
+					font-size: @body-size - 2px;
+					&:first-of-type { margin-top: 0.7em; border-top: 1px lighten(@black-color,50%) solid; }
+					&:hover { color: @yellow-color; }
+				}
 			}
 		}
 	}

@@ -4,7 +4,13 @@
 
 @media only screen and (max-width: 799px) {
 	.row { min-width: 320px; }
-	#icon-collage { display: none; }
+	#icon-collage {
+		bottom: -1.4em; font-size: 1.07em;
+		.icon-presentation { right: 5.08em; top: -3.66em; }
+		.icon-phone { right: 4.06em; top: -2.1em; }
+		.icon-target-2 { font-size: 5em; right: 5em; top: -3.44em; }
+		.icon-envelope-2 { font-size: 6.2em; right: 5.04em; top: -2.06em; }
+	}
 	#header {
 		border-top: 0;
 		border-bottom: 1px #ddd solid;
@@ -20,9 +26,9 @@
 	}
 	#feature {
 		text-align: center;
-		.row { padding-bottom: 2.4em; }
+		.row { padding-bottom: 3em; }
 		h2 {
-			margin-top: 0.6em; font-size: 2.6em; line-height: 1.2em;
+			margin-top: 1.2em; font-size: 1.9em;
 			br { display: none; }
 		}
 		.cta {
@@ -31,27 +37,41 @@
 	}
 	#subheader {
 		.col-4 {
-			margin-top: 2em;
+			margin-top: @gutter-width;
 			width: 100%;
 		}
 		hr {
-			margin-bottom: 1em;
+			margin-bottom: 0.8em;
+		}
+		h3 {
+			font-size: 1.4em;
 		}
 		p {
 			margin-top: 0.6em;
 			border: none; padding-top: 0;
 		}
-		.row { padding-bottom: 2.2em; }
+		.row { padding-bottom: @gutter-width; }
 	}
 	#footer {
 		.col-2 {
 			width: 100% / 2;
-			margin-bottom: 1.5em;
+			margin-bottom: @gutter-width;
+			&:nth-child(2n) { padding-left: @gutter-width / 2; }
+			&:nth-child(2n-1) { padding-right: @gutter-width / 2; }
 		}
 		.row { padding-bottom: 0; }
 		h3 {
 			padding-bottom: 0.26em;
 			&:after { display: none; }
+		}
+		ul {
+			li {
+				a:before {
+					content: "\2014"; margin-right: 0.6em;
+					float: left;
+					color: lighten(@bg-color,10%);
+				}
+			}
 		}
 	}
 }

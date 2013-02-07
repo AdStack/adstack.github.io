@@ -6,6 +6,8 @@
 	.row { min-width: 320px; }
 	#icon-collage { display: none; }
 	#header {
+		border-top: 0;
+		border-bottom: 3px @yellow-color solid;
 		.button.clear { display: none; }
 		.nav { display: none; }
 		.row { padding-top: 0.8em; }
@@ -14,6 +16,7 @@
 			margin-bottom: -0.12em;
 			.button { top: 0.42em; }
 		}
+		hr { display: none; }
 	}
 	#feature {
 		background-size: 200% auto;
@@ -47,5 +50,9 @@
 			margin-bottom: 1.5em;
 		}
 		.row { padding-bottom: 0; }
+		h3 {
+			padding-bottom: 0.26em;
+			&:after { display: none; }
+		}
 	}
 }

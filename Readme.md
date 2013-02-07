@@ -10,4 +10,4 @@ Grunt is used to concatenate and minify all JavaScript and compile LESS files. W
 
 ## Styles and Layout
 
-The layout uses a custom grid system. 
+The layout uses a custom grid system that is loosely based on Twitter Bootstrap's 12-column grid. 

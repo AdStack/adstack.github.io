@@ -4,7 +4,6 @@
 
 #feature {
 	background-color: @white-color;
-	//.linear-gradient(@blue-color,#51baa5);
 	overflow: hidden;
 	.row {
 		padding-bottom: 5.8em;
@@ -21,41 +20,7 @@
 		position: relative; z-index: 3;
 		i { margin-left: 0.5em; position: relative; top: 0.12em; }
 	}
-	/*
-	.line-container {
-		position: absolute; bottom: -20px; left: 42%; z-index: 0;
-		.line {
-			position: absolute; bottom: 0; left: 0;
-			width: 2px; height: 1000px;
-			.linear-gradient(rgba(0,0,0,0.06),rgba(0,0,0,0));
-		}
-		&.x {
-			.rotation(52deg);
-			.line { .transform-origin(0 100%); }
-		}
-		&.y {
-			bottom: -190px; left: 100%;
-			.rotation(6deg);
-			.line { .transform-origin(0 0%); }
-		}
-		@deg: 3deg;
-		@iterations: 10;
-		.loop(@index) when (@index > 0) {
-			(~"> div:nth-of-type(@{index})") { .rotation(@deg * @index); }
-			.loop(@index - 1);
-		}
-		.loop(0) {}
-		.loop(@iterations);
-	}
-	*/
 }
-
-/*
-#engine {
-	position: absolute; top: -56px; right: -52px;
-	width: 660px; height: 608px; opacity: 0.1;
-}
-*/
 
 #icon-collage {
 	position: absolute; right: @gutter-width; bottom: -0.62em;

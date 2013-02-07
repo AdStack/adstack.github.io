@@ -1,1 +1,1 @@
-(function(){var e,t=[].indexOf||function(e){for(var t=0,n=this.length;t<n;t++)if(t in this&&this[t]===e)return t;return-1};e=!!(t.call(document,"createElementNS")>=0&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect),e||(document.body.className+=" no-svg")}).call(this);
+(function(){var e;e=!!("createElementNS"in document&&document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect),e||(document.body.className+=" no-svg")}).call(this);

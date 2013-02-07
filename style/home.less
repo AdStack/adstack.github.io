@@ -1,0 +1,106 @@
+/*
+ *  Home
+ */
+
+#feature {
+	background-color: @white-color;
+	overflow: hidden;
+	.row {
+		padding-bottom: 5.8em;
+	}
+	h2 {
+		color: @white-color; letter-spacing: -0.02em;
+		margin: 1.4em 0 0.52em; font-size: 3.8em; line-height: 1.3em;
+		position: relative; z-index: 3;
+	}
+	.cta {
+		font-size: 1.5em; line-height: 2.3em;
+		font-weight: normal; text-transform: uppercase;
+		border-radius: 5px; padding: 0 0.9em;
+		position: relative; z-index: 3;
+		i { margin-left: 0.5em; position: relative; top: 0.12em; }
+	}
+	/*
+	.line-container {
+		position: absolute; bottom: -20px; left: 42%; z-index: 0;
+		.line {
+			position: absolute; bottom: 0; left: 0;
+			width: 2px; height: 1000px;
+			.linear-gradient(rgba(0,0,0,0.06),rgba(0,0,0,0));
+		}
+		&.x {
+			.rotation(52deg);
+			.line { .transform-origin(0 100%); }
+		}
+		&.y {
+			bottom: -190px; left: 100%;
+			.rotation(6deg);
+			.line { .transform-origin(0 0%); }
+		}
+		@deg: 3deg;
+		@iterations: 10;
+		.loop(@index) when (@index > 0) {
+			(~"> div:nth-of-type(@{index})") { .rotation(@deg * @index); }
+			.loop(@index - 1);
+		}
+		.loop(0) {}
+		.loop(@iterations);
+	}
+	*/
+}
+
+/*
+#engine {
+	position: absolute; top: -56px; right: -52px;
+	width: 660px; height: 608px; opacity: 0.1;
+}
+*/
+
+#icon-collage {
+	position: absolute; right: @gutter-width; bottom: -0.62em;
+	font-size: 1.15em;
+	i {
+		position: absolute;
+		color: rgba(255,255,255,0.18);
+	}
+	.icon-camera { top: -1.3em; right: 0; font-size: 7em; }
+	.icon-pig { top: -2.87em; right: 0; font-size: 5em; .rotation(-90deg); }
+	.icon-presentation { top: -4.6em; right: 0; font-size: 4em; }
+	.icon-phone { top: -3.94em; right: 0; font-size: 6em; .rotation(-90deg); }
+	.icon-monitor { top: -1.82em; right: 0.42em; font-size: 10.6em; }
+	.icon-target-2 { top: -7.38em; right: 2.12em; font-size: 3em; }
+	.icon-atom { font-size: 8.2em; right: 0.88em; top: -1.17em; }
+	.icon-equalizer { font-size: 5.2em; right: 2.92em; top: -1.3em; .rotation(-90deg); }
+	.icon-cart { font-size: 5em; right: 3em; top: -2.34em; .rotation(-90deg); }
+	.icon-flow-branch { font-size: 4.8em; right: 3.14em; top: -3.44em; .rotation(-90deg); }
+	.icon-envelope-3 { font-size: 4em; right: 5.12em; top: -1.54em; .rotation(-90deg); }
+	.icon-target { font-size: 3.1em; right: 6.76em; top: -3.28em; }
+	.icon-pictures { font-size: 5em; right: 5.04em; top: -1.48em; }
+	.icon-eye { font-size: 3em; right: 10.4em; top: -1.78em; .rotation(-90deg); }
+	.icon-envelope-2 { font-size: 2.2em; right: 15.84em; top: -2.06em; }
+}
+
+#subheader {
+	background-color: @black-color;
+	.row {
+		padding-bottom: 3.4em;
+	}
+	hr {
+		height: 7px; opacity: 0.25;
+		margin-bottom: 2.4em;
+	}
+	i {
+		vertical-align: middle; margin: 0 0.4em 0 0;
+		color: lighten(@black-color,25%); font-size: 1.5em;
+	}
+	h3 {
+		.cutoff;
+		font-weight: bold; font-size: 1.5em;
+		margin: 0 0 0.2em; color: @white-color;
+	}
+	p {
+		color: lighten(@black-color,40%);
+		padding-top: 1em; margin-top: 1.1em;
+		border-top: 1px lighten(@black-color,15%) solid;
+	}
+}

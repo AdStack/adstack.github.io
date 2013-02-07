@@ -20,25 +20,28 @@
 			}
 			&.yellow {
 				border: 1px lighten(@black-color,80%) solid; color: @black-color; background: none;
-				i { margin-right: 0.5em; }
+				i { margin-right: 0.5em; position: relative; top: 0.08em; }
 				&:hover { border-color: @yellow-color; }
 			}
 		}
 	}
 	hr {
 		.clear; opacity: 0.2;
-		height: 7px; margin: 0 @gutter-width 0.56em;
+		height: 7px; margin: 0 @gutter-width;
 	}
-	.col-2 a {
-		color: @black-color;
-		display: block; font-weight: bold;
-		padding-bottom: 0.7em; margin-bottom: 1.1em;
-		border-bottom: 1px lighten(@black-color,70%) solid;
-		&:hover { border-bottom-color: @yellow-color; }
-		&:before {
-			color: lighten(@black-color,60%);
-			display: block; line-height: 1.3em;
-			content: "\2014"; font-weight: normal;
+	.nav {
+		margin-top: 0.56em;
+		a {
+			color: @black-color;
+			display: block; font-weight: bold;
+			padding-bottom: 0.7em; margin-bottom: 1.1em;
+			border-bottom: 1px lighten(@black-color,70%) solid;
+			&:hover { border-bottom-color: @yellow-color; }
+			&:before {
+				color: lighten(@black-color,60%);
+				display: block; line-height: 1.3em;
+				content: "\2014"; font-weight: normal;
+			}
 		}
 	}
 }

@@ -6,6 +6,8 @@
 @bg-color: #222;
 @yellow-color: #efe056;
 @blue-color: #5b9ece;
+@green-color: #68b952;
+@red-color: #ce615b;
 @black-color: #151515;
 @white-color: #f0f0f0;
 
@@ -13,20 +15,58 @@ html, body {
 	background-color: @bg-color;
 	color: @body-color;
 	overflow-x: hidden;
+	min-height: 100%;
+	&.light {
+		background-color: @white-color;
+		#footer a:hover { color: @body-color; }
+	}
 }
 a:hover { outline: none; }
 
 .button {
 	line-height: 2em; padding: 0 0.8em; border-radius: 3px;
-	border-top: 1px rgba(255,255,255,0.2) solid;
+	border: 1px transparent solid;
 	font-weight: bold; display: inline-block;
 	&.blue {
 		background-color: #4a5eca; color: #fff;
 	}
 	&.yellow {
+		border-top-color: rgba(255,255,255,0.7);
+		border-bottom-color: rgba(0,0,0,0.1);
 		background-color: @yellow-color; color: #151515;
 	}
 	&.clear {
 		border-top-color: transparent;
+	}
+}
+
+#subheader {
+	h1 {
+		.alt-font; font-weight: normal; letter-spacing: -0.03em;
+		font-size: 2.8em; line-height: 1.3em;
+		text-align: center; margin: 1.1em 0 0;
+		color: lighten(@body-color,30%);
+	}
+	.fleuron {
+		margin-bottom: 0.6em;
+	}
+}
+
+.fleuron {
+	overflow: hidden; opacity: 0.16;
+	height: 80px; position: relative;
+	& > div {
+		position: absolute; top: 50%; left: 50%;
+		@spacing: 82px;
+		&:before, &:after {
+			content: " "; display: block;
+			position: absolute; top: -2px; left: @spacing;
+			width: 800px; height: 2px;
+			border: 1px @black-color solid;
+			border-left: 0; border-right: 0;
+		}
+		&:after {
+			left: auto; right: @spacing;
+		}
 	}
 }

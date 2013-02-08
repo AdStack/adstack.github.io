@@ -20,12 +20,13 @@
 		border-radius: 5px; padding: 0 0.9em;
 		position: relative; z-index: 3;
 		i { margin-left: 0.5em; position: relative; top: 0.12em; }
+		&:active { background-color: @black-color; color: @white-color; }
 	}
 }
 
 #icon-collage {
-	position: absolute; right: @gutter-width; bottom: -0.62em;
-	font-size: 1.15em; pointer-events: none;
+	position: absolute; right: @gutter-width; bottom: -0.8em;
+	font-size: 1.1em; pointer-events: none;
 	i {
 		position: absolute;
 		color: rgba(0,0,0,0.08);
@@ -47,7 +48,7 @@
 	.icon-envelope-2 { font-size: 2.2em; right: 15.84em; top: -2.06em; }
 }
 
-#subheader {
+#subfooter {
 	background-color: @black-color;
 	.row {
 		padding-bottom: 3.2em;
@@ -67,7 +68,7 @@
 	}
 	p {
 		color: lighten(@black-color,40%);
-		padding-top: 1em; margin-top: 1.1em;
+		padding-top: 1em; margin-top: 1em;
 		border-top: 1px lighten(@black-color,15%) solid;
 	}
 }

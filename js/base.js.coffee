@@ -26,3 +26,24 @@ $( document ).on 'click', '.dropdown a', ( e ) ->
 
 $( document ).on 'click', ->
 		$( '.dropdown' ).removeClass 'open'
+
+
+# pricing fixed position header
+$ ->
+	if $( '#pricing-label' ).length
+		$header = $ '#pricing-label'
+		$pricing = $ '#pricing'
+		headerPosition = 0
+		headerHeight = 0
+		$( window ).on( 'resize', ->
+			headerPosition = $header.offset().top
+			headerHeight = $header.outerHeight()
+		).trigger( 'resize' )
+		$( window ).on( 'scroll', ->
+			if $( window ).scrollTop() > headerPosition
+				$header.addClass 'fixed'
+				$pricing.css 'marginTop', headerHeight + 'px'
+			else
+				$header.removeClass 'fixed'
+				$pricing.css 'marginTop', 0
+		).trigger( 'scroll' )

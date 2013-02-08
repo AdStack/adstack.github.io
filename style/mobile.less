@@ -35,7 +35,7 @@
 			font-size: 1.2em;
 		}
 	}
-	#subheader {
+	#subfooter {
 		.col-4 {
 			margin-top: @gutter-width;
 			width: 100%;
@@ -56,6 +56,7 @@
 		.col-2 {
 			width: 100% / 2;
 			margin-bottom: @gutter-width;
+			&.product { display: none; }
 			&:nth-child(2n) { padding-left: @gutter-width / 2; }
 			&:nth-child(2n-1) { padding-right: @gutter-width / 2; }
 		}
@@ -71,6 +72,38 @@
 					float: left;
 					color: lighten(@bg-color,12%);
 				}
+			}
+		}
+	}
+	#subheader {
+		h1 {
+			font-size: 2em;
+		}
+	}
+	.fleuron {
+		height: 60px;
+		background-size: auto 100%;
+		& > div {
+			@spacing: 50px;
+			&:before { left: @spacing; }
+			&:after { right: @spacing; }
+		}
+	}
+	#pricing-label {
+		.row { border-radius: 0; }
+		h2 {
+			font-size: 0.8em; padding: 0.8em 0 0.7em;
+		}
+		.label h2 {
+			text-align: center; padding-left: 0;
+		}
+	}
+	#pricing {
+		font-size: 0.8em; margin-bottom: 1em;
+		[class^="col-"] {
+			&.label {
+				padding: 0 @gutter-width / 2; text-align: center;
+
 			}
 		}
 	}

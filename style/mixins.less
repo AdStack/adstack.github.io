@@ -53,3 +53,11 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+.columns(@count, @gap) {
+	-moz-column-count: @count;
+	-webkit-column-count: @count;
+	column-count: @count;
+	-moz-column-gap: @gap;
+	-webkit-column-gap: @gap;
+	column-gap: @gap;
+}

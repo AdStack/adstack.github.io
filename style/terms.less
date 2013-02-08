@@ -1,0 +1,43 @@
+/*
+ *  Terms of Service
+ */
+
+#terms {
+	.alt-font; letter-spacing: -0.01em;
+	line-height: 1.9em; color: lighten(@body-color,20%);
+	margin-bottom: 2em;
+	text-align: justify;
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal; color: @body-color;
+		margin: 1.6em 0 0.5em; padding: 0 0 0.5em;
+		border-bottom: 1px rgba(0,0,0,0.15) dotted;
+		line-height: 1.4em;
+	}
+	p, ul, ol, pre { margin-bottom: 1em; }
+	ul, ol {
+		margin-left: 1.5em;
+	}
+	pre {
+		padding-left: 1.2em;
+		border-left: 0.3em rgba(0,0,0,0.15) solid;
+		code { .alt-font; }
+	}
+	h1 { font-size: 1.7em; }
+	.maruku_toc {
+		.cf;
+		margin-bottom: 1.4em;
+		ul {
+			text-align: center;
+			margin-left: 0;
+			li {
+				display: inline-block; margin-right: 0.5em;
+				&:after { margin-left: 0.5em; content: "/"; color: lighten(@body-color,40%); }
+				&:last-of-type:after { content: ""; }
+			}
+		}
+		a {
+			color: darken(@blue-color,20%);
+			&:hover { text-decoration: underline; }
+		}
+	}
+}

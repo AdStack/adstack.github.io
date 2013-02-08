@@ -4,13 +4,8 @@
 
 @media only screen and (max-width: 799px) {
 	.row { min-width: 320px; }
-	#icon-collage {
-		bottom: -1.4em; font-size: 1.07em;
-		.icon-presentation { right: 5.08em; top: -3.66em; }
-		.icon-phone { right: 4.06em; top: -2.1em; }
-		.icon-target-2 { font-size: 5em; right: 5em; top: -3.44em; }
-		.icon-envelope-2 { font-size: 6.2em; right: 5.04em; top: -2.06em; }
-	}
+
+	// content
 	#header {
 		border-top: 0;
 		border-bottom: 1px #ddd solid;
@@ -18,22 +13,11 @@
 		.nav { display: none; }
 		.row { padding-top: 0.8em; }
 		h1 {
-			font-size: 2.6em;
+			font-size: 2.2em;
 			margin-bottom: -0.12em;
-			.button { top: 0.42em; }
+			.button { top: 0.18em; }
 		}
 		hr { display: none; }
-	}
-	#feature {
-		text-align: center;
-		.row { padding-bottom: 3em; }
-		h2 {
-			margin-top: 1.2em; font-size: 1.9em;
-			br { display: none; }
-		}
-		.cta {
-			font-size: 1.2em;
-		}
 	}
 	#subfooter {
 		.col-4 {
@@ -89,6 +73,28 @@
 			&:after { right: @spacing; }
 		}
 	}
+
+	// home
+	#icon-collage {
+		bottom: -1.4em; font-size: 1.07em;
+		.icon-presentation { right: 5.08em; top: -3.66em; }
+		.icon-phone { right: 4.06em; top: -2.1em; }
+		.icon-target-2 { font-size: 5em; right: 5em; top: -3.44em; }
+		.icon-envelope-2 { font-size: 6.2em; right: 5.04em; top: -2.06em; }
+	}
+	#feature {
+		text-align: center;
+		.row { padding-bottom: 3em; }
+		h2 {
+			margin-top: 1.2em; font-size: 1.9em;
+			br { display: none; }
+		}
+		.cta {
+			font-size: 1.2em;
+		}
+	}
+
+	// pricing
 	#pricing-label {
 		.row { border-radius: 0; }
 		h2 {
@@ -107,9 +113,34 @@
 
 			}
 		}
+		.row:last-of-type { border-radius: 0; }
 	}
 	#pricing-cta {
 		margin: 2em 0 1em;
 		.button { font-size: 1em; }
+	}
+
+	// contact
+	#contact {
+		border-top: 1px darken(@white-color,8%) solid;
+		[class^="col-"] {
+			width: 100%; border: 0;
+			border-bottom: 1px darken(@white-color,8%) solid;
+			padding-bottom: @gutter-width;
+		}
+		h2 {
+			border-bottom: 0; margin-bottom: 0;
+			padding-bottom: @gutter-width / 2;
+		}
+	}
+	#map {
+		.row {
+			border-radius: 0;
+			border-top: 0; border-bottom-width: 1px;
+		}
+		margin-bottom: 0.8em;
+	}
+	#gmap {
+		height: 220px;
 	}
 }

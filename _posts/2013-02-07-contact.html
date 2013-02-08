@@ -1,0 +1,109 @@
+---
+layout: default
+title: Contact
+class: light
+---
+<div id="subheader">
+	<div class="row">
+		<div class="col-12">
+			<h1>Contact</h1>
+			<div class="fleuron"><div></div></div>
+		</div>
+	</div>
+</div>
+<div id="contact">
+	<div class="row">
+		<div class="col-4">
+			<h2><i class="icon-envelope"></i>Email</h2>
+			<p>
+				<strong>Support</strong>: <a href="mailto:support@adstack.com">support@adstack.com</a><br>
+				<strong>New Business</strong>: <a href="mailto:dan@adstack.com">dan@adstack.com</a><br>
+				<strong>Media</strong>: <a href="mailto:media@adstack.com">media@adstack.com</a><br>
+				<!--<strong>General</strong>: <a href="mailto:info@adstack.com">info@adstack.com</a><br>-->
+			</p>
+		</div>
+		<div class="col-4">
+			<h2><i class="icon-phone-2"></i>Telephone</h2>
+			<p>
+				<strong>Support</strong>: <a href="tel:+1-888-246-7444">+1 (888) 246-7444</a><br>
+				<strong>San Francisco</strong>: <a href="tel:+1-415-508-3644">+1 (415) 508-3644</a><br>
+				<strong>New York</strong>: <a href="tel:+1-646-714-2592">+1 (646) 714-2592</a><br>
+			</p>
+		</div>
+		<div class="col-4 location">
+			<h2><i class="icon-location"></i>Location</h2>
+			<p>
+				<strong>AdStack HQ</strong><br>
+				604 Mission St.<br>
+				San Francisco, CA
+			</p>
+			<p>
+				<strong>AdStack NYC</strong><br>
+				155 Water Street<br>
+				Brooklyn, NY
+			</p>
+		</div>
+	</div>
+</div>
+<div id="map">
+	<div class="row">
+		<div class="col-12">
+			<div id="gmap"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDwMjK_R8BBIYcyH8T4g_6altdlZMBOmI&sensor=false"></script>
+<script type="text/javascript" src="//google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js?compiled"></script>
+<script type="text/javascript">
+$(function(){
+var hq = new google.maps.LatLng(37.787846,-122.400068);
+var mapStyle = [ { "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "road", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#ececec" } ] },{ "featureType": "road", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "stylers": [ { "color": "#e4f0f8" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "labels", "stylers": [ { "visibility": "off" } ] } ];
+var myOptions = {
+  center: hq,
+  zoom: 15,
+  disableDefaultUI: true,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
+map.setOptions({styles:mapStyle});
+var image = new google.maps.MarkerImage(
+  'https://s3.amazonaws.com/mashape-static-production/web/assets/favicon.png',
+  new google.maps.Size(16,16),
+  new google.maps.Point(0,0),
+  new google.maps.Point(8,-8)
+);
+var shape = {
+  coord: [15,0,15,1,15,2,15,3,15,4,15,5,15,6,15,7,15,8,15,9,15,10,15,11,15,12,15,13,15,14,15,15,0,15,0,14,0,13,0,12,0,11,0,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0,0,15,0],
+  type: 'poly'
+};
+var marker = new google.maps.Marker({
+  draggable: false,
+  raiseOnDrag: false,
+  icon: image,
+  shape: shape,
+  map: map,
+  position: hq
+});
+var adstackHQ = new InfoBubble({
+          map: map,
+          content: '<b>AdStack HQ</b><br>604 Mission St.<br>San Francisco, CA',
+          position: hq,
+          shadowStyle: 1,
+          padding: 0,
+          backgroundColor: 'rgb(255,255,255)',
+          borderRadius: 3,
+          arrowSize: 6,
+          borderWidth: 1,
+          borderColor: '#bbb',
+          disableAutoPan: true,
+          hideCloseButton: true,
+          arrowPosition: 48,
+          minWidth: 150,
+          minHeight: 90,
+          backgroundClassName: 'marker-label',
+          arrowStyle: 0
+  });
+adstackHQ.open();
+});
+</script>

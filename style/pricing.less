@@ -10,8 +10,8 @@
 		[class^="col-"] {
 			padding: 0;
 			border-right: 1px lighten(@black-color,20%) solid;
-			&:nth-of-type(2) h2 { border-bottom-color: @blue-color; }
-			&:nth-of-type(3) h2 { border-bottom-color: @green-color; }
+			&:nth-of-type(2) h2 { border-bottom-color: @green-color; }
+			&:nth-of-type(3) h2 { border-bottom-color: @blue-color; }
 			&:nth-of-type(4) h2 { border-bottom-color: @red-color; }
 			&:last-of-type {
 				border-right: none;
@@ -44,7 +44,7 @@
 		border-bottom: 1px darken(@white-color,4%) dotted;
 		em { font-style: normal; color: darken(@white-color,15%); }
 		&:last-of-type {
-			border-bottom: 1px darken(@white-color,8%) solid; border-radius: 0 0 4px 4px;
+			border-bottom: 2px darken(@white-color,8%) solid; border-radius: 0 0 4px 4px;
 		}
 	}
 	[class^="col-"] {
@@ -53,8 +53,8 @@
 		border-right: 1px darken(@white-color,8%) solid;
 		text-align: center;
 		i { position: relative; top: 0.1em; }
-		&:nth-of-type(2) i { color: @blue-color; }
-		&:nth-of-type(3) i { color: @green-color; }
+		&:nth-of-type(2) i { color: @green-color; }
+		&:nth-of-type(3) i { color: @blue-color; }
 		&:nth-of-type(4) i { color: @red-color; }
 		&:last-of-type { border-right: none; }
 		&.label {
@@ -70,7 +70,7 @@
 	.button {
 		text-transform: uppercase;
 		font-size: 1.6em; font-weight: normal;
-		line-height: 2.4em;
+		line-height: 2.4em; border-radius: 4px;
 		i {
 			margin-left: 0.1em;
 			position: relative; top: 0.12em;

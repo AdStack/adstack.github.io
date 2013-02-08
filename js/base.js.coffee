@@ -36,14 +36,15 @@ $ ->
 		headerPosition = 0
 		headerHeight = 0
 		$( window ).on( 'resize', ->
-			headerPosition = $header.offset().top
+			if !$header.hasClass 'fixed' then headerPosition = $header.offset().top
 			headerHeight = $header.outerHeight()
-		).trigger( 'resize' )
+		).trigger 'resize'
 		$( window ).on( 'scroll', ->
 			if $( window ).scrollTop() > headerPosition
+				$( window ).trigger 'resize'
 				$header.addClass 'fixed'
 				$pricing.css 'marginTop', headerHeight + 'px'
 			else
 				$header.removeClass 'fixed'
 				$pricing.css 'marginTop', 0
-		).trigger( 'scroll' )
+		).trigger 'scroll'

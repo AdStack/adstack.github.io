@@ -2,10 +2,11 @@
  *  Contact
  */
 
-#contact {
+#contact, #about {
 	a {
 		color: darken(@blue-color,10%);
-		&[href^="tel:"] { color: darken(desaturate(@red-color,8%),4%); }
+		//&[href^="tel:"] { color: darken(desaturate(@red-color,8%),4%); }
+		&:hover { text-decoration: underline; }
 	}
 	.row {
 		display: table; width: 100%;

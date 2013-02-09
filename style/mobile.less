@@ -51,10 +51,10 @@
 		}
 		ul {
 			li {
-				a:before {
+				a:first-of-type:before {
 					content: "\2014"; margin-right: 0.6em;
 					float: left;
-					color: lighten(@bg-color,12%);
+					color: lighten(@bg-color,30%);
 				}
 			}
 		}
@@ -122,7 +122,7 @@
 	}
 
 	// contact
-	#contact {
+	#about, #contact {
 		border-top: 1px darken(@white-color,8%) solid;
 		[class^="col-"] {
 			width: 100%; border: 0; float: left;

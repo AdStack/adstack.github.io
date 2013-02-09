@@ -1,8 +1,8 @@
 /*
- *  Terms of Service
+ *  Legal pages
  */
 
-#terms {
+#legal {
 	.alt-font; letter-spacing: -0.01em;
 	line-height: 1.9em; color: lighten(@body-color,25%);
 	margin-bottom: 2em;
@@ -29,6 +29,10 @@
 		border-left: 0; border-right: 0;
 		margin-bottom: 2.4em;
 	}
+	a {
+		color: darken(@blue-color,20%);
+		&:hover { text-decoration: underline; }
+	}
 	.maruku_toc {
 		.cf;
 		margin-bottom: 1.4em;
@@ -40,10 +44,6 @@
 				&:after { margin-left: 0.5em; content: "/"; color: lighten(@body-color,40%); }
 				&:last-of-type:after { content: ""; }
 			}
-		}
-		a {
-			color: darken(@blue-color,20%);
-			&:hover { text-decoration: underline; }
 		}
 	}
 }

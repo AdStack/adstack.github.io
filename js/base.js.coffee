@@ -35,7 +35,7 @@ AdStack =
 			e.preventDefault()
 			e.stopPropagation()
 			$( this ).toggleClass 'open'
-		$dropdowns.find( 'a' ).click ( e ) ->
+		$dropdowns.find( 'a:not([href="#"])' ).click ( e ) ->
 			e.stopPropagation()
 		@$document.on 'click', ->
 			$dropdowns.removeClass 'open'

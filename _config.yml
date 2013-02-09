@@ -1,2 +1,4 @@
 auto: true
+lsi: false
+pygments: true
 permalink: /:categories/:title/

@@ -33,13 +33,15 @@
 	.nav {
 		margin-top: 0.6em;
 		.col-2 > a, .link {
-			color: darken(@blue-color,10%);
+			@link-color: darken(@blue-color, 2%);
+			color: @link-color;
+			font-weight: bold;
 			display: block; cursor: pointer;
 			padding-bottom: 0.7em; margin-bottom: 1.1em;
 			border-bottom: 1px lighten(@black-color,70%) solid;
 			&:hover {
 				border-bottom-color: darken(@blue-color,2%);
-				i { color: darken(@blue-color,10%); }
+				i { color: @link-color; }
 				&:before { color: darken(@blue-color,2%); }
 			}
 			&:before {

@@ -98,7 +98,7 @@
 	#pricing-label {
 		.row { border-radius: 0; }
 		h2 {
-			font-size: 0.8em; padding: 0.8em 0 0.7em;
+			font-size: 0.8em; padding: 1.3em 0 1.2em;
 			border-bottom-width: 5px;
 		}
 		.label h2 {
@@ -145,8 +145,31 @@
 		height: 220px;
 	}
 
+	// about
+	#about {
+		margin-bottom: 0.7em;
+		.member-container {
+			border-top: 1px darken(@white-color,8%) dotted;
+			margin: @gutter-width / 2 -@gutter-width -@gutter-width * 2;
+		}
+		[class^="col-"]:nth-of-type(2) {
+			background-color: #fff;
+			h2 {
+				margin-top: @gutter-width;
+				color: @body-color;
+				&:first-of-type { margin-top: 0; }
+			}
+			p { color: lighten(@body-color,25%); }
+		}
+		.row {
+			border-radius: 0;
+			border-bottom-width: 0;
+		}
+	}
+
 	// terms
 	#terms {
 		text-align: left;
 	}
+
 }

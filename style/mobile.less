@@ -151,6 +151,10 @@
 		.member-container {
 			border-top: 1px darken(@white-color,8%) dotted;
 			margin: @gutter-width / 2 -@gutter-width -@gutter-width * 2;
+			.member {
+				padding-left: @gutter-width / 4; padding-right: @gutter-width / 4;
+				p { font-size: 0.82em; }
+			}
 		}
 		[class^="col-"]:nth-of-type(2) {
 			background-color: #fff;
@@ -164,6 +168,12 @@
 		.row {
 			border-radius: 0;
 			border-bottom-width: 0;
+		}
+		.investor {
+			padding-top: @gutter-width / 2;
+			.description {
+				float: none; width: 100%;
+			}
 		}
 	}
 

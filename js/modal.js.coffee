@@ -22,7 +22,8 @@ Modal.prototype =
 				.css(
 					display: 'inline-block'
 					position: 'absolute'
-				).html @params.content
+				).html( @params.content )
+				.hide().fadeIn 250
 			@bindEvents()
 			if typeof @params.init == 'function'
 				@params.init.call this
@@ -43,9 +44,11 @@ Modal.prototype =
 			dimensions =
 				width: _this.$modalBody.outerWidth()
 				height: _this.$modalBody.outerHeight()
+			left = $window.width() / 2 - dimensions.width / 2
+			top = $window.height() / 2 - dimensions.height / 2
 			_this.$modalBody.css
-				left: $window.width() / 2 - dimensions.width / 2
-				top: $window.height() / 2 - dimensions.height / 2
+				left: left
+				top: if top < 0 then 0 else top
 		).trigger( 'resize' )
 
 	unbindEvents: ->

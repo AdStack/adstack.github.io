@@ -4,7 +4,7 @@
 
 #modal {
 	position: fixed; top: 0; left: 0; z-index: 1000;
-	width: 100%; height: 100%;
+	width: 100%; height: 100%; overflow: auto;
 	background-color: rgba(255,255,255,0.5);
 	.modal-body {
 		background-color: #fff; background-clip: padding-box;
@@ -15,7 +15,7 @@
 }
 
 .signup-form {
-	width: 580px; padding: @gutter-width;
+	width: 560px; padding: @gutter-width;
 	@input-height: 2em;
 	label, input, textarea {
 		.alt-font; font-size: @body-size;
@@ -27,12 +27,12 @@
 	}
 	label {
 		color: lighten(@body-color,35%);
-		width: 15%; border-bottom-color: transparent;
+		width: 16%; border-bottom-color: transparent;
 		line-height: @input-height;
 		&:after { content: ":"; }
 	}
 	input {
-		width: 85%; height: @input-height;
+		width: 84%; height: @input-height;
 	}
 	hr {
 		.clear; height: @gutter-width / 2;

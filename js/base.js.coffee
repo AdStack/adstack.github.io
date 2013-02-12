@@ -46,14 +46,22 @@ Methods =
 		@$document.on 'click', '.signup', ( e ) ->
 			AdStack.modal
 				content: $( '#signup-form' ).html()
+				validate: ->
+					emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+					if @$modal.find( 'input[name="email"]' ).val().match emailRegex
+						return true
+					else
+						alert 'Please enter a valid email address.'
+						return false
 				init: ->
 					_this = this
 					if $( window ).width() >= 800
-						@$modal.find( 'input:first-of-type' ).focus()
+						@$modal.find( 'input[type="text"]' ).first().focus()
 					@$modal.find( '.cancel' ).on 'click', ->
 						_this.close()
 					@$modal.find( '.send' ).on 'click', ->
-						alert 'post'
+						if _this.validate()
+							_this.$modal.find( 'form' ).submit()
 
 	_bindPages: ->
 		# pricing page fixed header
@@ -78,10 +86,9 @@ Methods =
 					$pricing.css 'marginTop', 0
 			).trigger 'scroll'
 
-AdStack = window.AdStack or {}
+window.AdStack = window.AdStack or {}
 for i of Methods
-	AdStack[i] = Methods[i]
-window.AdStack = AdStack
+	window.AdStack[i] = Methods[i]
 
 $ ->
 	window.AdStack.init()

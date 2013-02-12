@@ -1,12 +1,15 @@
 <script type="text/html" id="signup-form">
-	<div class="signup-form">
+	<form class="signup-form" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+		<input type="hidden" value="00DG0000000C2jM" name="oid">
+		<input type="hidden" value="http://www.adstack.com/thanks/" name="retURL">
+		<input type="hidden" value="Web" name="lead_source">
 		<label for="email-address">From</label>
-		<input type="text" id="email-address" placeholder="your@email.com">
+		<input type="text" id="email-address" name="email" placeholder="your@email.com">
 		<hr>
 		<label for="subject-line">Subject</label>
-		<input type="text" id="subject-line" placeholder="Subject" value="Getting Started">
+		<input type="text" id="subject-line" name="company" placeholder="Subject" value="Getting Started">
 		<hr>
-		<textarea placeholder="Insert your introduction here">Hello Brian Hanna,
+		<textarea name="00NG0000008XM9s" placeholder="Insert your introduction here">Hello Brian Hanna,
 
 I would like to maximize returns on my marketing emails. My website is located at http://____.com. How do we proceed?
 
@@ -16,5 +19,5 @@ Your Name</textarea>
 			<span class="button blue send">Send</span>
 			<span class="button grey cancel">Cancel</span>
 		</div>
-	</div>
+	</form>
 </script>

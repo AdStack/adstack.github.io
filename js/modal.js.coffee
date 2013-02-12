@@ -9,6 +9,8 @@ ModalFactory = ( params ) ->
 
 Modal = ( params ) ->
 	@params = params
+	if typeof params.validate == 'function'
+		@validate = params.validate
 	@show()
 
 Modal.prototype =
@@ -55,6 +57,5 @@ Modal.prototype =
 		$( window ).off '.modal'
 
 # Assign Modal under the AdStack namespace
-AdStack = window.AdStack or {}
-AdStack.modal = ModalFactory
-window.AdStack = AdStack
+window.AdStack = window.AdStack or {}
+window.AdStack.modal = ModalFactory

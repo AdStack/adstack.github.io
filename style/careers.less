@@ -1,0 +1,29 @@
+/*
+ *  Careers page
+ */
+
+#careers {
+	a { float: none; }
+	blockquote {
+		color: lighten(@body-color,45%);
+		margin-bottom: 0.8em; padding-left: 0.8em;
+		border-left: 0.3em darken(@white-color,2%) solid;
+	}
+	h3 {
+		font-size: 1.2em; line-height: 1.4em;
+		margin-bottom: 0.6em;
+		span {
+			font-weight: normal; float: right;
+			color: lighten(@body-color,60%);
+			display: inline-block; font-size: 0.8em;
+		}
+	}
+	hr {
+		height: @gutter-width;
+		border-bottom: 1px darken(@white-color,8%) dotted;
+		margin-bottom: @gutter-width;
+	}
+	[class^="col-"]:nth-of-type(1) {
+		h3, p { margin-right: @gutter-width; }
+	}
+}

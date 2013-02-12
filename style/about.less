@@ -2,7 +2,7 @@
  *  About page
  */
 
-#about {
+#about, #careers {
 	margin-bottom: 1.4em;
 	p { color: lighten(@body-color,25%); }
 	h2 {
@@ -46,7 +46,7 @@
 			padding: @gutter-width @gutter-width @gutter-width / 2;
 			text-align: center;
 			border-bottom: 1px @border-color dotted;
-			border-right: 1px @border-color solid;
+			border-right: 1px @border-color dotted;
 			img {
 				width: 100% * 2 / 3; display: block;
 				background-color: #000;
@@ -54,9 +54,10 @@
 				margin: 0 auto @gutter-width / 3;
 			}
 			h3 {
-				font-size: 1em;
+				font-size: 1em; line-height: 1.4em;
+				margin-bottom: 0.2em;
 			}
-			p { font-size: @body-size - 2px; }
+			p { font-size: @body-size - 2px; line-height: 1.4em; }
 			&:nth-child(4n) { border-right: 0; }
 		}
 	}

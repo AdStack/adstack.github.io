@@ -77,6 +77,7 @@
 	// home
 	#icon-collage {
 		bottom: -1.4em; font-size: 1.07em;
+		i { color: rgba(0,0,0,0.05); }
 		.icon-presentation { right: 5.08em; top: -3.66em; }
 		.icon-phone { right: 4.06em; top: -2.1em; }
 		.icon-target-2 { font-size: 5em; right: 5em; top: -3.44em; }
@@ -98,7 +99,7 @@
 	#pricing-label {
 		.row { border-radius: 0; }
 		h2 {
-			font-size: 0.8em; padding: 1.3em 0 1.2em;
+			font-size: 0.8em; padding: 1em 0 0.9em;
 			border-bottom-width: 5px;
 		}
 		.label h2 {
@@ -122,7 +123,7 @@
 	}
 
 	// contact
-	#about, #contact {
+	#about, #contact, #careers {
 		border-top: 1px darken(@white-color,8%) solid;
 		[class^="col-"] {
 			width: 100%; border: 0; float: left;
@@ -137,7 +138,7 @@
 	#map {
 		.row {
 			border-radius: 0;
-			border-top: 0; border-bottom-width: 1px;
+			border-top: 0; border-bottom-width: 2px;
 		}
 		margin-bottom: 0.8em;
 	}
@@ -146,8 +147,9 @@
 	}
 
 	// about
-	#about {
+	#about, #careers {
 		margin-bottom: 0.7em;
+		h2 { border-top-style: solid; }
 		.member-container {
 			border-top: 1px darken(@white-color,8%) dotted;
 			margin: @gutter-width / 2 -@gutter-width -@gutter-width * 2;
@@ -167,7 +169,7 @@
 		}
 		.row {
 			border-radius: 0;
-			border-bottom-width: 0;
+			border-bottom-width: 1px;
 		}
 		.investor {
 			padding-top: @gutter-width / 2;
@@ -177,8 +179,23 @@
 		}
 	}
 
-	// terms
-	#terms {
+	// careers
+	#careers {
+		[class^="col-"]:nth-of-type(1) {
+			p { margin-right: 0; }
+			h3 {
+				margin-right: 0;
+				&:first-of-type {
+					border-top: 1px darken(@white-color,8%) dotted;
+					padding-top: @gutter-width;
+					margin-top: @gutter-width / 2;
+				}
+			}
+		}
+	}
+
+	// legal
+	#legal {
 		text-align: left;
 	}
 

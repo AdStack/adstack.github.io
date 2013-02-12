@@ -2,3 +2,4 @@ auto: true
 lsi: false
 pygments: true
 permalink: /:categories/:title/
+exclude: node_modules, js, style, grunt.js, Readme.md

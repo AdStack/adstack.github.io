@@ -12,7 +12,7 @@
 @white-color: #f0f0f0;
 
 body {
-	background-color: @bg-color;
+	background-color: @white-color;
 	color: @body-color;
 	overflow-x: hidden;
 	&.light {
@@ -20,10 +20,17 @@ body {
 		#logo { opacity: 0.7; }
 		#header {
 			background: none;
-			border-top-color: transparent;
 			.button { color: lighten(@body-color,15%); }
 		}
 		#footer a:hover { color: @body-color; }
+	}
+	&.dark {
+		background-color: @bg-color;
+		#logo { opacity: 1; }
+		#header {
+			background: #fff;
+			.button { color: @body-color; }
+		}
 	}
 }
 a:hover { outline: none; }

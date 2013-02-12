@@ -3,32 +3,34 @@
 # Requires: jQuery
 # Author: Dali Zheng
 
+'use strict'
 
-# AdStack namespace
-AdStack =
-
+Methods =
 	init: ->
-		@detectSVG()
-		@cacheSelectors()
-		@bindEvents()
-		@bindPages()
+		@_detectSVG()
+		@_cacheSelectors()
+		@_bindEvents()
+		@_bindPages()
 
-	detectSVG: ->
+	_detectSVG: ->
 		svg = !!( 'createElementNS' of document and
 		document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 		if !svg then document.body.className += ' no-svg'
 
-	cacheSelectors: ->
+	_cacheSelectors: ->
 		@$document = $ document
 		@$window = $ window
 		@$dropdowns = $ '.dropdown'
 		@$pricingLabel = $ '#pricing-label'
 		@$pricing = $ '#pricing'
 
-	bindEvents: ->
+	_bindEvents: ->
+		_this = this
+
 		# suppress blank hash links
 		@$document.on 'click', 'a[href="#"]', ( e ) ->
 			e.preventDefault()
+
 		# dropdowns
 		$dropdowns = @$dropdowns
 		$dropdowns.click ( e ) ->
@@ -40,7 +42,20 @@ AdStack =
 		@$document.on 'click', ->
 			$dropdowns.removeClass 'open'
 
-	bindPages: ->
+		# signup popup
+		@$document.on 'click', '.signup', ( e ) ->
+			AdStack.modal
+				content: $( '#signup-form' ).html()
+				init: ->
+					_this = this
+					if $( window ).width() >= 800
+						@$modal.find( 'input:first-of-type' ).focus()
+					@$modal.find( '.cancel' ).on 'click', ->
+						_this.close()
+					@$modal.find( '.send' ).on 'click', ->
+						alert 'post'
+
+	_bindPages: ->
 		# pricing page fixed header
 		if @$pricingLabel.length
 			headerPosition = 0
@@ -63,5 +78,10 @@ AdStack =
 					$pricing.css 'marginTop', 0
 			).trigger 'scroll'
 
+AdStack = window.AdStack or {}
+for i of Methods
+	AdStack[i] = Methods[i]
+window.AdStack = AdStack
+
 $ ->
-	AdStack.init()
+	window.AdStack.init()

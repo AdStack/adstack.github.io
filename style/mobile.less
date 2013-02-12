@@ -4,17 +4,22 @@
 
 @media only screen and (max-width: 799px) {
 	.row { min-width: 320px; }
+	body.light {
+		#logo { opacity: 1; }
+		#header .button { color: @body-color; }
+	}
 
 	// content
 	#header {
+		background: #fff !important;
 		border-top: 0;
 		border-bottom: 1px #ddd solid;
-		.button.clear { display: none; }
+		.button.signup { display: none; }
 		.nav { display: none; }
 		.row { padding-top: 0.8em; }
 		h1 {
 			font-size: 2.2em;
-			margin-bottom: -0.12em;
+			margin-bottom: 0;
 			.button { top: 0.18em; }
 		}
 		hr { display: none; }
@@ -62,6 +67,7 @@
 	#subheader {
 		h1 {
 			font-size: 2em;
+			margin-top: 0.8em;
 		}
 	}
 	.fleuron {
@@ -97,7 +103,6 @@
 
 	// pricing
 	#pricing-label {
-		.row { border-radius: 0; }
 		h2 {
 			font-size: 0.8em; padding: 1em 0 0.9em;
 			border-bottom-width: 5px;
@@ -115,7 +120,6 @@
 
 			}
 		}
-		.row:last-of-type { border-radius: 0; }
 	}
 	#pricing-cta {
 		margin: 2em 0 1em;
@@ -137,7 +141,6 @@
 	}
 	#map {
 		.row {
-			border-radius: 0;
 			border-top: 0; border-bottom-width: 2px;
 		}
 		margin-bottom: 0.8em;
@@ -168,7 +171,6 @@
 			p { color: lighten(@body-color,25%); }
 		}
 		.row {
-			border-radius: 0;
 			border-bottom-width: 1px;
 		}
 		.investor {
@@ -199,4 +201,14 @@
 		text-align: left;
 	}
 
+	// modal
+	.signup-form {
+		width: 300px;
+		label, input, textarea {
+			font-size: @body-size - 2px; letter-spacing: 0;
+		}
+		label { width: 30%; }
+		input { width: 70%; }
+		textarea { height: 11.4em; }
+	}
 }

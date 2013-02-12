@@ -26,9 +26,10 @@ module.exports = function ( grunt ) {
 			}
 		},
 		coffee: {
-			app: {
-				src: [ 'js/*.coffee' ],
-				dest: 'dist/adstack.js',
+			compile: {
+				files: {
+					'dist/adstack.js': [ 'js/*.coffee' ]
+				},
 				options: {
 					bare: false
 				}

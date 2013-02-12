@@ -2,7 +2,7 @@
  *  Tablet layout
  */
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1079px) {
 	html, body {
 		font-size: @body-size - 2px;
 		line-height: 1.5em;
@@ -17,4 +17,8 @@
 	.row {
 		min-width: 800px;
 	}
+	#about, #careers, #contact, #pricing-label, #map, #pricing {
+		.row { border-radius: 0; }
+	}
+	#pricing .row:last-of-type { border-radius: 0; }
 }

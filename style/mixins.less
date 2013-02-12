@@ -61,3 +61,10 @@
 	-webkit-column-gap: @gap;
 	column-gap: @gap;
 }
+.placeholder(@color) {
+	&:-moz-placeholder { color: @color; }
+	&::-moz-placeholder { color: @color; }
+	&:-ms-input-placeholder { color: @color; }
+	&::-webkit-input-placeholder { color: @color; }
+	&:placeholder { color: @color; }
+}

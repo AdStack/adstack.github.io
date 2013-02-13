@@ -9,8 +9,6 @@ ModalFactory = ( params ) ->
 
 Modal = ( params ) ->
 	@params = params
-	if typeof params.validate == 'function'
-		@validate = params.validate
 	@show()
 
 Modal.prototype =

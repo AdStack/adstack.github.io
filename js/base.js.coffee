@@ -44,6 +44,7 @@ Methods =
 
 		# signup popup
 		@$document.on 'click', '.signup', ( e ) ->
+			analytics.track 'signup-click'
 			AdStack.modal
 				content: $( '#signup-form' ).html()
 				validate: ->

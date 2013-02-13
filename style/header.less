@@ -57,11 +57,13 @@
 		}
 		.dropdown {
 			&.open {
-				@padding: 8px; cursor: default;
+				@padding: 8px;
+				cursor: default;
+				position: relative; z-index: 10; 
 				padding-left: @padding; padding-right: @padding;
 				margin-left: -@padding; margin-right: -@padding;
 				border-bottom: 0; margin-bottom: -10em;
-				background-color: rgba(0,0,0,0.9);
+				background-color: rgba(0,0,0,0.88);
 				border-radius: 3px; padding-bottom: @padding;
 				color: @white-color;
 				i {
@@ -69,7 +71,7 @@
 					&:before { content: "\e018"; }
 				}
 				a {
-					display: block; position: relative; z-index: 10; font-weight: normal;
+					display: block; font-weight: normal;
 					padding: 0.76em 0; border-bottom: 1px rgba(255,255,255,0.15) solid;
 					font-size: @body-size - 2px;
 					&:first-of-type { margin-top: 0.72em; border-top: 1px lighten(@black-color,50%) solid; }

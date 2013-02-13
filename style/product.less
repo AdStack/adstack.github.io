@@ -25,6 +25,7 @@
 
 .product-section {
 	@border-color: darken(@white-color,8%);
+	color: lighten(@body-color,20%);
 	margin-bottom: 2em;
 	.row {
 		display: table; width: 100%;
@@ -49,6 +50,7 @@
 		font-size: 1.3em; line-height: 1.2em;
 		padding: @gutter-width;
 		margin: 0 -@gutter-width;
+		color: @body-color;
 		border-bottom: 1px darken(@white-color,8%) solid;
 		i { margin-right: 0.6em; }
 	}
@@ -74,11 +76,28 @@
 	}
 	.box-row {
 		display: table; width: 100%;
-		border-bottom: 1px @border-color dotted;
 		.box {
 			display: table-cell; width: 25%;
-			border-right: 1px @border-color solid;
-			height: 12em; padding: 0 @gutter-width;
+			border-right: 1px @border-color dotted;
+			height: 12em; padding: @gutter-width;
+			text-align: center;
+			i {
+				font-size: 3em;
+				color: lighten(@body-color,50%);
+			}
+			h4 {
+				font-size: 1em; margin: 0.6em 0 0.4em;
+				color: @body-color;
+			}
+			p {
+				font-size: @body-size - 2px; line-height: 1.5em;
+			}
+			/*
+			&:nth-child(1) { i,h4 { color: darken(@yellow-color,18%); } }
+			&:nth-child(2) { i,h4 { color: @green-color; } }
+			&:nth-child(3) { i,h4 { color: @blue-color; } }
+			&:nth-child(4) { i,h4 { color: @red-color; } }
+			*/
 			&:last-of-type { border-right: 0; }
 		}
 	}

@@ -42,17 +42,25 @@
 		&:nth-of-type(1) {
 			background-color: #fff;
 			padding: 0;
-			h2 { margin: 0; }
+			h2 {
+				margin-left: 0; margin-right: 0;
+				background-color: #fff;
+			}
 		}
 	}
 	h2 {
 		.alt-font; font-weight: normal; letter-spacing: -0.02em;
 		font-size: 1.3em; line-height: 1.2em;
 		padding: @gutter-width;
-		margin: 0 -@gutter-width;
+		margin: @gutter-width * 2 -@gutter-width 0;
 		color: @body-color;
+		border-top: 1px darken(@white-color,8%) dotted;
 		border-bottom: 1px darken(@white-color,8%) solid;
-		i { margin-right: 0.6em; }
+		&:first-of-type {
+			padding-top: @gutter-width; margin-top: 0;
+			border-top: 0;
+		}
+		i { margin-right: 0.6em; position: relative; top: 0.03em; }
 	}
 	h3 {
 		color: lighten(@body-color,35%);
@@ -66,6 +74,10 @@
 		}
 		&:last-of-type { border-bottom: 0; }
 	}
+	.long {
+		margin: @gutter-width;
+		.columns(2,@gutter-width);
+	}
 	.button {
 		width: 100%; padding: 0;
 		margin: @gutter-width / 2 0 @gutter-width;
@@ -75,11 +87,14 @@
 		i { position: relative; top: 0.12em; margin-left: 0.3em; }
 	}
 	.box-row {
-		display: table; width: 100%;
+		display: table; width: 100% * 2 / 3;
+		position: absolute; bottom: 2px; left: 0;
+		background-color: #fff; border-radius: 0 0 0 3px;
+		border-top: 1px @border-color solid;
 		.box {
 			display: table-cell; width: 25%;
 			border-right: 1px @border-color dotted;
-			height: 12em; padding: @gutter-width;
+			padding: @gutter-width;
 			text-align: center;
 			i {
 				font-size: 3em;
@@ -87,7 +102,8 @@
 			}
 			h4 {
 				font-size: 1em; margin: 0.6em 0 0.4em;
-				color: @body-color;
+				//color: @body-color;
+				color: lighten(@blue-color,4%);
 			}
 			p {
 				font-size: @body-size - 2px; line-height: 1.5em;

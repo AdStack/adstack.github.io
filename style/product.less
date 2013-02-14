@@ -2,7 +2,7 @@
  *  Products
  */
 
-.product-section {
+#email-dsp {
 	@border-color: darken(@white-color,8%);
 	color: lighten(@body-color,20%);
 	margin-bottom: 2em;
@@ -16,11 +16,13 @@
 				.alt-font; font-size: 3.4em; line-height: 1.4em;
 				font-weight: normal;
 				color: lighten(@body-color,25%);
+				.cutoff;
 			}
 			& > h2 {
 				.alt-font; font-size: 1.52em; line-height: 1.4em;
 				font-weight: normal; font-style: italic;
 				color: darken(@white-color,15%);
+				.cutoff;
 			}
 		}
 	}
@@ -30,7 +32,7 @@
 			color: lighten(@body-color,35%);
 			font-weight: normal; font-size: 1em;
 			line-height: 1.5em; padding: @gutter-width 0;
-			border-bottom: 1px @border-color dotted;
+			border-bottom: 1px darken(@border-color,6%) dotted;
 			i {
 				color: lighten(@body-color,70%);
 				float: left; font-size: 2.6em; line-height: 1.4em;
@@ -41,28 +43,29 @@
 		.button {
 			width: 100%; padding: 0;
 			margin: @gutter-width / 2 0 0;
-			font-weight: normal; font-size: 1.6em;
+			font-weight: normal; font-size: 1.4em;
 			text-transform: uppercase; text-align: center;
-			line-height: 2.4em;
+			line-height: 2.6em;
 			i { position: relative; top: 0.12em; margin-left: 0.3em; }
 		}
 	}
 	.publisher-box {
+		color: lighten(@body-color,35%);
 		border-radius: 5px; border-bottom: 2px @border-color solid;
-		pointer-events: none; overflow: hidden;
+		overflow: auto; height: 34.6em;
 		.publisher, .header {
 			display: table; width: 100%;
 			background-color: #fff; border-bottom: 1px @border-color solid;
 			& > div {
 				display: table-cell;
 				padding: @gutter-width - 5px @gutter-width;
-				border-right: 1px @border-color solid;
+				border-right: 1px @border-color dotted;
 				&:nth-of-type(1) {
-					width: 55%;
+					width: 72%;
 					h4 { font-weight: bold; }
 				}
-				&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
-					width: 15%; text-align: center; padding: @gutter-width / 2;
+				&:nth-of-type(2), &:nth-of-type(3) {
+					width: 14%; text-align: center; padding: @gutter-width / 2 0;
 				}
 				&:last-of-type { border-right: 0; }
 			}
@@ -78,10 +81,7 @@
 			&:last-of-type { border-bottom: 0; }
 		}
 		.header {
-			.alt-font;
-			& > div {
-				//border-color: lighten(@black-color,18%);
-			}
+			.alt-font; color: @body-color;
 		}
 	}
 }

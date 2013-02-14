@@ -56,7 +56,7 @@ Methods =
 						return false
 				init: ->
 					_this = this
-					if $( window ).width() >= 800
+					if $( window ).width() >= 1080
 						@$modal.find( 'input[type="text"]' ).first().focus()
 					@$modal.find( '.cancel' ).on 'click', ->
 						_this.close()
@@ -77,7 +77,7 @@ Methods =
 				if !$pricingLabel.hasClass 'fixed'
 					headerPosition = $pricingLabel.offset().top
 			).trigger 'resize'
-			$window.on( 'scroll', ->
+			$window.on( 'scroll touchmove', ->
 				if $window.scrollTop() > headerPosition
 					$window.trigger 'resize'
 					$pricingLabel.addClass 'fixed'

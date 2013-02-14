@@ -31,19 +31,20 @@
 		h3 {
 			color: lighten(@body-color,25%);
 			font-weight: normal; font-size: 1em;
-			line-height: 1.5em; padding: @gutter-width 0;
-			border-bottom: 1px darken(@border-color,6%) dotted;
+			line-height: 1.5em; padding: 1em 0 0;
+			margin-bottom: 1em;
+			border-top: 1px darken(@border-color,6%) dotted;
+			height: 4.3em; overflow: hidden;
 			i {
 				color: lighten(@body-color,70%);
 				float: left; font-size: 2.6em; line-height: 1.4em;
 				margin-right: 0.3em;
 			}
-			&:last-of-type { border-bottom: 0; }
 		}
 		.button {
 			width: 100%; padding: 0;
-			margin: @gutter-width / 2 0 0;
-			font-weight: normal; font-size: 1.4em;
+			margin: 0.3em 0 0;
+			font-weight: normal; font-size: 1.3em;
 			text-transform: uppercase; text-align: center;
 			line-height: 2.6em;
 			i { position: relative; top: 0.12em; margin-left: 0.3em; }
@@ -52,7 +53,7 @@
 	.publisher-box {
 		color: lighten(@body-color,35%);
 		border-radius: 5px; border-bottom: 2px @border-color solid;
-		overflow: auto; height: 35.4em;
+		overflow: auto; height: 34.4em;
 		.publisher, .header {
 			.cf;
 			background-color: #fff; border-bottom: 1px @border-color solid;
@@ -118,6 +119,7 @@
 				color: lighten(@body-color,25%);
 				margin: 0.6em 0 2.2em;
 			}
+			&:last-of-type { border-right: 0; }
 		}
 		&.small {
 			background-color: darken(#fff,1%);

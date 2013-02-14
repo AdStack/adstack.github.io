@@ -134,3 +134,24 @@
 		&:last-of-type .feature { border-bottom: 0; }
 	}
 }
+
+#wall-of-text {
+	margin: 2.4em 0 0;
+	text-align: center;
+	h2 {
+		.alt-font; font-weight: normal; letter-spacing: -0.02em;
+		font-size: 1.1em; line-height: 1.4em;
+		color: lighten(@body-color,20%);
+	}
+	p {
+		color: lighten(@body-color,35%);
+		margin: 0.8em 0 2.6em;
+		font-size: @body-size - 2px;
+		line-height: 1.6em;
+	}
+	hr {
+		.clear; height: 4px;
+		border: 1px darken(@white-color,14%) solid;
+		border-left: 0; border-right: 0;
+	}
+}

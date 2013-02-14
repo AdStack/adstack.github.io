@@ -21,7 +21,7 @@
 			& > h2 {
 				.alt-font; font-size: 1.52em; line-height: 1.4em;
 				font-weight: normal; font-style: italic;
-				color: darken(@white-color,15%);
+				color: darken(@white-color,20%);
 				.cutoff;
 			}
 		}
@@ -29,7 +29,7 @@
 	.box {
 		margin-top: 1.5em;
 		h3 {
-			color: lighten(@body-color,35%);
+			color: lighten(@body-color,25%);
 			font-weight: normal; font-size: 1em;
 			line-height: 1.5em; padding: @gutter-width 0;
 			border-bottom: 1px darken(@border-color,6%) dotted;
@@ -54,18 +54,18 @@
 		border-radius: 5px; border-bottom: 2px @border-color solid;
 		overflow: auto; height: 34.6em;
 		.publisher, .header {
-			display: table; width: 100%;
+			.cf;
 			background-color: #fff; border-bottom: 1px @border-color solid;
 			& > div {
-				display: table-cell;
-				padding: @gutter-width - 5px @gutter-width;
+				float: left;
+				padding: @gutter-width - 3px @gutter-width @gutter-width - 5px;
 				border-right: 1px @border-color dotted;
 				&:nth-of-type(1) {
 					width: 72%;
 					h4 { font-weight: bold; }
 				}
 				&:nth-of-type(2), &:nth-of-type(3) {
-					width: 14%; text-align: center; padding: @gutter-width / 2 0;
+					width: 14%; text-align: center; padding-left: 0; padding-right: 0;
 				}
 				&:last-of-type { border-right: 0; }
 			}
@@ -74,7 +74,7 @@
 				font-weight: normal;
 			}
 			.button {
-				position: relative; top: 0.56em; margin-top: -1em;
+				position: relative; top: 0.56em; margin: -1em 0 0;
 				font-weight: bold; line-height: 1em;
 				font-size: 1.4em; padding: 0.3em 0.7em 0.4em;
 			}
@@ -83,5 +83,54 @@
 		.header {
 			.alt-font; color: @body-color;
 		}
+	}
+}
+
+#live-optimizer {
+	@border-color: darken(@white-color,8%);
+	.row {
+		border-radius: 5px; overflow: hidden;
+		border-bottom: 2px @border-color solid;
+	}
+	.feature-row {
+		display: table; width: 100%;
+		background-color: #fff;
+		.feature {
+			display: table-cell; width: 100% / 3;
+			padding: 0 @gutter-width;
+			border-right: 1px @border-color solid;
+			border-bottom: 1px @border-color solid;
+			text-align: center;
+			h2 {
+				.alt-font; font-weight: normal; letter-spacing: -0.02em;
+				font-size: 1.3em; line-height: 1.4em;
+			}
+			h3 {
+				font-size: 1em; line-height: 1.5em;
+				margin: 0 0 2.2em; font-weight: normal;
+				color: lighten(@body-color,25%);
+			}
+			i {
+				display: block;
+				font-size: 5em; color: lighten(@body-color,70%);
+				margin: 0.4em 0 0.2em;
+			}
+			p {
+				color: lighten(@body-color,25%);
+				margin: 0.6em 0 2em;
+			}
+		}
+		&.small {
+			background-color: darken(#fff,1%);
+			.feature {
+				width: 100% / 6;
+				border-right-style: dotted;
+				i {
+					font-size: 3em; color: lighten(@body-color,40%);
+					margin: 0.6em 0 0.3em;
+				}
+			}
+		}
+		&:last-of-type .feature { border-bottom: 0; }
 	}
 }

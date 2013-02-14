@@ -61,7 +61,7 @@ Methods =
 					@$modal.find( '.cancel' ).on 'click', ->
 						_this.close()
 					@$modal.find( '.send' ).on 'click', ->
-						if _this.params.validate()
+						if _this.params.validate.call _this
 							_this.$modal.find( 'form' ).submit()
 
 	_bindPages: ->

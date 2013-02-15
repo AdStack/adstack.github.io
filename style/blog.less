@@ -4,6 +4,9 @@
 
 #blog {
 	@border-color: darken(@white-color,8%);
+	[class^="col-"] {
+		padding-bottom: @gutter-width;
+	}
 	h2 a {
 		color: @body-color;
 		&:hover { text-decoration: none; }

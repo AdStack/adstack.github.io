@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="light">
+{% include header.html %}
+{% include subheader.html %}
+<div id="blog">
+	<div class="row">
+		{{ content }}
+	</div>
+</div>
+{% include footer.html %}
+<!-- disqus comment counts -->
+<script>
+var disqus_shortname = 'adstack';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+{% include templates.html %}
+{% include scripts.html %}
+</body>
+</html>

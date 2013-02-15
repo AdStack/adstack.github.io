@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="light">
+{% include header.html %}
+{% include subheader.html %}
+<div id="blog">
+	<div class="row">
+		<div class="col-8">
+			<h2>{{ page.date | date: "%e %B %Y" }}</h2>
+			{{ content }}
+			<div id="disqus_thread"></div>
+			<script>
+				var disqus_shortname = 'adstack';
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+		<div class="col-4">
+			{% include sidebar.html %}
+		</div>
+	</div>
+</div>
+{% include footer.html %}
+{% include templates.html %}
+{% include scripts.html %}
+</body>
+</html>

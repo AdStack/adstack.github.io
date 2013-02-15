@@ -10,8 +10,10 @@
 	}
 
 	// content
+	body.light, body.dark {
+		#header { background-color: #fff !important; }
+	}
 	#header {
-		background: #fff !important;
 		border-bottom: 1px #ddd solid;
 		.button.signup { display: none; }
 		.nav { display: none; }
@@ -239,6 +241,21 @@
 	#wall-of-text {
 		[class^="col-"] {
 			width: 100%;
+		}
+	}
+
+	// blog
+	#blog {
+		margin-bottom: 0.6em;
+		.row {
+			display: block;
+		}
+		[class^="col-"] {
+			display: block; float: left; width: 100%;
+			padding-bottom: @gutter-width;
+			&:nth-of-type(2) {
+				border-top: 1px darken(@white-color,8%) solid;
+			}
 		}
 	}
 

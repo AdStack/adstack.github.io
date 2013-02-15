@@ -3,8 +3,6 @@
 # Requires: jQuery
 # Author: Dali Zheng
 
-'use strict'
-
 Methods =
 	init: ->
 		@_detectSVG()
@@ -72,7 +70,7 @@ Methods =
 			$pricingLabel = @$pricingLabel
 			$pricing = @$pricing
 			$window = @$window
-			$window.on( 'resize', ->
+			$window.on( 'resize orientationchange', ->
 				headerHeight = $pricingLabel.outerHeight()
 				if !$pricingLabel.hasClass 'fixed'
 					headerPosition = $pricingLabel.offset().top

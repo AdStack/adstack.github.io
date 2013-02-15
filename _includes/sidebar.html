@@ -1,0 +1,12 @@
+<h2><i class="icon-atom"></i>What is AdStack?</h2>
+<p>
+	 AdStack is a real-time advertising optimization platform that uses quantitative techniques to automatically optimize and manage digital marketing campaigns for agencies, publishers and advertisers. 
+</p>
+<h2><i class="icon-pig"></i>All Posts</h2>
+<ul>
+{% for post in site.categories.blog %}
+	<li>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,28 @@
+/*
+ *  Blog
+ */
+
+#blog {
+	@border-color: darken(@white-color,8%);
+	h2 a {
+		color: @body-color;
+		&:hover { text-decoration: none; }
+	}
+	p, ol, ul { margin-bottom: 1em; }
+	.date {
+		color: lighten(@body-color,50%);
+	}
+	ul, ol {
+		margin-left: 1.4em;
+	}
+	ul {
+		list-style-type: circle;
+	}
+	img {
+		display: block;
+		width: 100%;
+		border: 1px @border-color solid;
+		border-radius: 3px;
+		padding: @gutter-width / 2;
+	}
+}

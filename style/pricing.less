@@ -10,9 +10,6 @@
 		[class^="col-"] {
 			padding: 0;
 			border-right: 1px lighten(@black-color,26%) solid;
-			&:nth-of-type(2) h2 { border-bottom-color: @green-color; }
-			&:nth-of-type(3) h2 { border-bottom-color: @blue-color; }
-			&:nth-of-type(4) h2 { border-bottom-color: @red-color; }
 			&:last-of-type {
 				border-right: none;
 				h2 { margin-right: 0; }
@@ -23,7 +20,7 @@
 		.alt-font; font-weight: normal;
 		font-size: 1.4em; text-align: center;
 		padding: 1.1em 0; margin-right: -1px;
-		border-bottom: 7px @yellow-color solid;
+		border-bottom: 5px @red-color solid;
 	}
 	.label h2 {
 		text-align: left; padding-left: @gutter-width;
@@ -52,10 +49,7 @@
 		float: none; padding: 1.1em 0;
 		border-right: 1px darken(@white-color,8%) solid;
 		text-align: center;
-		i { position: relative; top: 0.1em; }
-		&:nth-of-type(2) i { color: @green-color; }
-		&:nth-of-type(3) i { color: @blue-color; }
-		&:nth-of-type(4) i { color: @red-color; }
+		i { position: relative; top: 0.1em; color: @red-color; }
 		&:last-of-type { border-right: none; }
 		&.label {
 			padding-left: @gutter-width;

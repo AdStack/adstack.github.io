@@ -2,11 +2,6 @@
 # Modal dialog
 # ============
 
-'use strict'
-
-ModalFactory = ( params ) ->
-	return new Modal params
-
 Modal = ( params ) ->
 	@params = params
 	@show()
@@ -16,7 +11,7 @@ Modal.prototype =
 	constructor: Modal
 
 	show: ->
-		if typeof @params == 'object' and @params.content and !$( '#modal' ).length
+		if typeof @params == 'object' and @params.content and !@$modal
 			@$modal = $( '<div id="modal" />' ).appendTo document.body
 			@$modalBody = $( '<div class="modal-body" />' ).appendTo( @$modal )
 				.css(
@@ -29,9 +24,13 @@ Modal.prototype =
 				@params.init.call this
 
 	close: ->
-		if @$modal.length
+		if @$modal
 			@$modal.remove()
+			@$modal = undefined
 			@unbindEvents()
+
+	toggle: ->
+		if @$modal then @close() else @show()
 
 	bindEvents: ->
 		_this = this
@@ -53,6 +52,10 @@ Modal.prototype =
 
 	unbindEvents: ->
 		$( window ).off '.modal'
+
+# convenience method to instantiate modal objects
+ModalFactory = ( params ) ->
+	return new Modal params
 
 # Assign Modal under the AdStack namespace
 window.AdStack = window.AdStack or {}

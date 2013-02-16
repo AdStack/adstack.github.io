@@ -56,11 +56,11 @@
 		overflow: auto; height: 34.4em;
 		.publisher, .header {
 			.cf;
-			background-color: #fff; border-bottom: 1px @border-color solid;
+			background-color: #fff; border-bottom: 1px @border-color dotted;
 			& > div {
 				float: left;
 				padding: @gutter-width - 3px @gutter-width @gutter-width - 5px;
-				border-right: 1px @border-color dotted;
+				border-right: 1px @border-color solid;
 				&:nth-of-type(1) {
 					width: 72%;
 					h4 { font-weight: bold; }
@@ -89,8 +89,15 @@
 		}
 		.header {
 			.alt-font; color: @body-color;
+			border-bottom-style: solid;
 		}
 	}
+}
+
+#email-dsp-bg {
+	position: absolute; top: 0; left: 0; z-index: -1;
+	background-color: @white-color;
+	width: 100%; height: 21.8em;
 }
 
 #live-optimizer {
@@ -120,8 +127,10 @@
 			i {
 				display: block;
 				font-size: 5em;
-				color: lighten(@red-color,4%);
-				margin: 0.5em 0 0.2em;
+				width: 1.6em; height: 1.6em; line-height: 1.78em;
+				border-radius: 1em;
+				color: lighten(@red-color,8%);
+				margin: 0.3em auto 0;
 			}
 			p {
 				color: lighten(@body-color,25%);
@@ -136,7 +145,7 @@
 				border-right-style: dotted;
 				i {
 					font-size: 3em; color: lighten(@body-color,50%);
-					margin: 0.6em 0 0.3em;
+					margin: 0.4em auto 0;
 				}
 			}
 		}

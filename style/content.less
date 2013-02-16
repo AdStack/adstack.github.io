@@ -22,7 +22,14 @@ body {
 			background-color: transparent;
 			.button { color: lighten(@body-color,15%); }
 		}
-		#footer a:hover { color: @body-color; }
+		#footer {
+			h3 {
+				color: lighten(@black-color,20%);
+				border-top-color: darken(@white-color,15%);
+				&:after { color: darken(@white-color,20%); }
+			}
+			a:hover { color: @body-color; }
+		}
 	}
 	&.dark {
 		background-color: @bg-color;

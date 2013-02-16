@@ -2,13 +2,9 @@
 # Modal dialog
 # ============
 
-Modal = ( params ) ->
-	@params = params
-	@show()
-
-Modal.prototype =
-
-	constructor: Modal
+class Modal
+	constructor: ( @params ) ->
+		@show()
 
 	show: ->
 		if typeof @params == 'object' and @params.content and !@$modal
@@ -55,7 +51,7 @@ Modal.prototype =
 
 # convenience method to instantiate modal objects
 ModalFactory = ( params ) ->
-	return new Modal params
+	new Modal params
 
 # Assign Modal under the AdStack namespace
 window.AdStack = window.AdStack or {}

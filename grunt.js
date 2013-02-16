@@ -21,7 +21,7 @@ module.exports = function ( grunt ) {
 					yuicompress: true
 				},
 				files: {
-					"dist/base.css": "style/base.less"
+					'dist/base.css': 'style/base.less'
 				}
 			}
 		},
@@ -47,8 +47,8 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask('default', 'less coffee min');
-	grunt.registerTask('compile-less', 'less');
-	grunt.registerTask('compile-coffee', 'coffee min');
+	grunt.registerTask( 'default', 'less coffee min' );
+	grunt.registerTask( 'compile-less', 'less' );
+	grunt.registerTask( 'compile-coffee', 'coffee min' );
 
 };

@@ -2,8 +2,8 @@
 layout: single
 title: New Website & Branding
 ---
-Hi, I'm Dali Zheng, the new guy at AdStack. My first task has been overhauling the public-facing website of the company, as well as setting the art direction for the products and brand. Rather than coming up with some superficial graphics, I started by focusing on the essence of the company's offerings, blending new techniques in digital marketing with the tried and true email protocol. The body typeface is [Roboto](http://en.wikipedia.org/wiki/Roboto), used in millions of Android devices. The header typeface is [Libre Baskerville](http://www.impallari.com/projects/overview/libre-baskerville), based on Baskerville (designed in the 18th century), which is a modern take on a classic font that juxtaposes old with new. 
+Hi, I'm Dali Zheng, the new front-end engineer / designer at AdStack. My first task has been rebranding the company, starting with the website. Rather than coming up with some superficial graphics, I started by focusing on the essence of the company’s offerings, blending new techniques in digital marketing with the tried and true email protocol. From this perspective emerged an aesthetic grounded in old school, direct response print advertising & 18th century typography, brought into the future with modern typefaces and responsive design. 
 
-The new site has been built from scratch using Jekyll, LESS, CoffeeScript, Grunt, IcoMoon, Bower, and plain old blood, sweat & tears. It is [open-sourced at GitHub](http://github.com/AdStack/adstack.github.com).
+This site is distributed via GitHub Pages and the [full source code is available on GitHub](http://github.com/AdStack/adstack.github.com).
 
--- Dali
+-- Dali Zheng

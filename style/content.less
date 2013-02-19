@@ -9,7 +9,7 @@
 @green-color: #68b952;
 @red-color: #ce615b;
 @black-color: #151515;
-@white-color: #f0f0f0;
+@white-color: #f0efee;
 
 body {
 	background-color: @white-color;
@@ -33,11 +33,56 @@ body {
 	}
 	&.dark {
 		background-color: @bg-color;
-		#logo { opacity: 1; }
 		#header {
 			background-color: #fff;
 			.button { color: @body-color; }
 		}
+	}
+	&.inverted {
+		background-color: lighten(@bg-color,6%);
+		#logo { opacity: 0.8; }
+		#header {
+			background-color: transparent;
+			.button {
+				color: rgba(255,255,255,0.6);
+				&.login { border-color: rgba(255,255,255,0.16); }
+			}
+			.nav {
+				.col-2 > a, .link {
+					color: rgba(255,255,255,0.8);
+					border-color: rgba(255,255,255,0.16);
+					&:hover {
+						color: #fff;
+						border-color: rgba(255,255,255,0.32);
+						i { color: #fff; }
+						&:before { color: rgba(255,255,255,0.4); }
+					}
+					&:before { color: rgba(255,255,255,0.2); }
+				}
+				i { color: rgba(255,255,255,0.7); }
+			}
+		}
+		#subheader {
+			h1 { color: rgba(255,255,255,0.8); }
+			.fleuron {
+				& > div:before, & > div:after { border-color: #fff; }
+			}
+		}
+		#footer {
+			color: rgba(255,255,255,0.4);
+			h3 {
+				color: rgba(255,255,255,0.8);
+				border-top-color: rgba(255,255,255,0.16);
+				&:after { color: rgba(255,255,255,0.2); }
+			}
+			a {
+				color: rgba(255,255,255,0.6);
+				&:hover { color: #fff; }
+			}
+		}
+	}
+	&.blue {
+		background-color: @blue-color;
 	}
 }
 a:hover { outline: none; }
@@ -55,7 +100,6 @@ a:hover { outline: none; }
 		background-color: @blue-color; color: #fff;
 	}
 	&.yellow {
-		border-top-color: transparent;
 		border-bottom-color: rgba(0,0,0,0.08);
 		border-width: 2px;
 		background-color: @yellow-color; color: #151515;
@@ -69,7 +113,6 @@ a:hover { outline: none; }
 		.linear-gradient(darken(#fff,12%),darken(#fff,2%));
 	}
 	&.clear {
-		border-top-color: transparent;
 	}
 }
 

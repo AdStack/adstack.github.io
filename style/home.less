@@ -3,33 +3,37 @@
  */
 
 #feature {
-	background-color: @white-color;
+	background-color: @blue-color;
+	//.linear-gradient(@blue-color,spin(@blue-color,-20%));
 	overflow: hidden;
 	.row {
 		padding-bottom: 5.8em;
 	}
 	h2 {
 		.alt-font; font-weight: normal;
-		color: @black-color; letter-spacing: -0.03em;
+		color: #fff; letter-spacing: -0.03em;
 		margin: 1.4em 0 0.52em; font-size: 3.4em; line-height: 1.3em;
 		position: relative; z-index: 3;
 	}
 	.cta {
-		font-size: 1.5em; line-height: 2.3em;
+		font-size: 1.4em; line-height: 2.3em;
 		font-weight: normal; text-transform: uppercase;
-		border-radius: 5px; padding: 0 0.9em;
+		border-radius: 5px; padding: 0 0.7em;
 		position: relative; z-index: 3;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.03em; margin-right: 0.4em;
 		i { margin-left: 0.5em; position: relative; top: 0.12em; }
+		&.clear {
+			color: rgba(0,0,0,0.35);
+		}
 	}
 }
 
 #icon-collage {
 	position: absolute; right: @gutter-width; bottom: -0.8em;
-	font-size: 1.1em; pointer-events: none;
+	font-size: 1.09em; pointer-events: none;
 	i {
 		position: absolute;
-		color: rgba(0,0,0,0.06);
+		color: rgba(0,0,0,0.08);
 	}
 	.icon-camera { top: -1.3em; right: 0; font-size: 7em; }
 	.icon-pig { top: -2.87em; right: 0; font-size: 5em; .rotation(-90deg); }

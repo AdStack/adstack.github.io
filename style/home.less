@@ -53,9 +53,7 @@
 
 #subfooter {
 	background-color: #000;
-	.row {
-		padding-bottom: 3.2em;
-	}
+	[class^="col-"] { margin-bottom: 3.2em; }
 	hr {
 		height: 7px; opacity: 0.25;
 		margin-bottom: 2.4em;
@@ -68,6 +66,20 @@
 		.cutoff; .alt-font; letter-spacing: -0.03em;
 		font-weight: normal; font-size: 1.3em;
 		margin: 0 0 0.2em; color: #fff;
+	}
+	h4 {
+		.clear;
+		height: 4px; border: 1px rgba(255,255,255,0.2) solid;
+		border-left: 0; border-right: 0;
+		text-align: center; font-size: 1em;
+		font-weight: normal;
+		text-transform: uppercase; letter-spacing: 0.02em;
+		color: rgba(255,255,255,0.6);
+		margin: 0 @gutter-width;
+		span {
+			background-color: #000; position: relative; top: -0.76em;
+			padding: 0 0.7em;
+		}
 	}
 	p {
 		color: rgba(255,255,255,0.6);

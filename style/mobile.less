@@ -73,6 +73,11 @@
 			font-size: 2em;
 			margin-top: 0.8em;
 		}
+		&.product {
+			padding-top: 0;
+			h1 { font-size: 1.8em !important; }
+			h3 { width: 100%; }
+		}
 	}
 	.fleuron {
 		height: 60px;
@@ -246,6 +251,23 @@
 	#wall-of-text {
 		[class^="col-"] {
 			width: 100%;
+		}
+	}
+	#product-images {
+		.image-container .image .label { display: none; }
+	}
+	#product-features {
+		.row { padding-bottom: 0; }
+		[class^="col-"] {
+			width: 100%;
+		}
+		hr { margin-bottom: 1em; }
+		p { margin-bottom: 2em; }
+	}
+	#product-subfeatures {
+		[class^="col-"] {
+			width: 100% / 2;
+			margin-bottom: 0; padding-bottom: 2em;
 		}
 	}
 

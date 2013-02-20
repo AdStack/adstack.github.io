@@ -13,8 +13,8 @@
    height="60"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="adstack.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="adstack_white.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,16 +24,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="61.114033"
-     inkscape:cy="10.358702"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="402.09683"
+     inkscape:cy="23.20554"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1316"
      inkscape:window-height="737"
-     inkscape:window-x="2132"
-     inkscape:window-y="178"
+     inkscape:window-x="2108"
+     inkscape:window-y="299"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

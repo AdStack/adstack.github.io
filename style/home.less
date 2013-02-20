@@ -3,7 +3,7 @@
  */
 
 #feature {
-	background-color: @blue-color;
+	background-color: lighten(@blue-color,4%);
 	overflow: hidden;
 	.row {
 		padding-bottom: 5.8em;
@@ -52,7 +52,7 @@
 }
 
 #subfooter {
-	background-color: @black-color;
+	background-color: #000;
 	.row {
 		padding-bottom: 3.2em;
 	}
@@ -62,16 +62,16 @@
 	}
 	i {
 		vertical-align: middle; margin: 0 0.4em 0 0;
-		color: lighten(@black-color,40%); font-size: 1.5em;
+		opacity: 0.4; font-size: 1.5em;
 	}
 	h3 {
 		.cutoff; .alt-font; letter-spacing: -0.03em;
 		font-weight: normal; font-size: 1.3em;
-		margin: 0 0 0.2em; color: @white-color;
+		margin: 0 0 0.2em; color: #fff;
 	}
 	p {
-		color: lighten(@black-color,40%);
+		color: rgba(255,255,255,0.6);
 		padding-top: 1em; margin-top: 1em;
-		border-top: 1px lighten(@black-color,15%) solid;
+		border-top: 1px rgba(255,255,255,0.2) solid;
 	}
 }

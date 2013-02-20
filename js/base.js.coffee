@@ -21,6 +21,7 @@ Methods =
 		@$dropdowns = $ '.dropdown'
 		@$pricingLabel = $ '#pricing-label'
 		@$pricing = $ '#pricing'
+		@$productImages = $ '#product-images'
 
 	_bindEvents: ->
 		_this = this
@@ -84,6 +85,14 @@ Methods =
 					$pricingLabel.removeClass 'fixed'
 					$pricing.css 'marginTop', 0
 			).trigger 'scroll'
+		# liveoptimizer page height ratio
+		if @$productImages.length
+			$imageContainer = @$productImages.find '.image-container'
+			$( window ).on( 'resize', ->
+				width = $imageContainer.outerWidth()
+				$imageContainer.css 'height', ( width * 0.21 ) + 'px'
+			).trigger 'resize'
+
 
 window.AdStack = window.AdStack or {}
 for i of Methods

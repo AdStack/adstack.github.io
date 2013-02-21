@@ -62,7 +62,9 @@ Methods =
 						_this.close()
 					@$modal.find( '.send' ).on 'click', ->
 						if _this.params.validate.call _this
-							_this.$modal.find( 'form' ).submit()
+							_this.$modal.find( 'input[name="last_name"]' )
+								.val( _this.$modal.find( 'input[name="email"]' ).val() )
+								.end().submit()
 
 	_bindPages: ->
 		# pricing page fixed header

@@ -57,6 +57,7 @@ Methods =
 					_this = this
 					if $( window ).width() >= 1080
 						@$modal.find( 'input[type="text"]' ).first().focus()
+					@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
 					@$modal.find( '.cancel' ).on 'click', ->
 						_this.close()
 					@$modal.find( '.send' ).on 'click', ->

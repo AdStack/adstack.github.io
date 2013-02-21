@@ -5,11 +5,8 @@
 
 module.exports = function ( grunt ) {
 
-	grunt.loadNpmTasks( 'grunt-contrib' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-
 	grunt.initConfig( {
-		min: {
+		uglify: {
 			dist: {
 				src: [ 'dist/adstack.js' ],
 				dest: 'dist/adstack.js'
@@ -38,17 +35,18 @@ module.exports = function ( grunt ) {
 		watch: {
 			less: {
 				files: [ 'style/*.less' ],
-				tasks: [ 'compile-less' ]
+				tasks: 'less'
 			},
 			js: {
 				files: [ 'js/*.coffee' ],
-				tasks: [ 'compile-coffee' ]
+				tasks: [ 'coffee', 'uglify' ]
 			}
 		}
 	} );
 
-	grunt.registerTask( 'default', 'less coffee min' );
-	grunt.registerTask( 'compile-less', 'less' );
-	grunt.registerTask( 'compile-coffee', 'coffee min' );
+	grunt.loadNpmTasks( 'grunt-contrib' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+
+	grunt.registerTask( 'default', ['less', 'coffee', 'uglify'] );
 
 };

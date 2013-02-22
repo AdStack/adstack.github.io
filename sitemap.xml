@@ -1,1 +1,43 @@
-_site/sitemap.xml
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://adstack.com/</loc>
+        <lastmod>2013-02-21T15:23:42-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/products/liveoptimizer/</loc>
+        <lastmod>2013-02-20T11:51:55-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/products/emaildsp/</loc>
+        <lastmod>2013-02-20T11:58:51-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/pricing-and-plans/</loc>
+        <lastmod>2013-02-20T11:51:55-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/careers/</loc>
+        <lastmod>2013-02-13T22:28:46-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/contact/</loc>
+        <lastmod>2013-02-21T12:38:57-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/blog/</loc>
+        <lastmod>2013-02-21T15:23:42-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/about/</loc>
+        <lastmod>2013-02-21T15:23:42-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/privacy/</loc>
+        <lastmod>2013-02-13T22:28:46-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://adstack.com/tos/</loc>
+        <lastmod>2013-02-13T22:28:46-08:00</lastmod>
+    </url>
+</urlset>

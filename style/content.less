@@ -47,6 +47,18 @@ body {
 			}
 		}
 	}
+	&.white-header {
+		#logo { opacity: 0.9; }
+		#header {
+			background-color: #fff;
+			.button { color: @body-color; }
+		}
+		#subfooter {
+			background: #fff;
+			h3 { color: @body-color; }
+			p { color: rgba(0,0,0,0.6); border-color: rgba(0,0,0,0.2); }
+		}
+	}
 	&.inverted {
 		background-color: lighten(@bg-color,5%);
 		#logo { opacity: 0.8; }

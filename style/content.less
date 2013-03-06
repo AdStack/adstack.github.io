@@ -32,7 +32,7 @@ body {
 		}
 	}
 	&.dark {
-		background-color: @bg-color;
+		background-color: desaturate(darken(@blue-color,44%),42%);
 		#header {
 			background-color: #fff;
 			.button { color: @body-color; }
@@ -40,7 +40,7 @@ body {
 		#subheader {
 			background-color: #fff;
 			h1 {
-				color: @body-color;
+				color: desaturate(darken(@blue-color,40%),40%);
 				font-size: 2.4em; line-height: 1.4em;
 				letter-spacing: -0.02em;
 			}
@@ -120,7 +120,10 @@ a:hover { outline: none; }
 		background-color: darken(#fff,8%);
 		.linear-gradient(darken(#fff,12%),darken(#fff,2%));
 	}
-	&.clear {
+	&.orange {
+		border-bottom-color: rgba(0,0,0,0.12);
+		border-width: 2px;
+		background-color: @yellow-color; color: #151515;
 	}
 }
 
@@ -141,7 +144,7 @@ a:hover { outline: none; }
 			text-align: center;
 			font-weight: normal; font-size: 1.1em;
 			line-height: 1.5em;
-			color: lighten(@body-color,40%);
+			color: desaturate(@blue-color, 48%);
 			margin: 0.5em auto 0;
 			width: 100% * 2 / 3;
 		}

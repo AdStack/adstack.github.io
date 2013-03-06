@@ -11,16 +11,26 @@
 		color: @black-color; letter-spacing: -0.02em;
 		font-size: 2.8em; padding-bottom: 0.2em; line-height: 1.28em;
 		.button {
-			position: absolute; top: 0.66em; right: @gutter-width;
+			position: absolute; top: 0.62em; right: @gutter-width;
 			font-size: @body-size; letter-spacing: 0; font-weight: normal;
 			font-size: @body-size - 1px; line-height: 2.3em;
 			&.clear {
 				&:hover { color: darken(@blue-color,10%); }
 			}
-			&.signup { right: 8.1em; }
+			&.signup {
+				border: 2px transparent solid;
+				right: 8.1em;
+				//color: darken(@blue-color, 2%) !important;
+			}
 			&.login {
-				border: 1px rgba(0,0,0,0.1) solid;
-				i { margin-right: 0.5em; position: relative; top: 0.08em; }
+				border: 2px rgba(0,0,0,0.1) solid;
+				border-radius: 0.5em;
+				border-color: desaturate(lighten(@blue-color, 28%), 16%);
+				//color: darken(@blue-color, 2%) !important;
+				i {
+					margin-right: 0.5em; position: relative; top: 0.08em;
+					//color: desaturate(lighten(@blue-color, 24%), 16%);
+				}
 			}
 		}
 	}

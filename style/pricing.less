@@ -5,11 +5,11 @@
 #pricing-label {
 	.row {
 		border-radius: 5px 5px 0 0;
-		background-color: @black-color;
+		background-color: desaturate(darken(@blue-color,34%),46%);
 		color: @white-color;
 		[class^="col-"] {
 			padding: 0;
-			border-right: 1px lighten(@black-color,12%) solid;
+			border-right: 1px rgba(255,255,255,0.16) solid;
 			&:last-of-type {
 				border-right: none;
 				h2 { margin-right: 0; }

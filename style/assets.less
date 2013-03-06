@@ -6,12 +6,12 @@ body, #feature, #email-dsp-bg, #product-features, #product-subfeatures, #subhead
 	background-image: url( '../media/noise.png' );
 	background-position: center 0; background-repeat: repeat;
 }
-#header hr {
+#header hr, body.white-header #subfooter hr {
 	/* dots.png */
 	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAH0lEQVQI12NgYGD4zwAB////hzERnP8YHAYUDgPDfwCfwBPtglF25wAAAABJRU5ErkJggg==' );
 	background-position: 0 0; background-repeat: repeat;
 }
-#subfooter hr, #product-features hr, body.inverted #header hr {
+body:not(.white-header) #subfooter hr, #product-features hr, body.inverted #header hr {
 	/* white_dots.png */
 	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIUlEQVQI123KsQ0AMAjAMMP/P6crQ0dLnioMwuwF2ovveMqdCwVp0Y71AAAAAElFTkSuQmCC' );
 	background-position: 0 0; background-repeat: repeat;

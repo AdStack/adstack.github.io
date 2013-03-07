@@ -5,7 +5,7 @@
 #pricing-label {
 	.row {
 		border-radius: 5px 5px 0 0;
-		background-color: lighten(@body-color,30%);
+		background-color: desaturate(darken(@blue-color,28%),32%);
 		color: @white-color;
 		[class^="col-"] {
 			padding: 0;
@@ -24,7 +24,7 @@
 	}
 	.label h2 {
 		text-align: left; padding-left: @gutter-width;
-		color: lighten(@black-color,50%);
+		color: rgba(255,255,255,0.5);
 	}
 	&.fixed {
 		position: fixed; top: 0; left: 0; z-index: 10;

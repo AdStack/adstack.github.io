@@ -5,11 +5,11 @@
 #pricing-label {
 	.row {
 		border-radius: 5px 5px 0 0;
-		background-color: desaturate(darken(@blue-color,28%),32%);
-		color: @white-color;
+		color: rgba(0,0,0,0.64);
+		background-color: #fff;
 		[class^="col-"] {
 			padding: 0;
-			border-right: 1px rgba(255,255,255,0.16) solid;
+			border-right: 1px rgba(0,0,0,0.12) solid;
 			&:last-of-type {
 				border-right: none;
 				h2 { margin-right: 0; }
@@ -20,11 +20,11 @@
 		.alt-font; font-weight: normal;
 		font-size: 1.4em; text-align: center;
 		padding: 1.1em 0; margin-right: -1px;
-		border-bottom: 5px @yellow-color solid;
+		border-bottom: 3px desaturate(lighten(@blue-color, 30%), 12%) solid;
 	}
 	.label h2 {
 		text-align: left; padding-left: @gutter-width;
-		color: rgba(255,255,255,0.5);
+		color: rgba(0,0,0,0.32);
 	}
 	&.fixed {
 		position: fixed; top: 0; left: 0; z-index: 10;

@@ -22,12 +22,12 @@ class: light
 			<p>
 				<strong>AdStack HQ</strong><br>
 				604 Mission St. #801<br>
-				San Francisco, CA
+				San Francisco, CA 94105
 			</p>
 			<p>
 				<strong>AdStack NYC</strong><br>
 				155 Water St.<br>
-				Brooklyn, NY
+				Brooklyn, NY 11201
 			</p>
 		</div>
 	</div>
@@ -44,54 +44,63 @@ class: light
 <script type="text/javascript" src="//google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js?compiled"></script>
 <script type="text/javascript">
 (function(){
-var hq = new google.maps.LatLng(37.787997,-122.400079);
-var mapStyle = [ { "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "road", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#ececec" } ] },{ "featureType": "road", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "stylers": [ { "color": "#e3ebf1" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "labels.text.fill", "stylers": [ { "color": "#6a6a6a" } ] },{ "featureType": "administrative", "elementType": "labels.text", "stylers": [ { "visibility": "off" } ] } ];
 
-var myOptions = {
-  center: hq,
-  zoom: 15,
-  disableDefaultUI: true,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
-map.setOptions({styles:mapStyle});
-var image = new google.maps.MarkerImage(
-  '/media/favicon.png',
-  new google.maps.Size(16,16),
-  new google.maps.Point(0,0),
-  new google.maps.Point(8,-8)
-);
-var shape = {
-  coord: [15,0,15,1,15,2,15,3,15,4,15,5,15,6,15,7,15,8,15,9,15,10,15,11,15,12,15,13,15,14,15,15,0,15,0,14,0,13,0,12,0,11,0,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0,0,15,0],
-  type: 'poly'
-};
-var marker = new google.maps.Marker({
-  draggable: false,
-  raiseOnDrag: false,
-  icon: image,
-  shape: shape,
-  map: map,
-  position: hq
-});
-var adstackHQ = new InfoBubble({
-          map: map,
-          content: '<b>AdStack HQ</b><br>604 Mission St. #801<br>San Francisco, CA',
-          position: hq,
-          shadowStyle: 1,
-          padding: 0,
-          backgroundColor: 'rgb(255,255,255)',
-          borderRadius: 3,
-          arrowSize: 6,
-          borderWidth: 1,
-          borderColor: '#bbb',
-          disableAutoPan: true,
-          hideCloseButton: true,
-          arrowPosition: 48,
-          minWidth: 167,
-          minHeight: 91,
-          backgroundClassName: 'marker-label',
-          arrowStyle: 0
-  });
-adstackHQ.open();
+	var hq = new google.maps.LatLng(37.787997,-122.400079);
+
+	var mapStyle = [ { "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "road", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#ececec" } ] },{ "featureType": "road", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "stylers": [ { "color": "#e3ebf1" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "color": "#ffffff" } ] },{ "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "elementType": "labels.text.fill", "stylers": [ { "color": "#6a6a6a" } ] },{ "featureType": "administrative", "elementType": "labels.text", "stylers": [ { "visibility": "off" } ] } ];
+
+	var myOptions = {
+		center: hq,
+		zoom: 15,
+		disableDefaultUI: true,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	var map = new google.maps.Map(document.getElementById("gmap"), myOptions);
+	map.setOptions({styles:mapStyle});
+
+	var image = new google.maps.MarkerImage(
+		'/media/favicon.png',
+		new google.maps.Size(16,16),
+		new google.maps.Point(0,0),
+		new google.maps.Point(8,-8)
+	);
+
+	var shape = {
+		coord: [15,0,15,1,15,2,15,3,15,4,15,5,15,6,15,7,15,8,15,9,15,10,15,11,15,12,15,13,15,14,15,15,0,15,0,14,0,13,0,12,0,11,0,10,0,9,0,8,0,7,0,6,0,5,0,4,0,3,0,2,0,1,0,0,15,0],
+		type: 'poly'
+	};
+
+	var marker = new google.maps.Marker({
+		draggable: false,
+		raiseOnDrag: false,
+		icon: image,
+		shape: shape,
+		map: map,
+		position: hq
+	});
+
+	var adstackHQ = new InfoBubble({
+		map: map,
+		content: '<b>AdStack HQ</b><br>604 Mission St. #801<br>San Francisco, CA 94105',
+		position: hq,
+		shadowStyle: 1,
+		padding: 0,
+		backgroundColor: 'rgb(255,255,255)',
+		borderRadius: 3,
+		arrowSize: 6,
+		borderWidth: 1,
+		borderColor: '#bbb',
+		disableAutoPan: true,
+		hideCloseButton: true,
+		arrowPosition: 48,
+		minWidth: 197,
+		minHeight: 91,
+		backgroundClassName: 'marker-label',
+		arrowStyle: 0
+	});
+
+	adstackHQ.open();
+
 })();
 </script>

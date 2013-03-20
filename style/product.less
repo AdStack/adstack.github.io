@@ -100,10 +100,25 @@
 	width: 100%; height: 21.8em;
 }
 
-#product-images {
-	background-color: desaturate(lighten(@blue-color,38%),12%);
-	.row {
+#subheader.product, #product-images {
+	background-color: desaturate(lighten(@blue-color,38%), 30%) !important;
+}
+
+#subheader {
+	&.product {
+		padding-top: 2.2em;
+		h3 {
+			text-align: center;
+			font-weight: normal; font-size: 1.1em;
+			line-height: 1.5em;
+			color: desaturate(@blue-color, 48%);
+			margin: 0.5em auto 0;
+			width: 100% * 2 / 3;
+		}
 	}
+}
+
+#product-images {
 	.image-container {
 		height: 15.4em;
 		.image {

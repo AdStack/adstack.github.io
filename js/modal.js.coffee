@@ -13,8 +13,9 @@ class Modal
 				.css(
 					display: 'inline-block'
 					position: 'absolute'
+					opacity: 0.01
 				).html( @params.content )
-				.hide().fadeIn 250
+				.animate {'opacity': 1}, 200
 			@bindEvents()
 			if typeof @params.init == 'function'
 				@params.init.call this
@@ -36,12 +37,13 @@ class Modal
 			if e.keyCode == 27 then _this.close()
 
 		$window.on( 'resize.modal', ->
+			$modalBody = _this.$modalBody;
 			dimensions =
-				width: _this.$modalBody.outerWidth()
-				height: _this.$modalBody.outerHeight()
+				width: parseInt($modalBody.width(), 10) + parseInt($modalBody.css('border-left-width'), 10) * 2
+				height: parseInt($modalBody.height(), 10) + parseInt($modalBody.css('border-top-width'), 10) * 2
 			left = $window.width() / 2 - dimensions.width / 2
 			top = $window.height() / 2 - dimensions.height / 2
-			_this.$modalBody.css
+			$modalBody.css
 				left: left
 				top: if top < 0 then 0 else top
 		).trigger( 'resize' )

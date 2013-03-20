@@ -64,7 +64,7 @@ Methods =
 						if _this.params.validate.call _this
 							_this.$modal.find( 'input[name="last_name"]' )
 								.val( _this.$modal.find( 'input[name="email"]' ).val() )
-								.end().submit()
+							_this.$modal.find('form').submit()
 
 	_bindPages: ->
 		# pricing page fixed header
@@ -75,7 +75,7 @@ Methods =
 			$pricing = @$pricing
 			$window = @$window
 			$window.on( 'resize orientationchange', ->
-				headerHeight = $pricingLabel.outerHeight()
+				headerHeight = $pricingLabel.height()
 				if !$pricingLabel.hasClass 'fixed'
 					headerPosition = $pricingLabel.offset().top
 			).trigger 'resize'
@@ -92,8 +92,8 @@ Methods =
 		if @$productImages.length
 			$imageContainer = @$productImages.find '.image-container'
 			$( window ).on( 'resize', ->
-				width = $imageContainer.outerWidth()
-				$imageContainer.css 'height', ( width * 0.21 ) + 'px'
+				width = $imageContainer.width()
+				$imageContainer.css 'height', ( width * 0.206 ) + 'px'
 			).trigger 'resize'
 
 

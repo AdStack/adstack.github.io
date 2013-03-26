@@ -1,0 +1,30 @@
+.tooltip {
+	@r: 75;
+	@g: 149;
+	@b: 201;
+	@a: 0.92;
+	position: absolute;
+	background-color: rgba(@r, @g, @b, @a);
+	color: #fff;
+	border-radius: 0.3em;
+	max-width: 24em;
+	p {
+		padding: 0.5em 0.8em;
+		font-size: 0.9em;
+		line-height: 1.4em;
+	}
+	.arrow {
+		@arrow-size: 9px;
+		position: absolute;
+		left: 50%; top: 100%;
+		opacity: @a;
+		&:after {
+			height: 0; width: 0;
+			position: absolute; top: 0; left: 0;
+			border: solid transparent; content: " ";
+			border-color: rgba(@r, @g, @b, 0); border-top-color: rgba(@r, @g, @b, 255);
+			border-width: @arrow-size; margin-left: -@arrow-size;
+			pointer-events: none;
+		}
+	}
+}

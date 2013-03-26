@@ -3,6 +3,7 @@
 # ============
 
 class Modal
+
 	constructor: ( @params ) ->
 		@show()
 
@@ -57,4 +58,4 @@ ModalFactory = ( params ) ->
 
 # Assign Modal under the AdStack namespace
 window.AdStack = window.AdStack or {}
-window.AdStack.modal = ModalFactory
+AdStack.modal = ModalFactory

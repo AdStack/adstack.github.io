@@ -1,8 +1,3 @@
-/*
- *  JS build script
- *  Requires grunt, grunt-contrib, grunt-contrib-watch
- */
-
 module.exports = function ( grunt ) {
 
 	grunt.initConfig( {
@@ -44,7 +39,9 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.loadNpmTasks( 'grunt-contrib' );
+	grunt.loadNpmTasks( 'grunt-contrib-less' );
+	grunt.loadNpmTasks( 'grunt-contrib-coffee' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	grunt.registerTask( 'default', ['less', 'coffee', 'uglify'] );

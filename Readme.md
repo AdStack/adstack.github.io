@@ -1,15 +1,27 @@
 # AdStack Public Site
 
-This is the full source for the public-facing site of AdStack. 
+This is the full source for the public-facing site of AdStack.
 
-## Build Process and Development
+## System Requirements
+- **ruby**: download ruby from [ruby-lang.org/en/downloads/](http://www.ruby-lang.org/en/downloads/)
+- **jekyll**: after installing ruby, run: `gem install jekyll`
+- **node.js**: download from [nodejs.org/download/](http://nodejs.org/download/)
+- **grunt-cli**: after installing node.js, run as a super-user: `npm install -g grunt-cli`
 
-You will need node.js, npm, ruby, and jekyll installed on your system. To install Jekyll on your system, run: `gem install jekyll`. To install developer dependencies, run: `npm install` in the root folder next to `package.json`. 
+## Instant Setup
 
-The site is built with Jekyll to generate static pages from templates and Markdown. Use `jekyll --server` while developing to setup a dev server at `localhost:4000` that watches files as they change. 
+Assuming you have met all of the system requirements:
 
-Grunt is used to concatenate and minify all JavaScript and compile CoffeeScript/LESS files. While developing, use `grunt watch` to let grunt automagically compile production assets when files change. 
+```
+npm install && grunt && jekyll --server
+```
 
-## Styles and Layout
+Then point your browser to `localhost:4000`.
 
-The layout uses a custom grid system that is loosely based on Twitter Bootstrap's 12-column grid. 
+### Build Process and Development
+
+While developing, use `grunt watch` to let grunt automagically compile production assets when files change. Production assets go in the `dist` folder.
+
+### Styles and Layout
+
+The layout uses a custom grid system that is loosely based on Twitter Bootstrap's 12-column grid.

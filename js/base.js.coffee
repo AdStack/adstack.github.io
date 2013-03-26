@@ -4,6 +4,7 @@
 # Author: Dali Zheng
 
 Methods =
+
 	init: ->
 		@_detectSVG()
 		@_cacheSelectors()
@@ -98,8 +99,9 @@ Methods =
 
 
 window.AdStack = window.AdStack or {}
+
 for i of Methods
-	window.AdStack[i] = Methods[i]
+	AdStack[i] = Methods[i]
 
 $ ->
-	window.AdStack.init()
+	AdStack.init()

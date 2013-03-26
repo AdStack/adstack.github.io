@@ -1,22 +1,24 @@
 {
-  "name": "AdStack",
-  "description": "The public facing website of AdStack Inc.",
-  "version": "1.0.0",
-  "homepage": "http://adstack.com/",
-  "author": "AdStack <info@adstack.com>",
-  "contributors": [
-    {
-      "name": "Dali Zheng",
-      "email": "dali@adstack.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AdStack/adstack.github.com"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib": "~0.4.0",
-    "grunt-contrib-watch": "~0.2.0"
-  }
+	"name": "AdStack",
+	"description": "The public facing website of AdStack Inc.",
+	"version": "1.0.0",
+	"homepage": "http://adstack.com/",
+	"author": "AdStack <info@adstack.com>",
+	"contributors": [
+		{
+			"name": "Dali Zheng",
+			"email": "dali@adstack.com"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AdStack/adstack.github.com"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.0",
+		"grunt-contrib-less": "~0.5.0",
+		"grunt-contrib-coffee": "~0.6.4",
+		"grunt-contrib-uglify": "~0.2.0",
+		"grunt-contrib-watch": "~0.3.1"
+	}
 }

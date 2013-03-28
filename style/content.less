@@ -17,7 +17,6 @@ body {
 	overflow-x: hidden;
 	&.light {
 		background-color: @white-color;
-		#logo { opacity: 0.7; }
 		#header {
 			background-color: transparent;
 			.button { color: lighten(@body-color,15%); }
@@ -33,7 +32,6 @@ body {
 	}
 	&.dark {
 		background-color: desaturate(darken(@blue-color,44%),42%);
-		#logo { opacity: 0.8; }
 		#header {
 			background-color: #fff;
 			.button { color: @body-color; }
@@ -46,64 +44,6 @@ body {
 				letter-spacing: -0.02em;
 			}
 		}
-	}
-	&.white-header {
-		#logo { opacity: 0.9; }
-		#header {
-			background-color: #fff;
-			.button { color: @body-color; }
-		}
-		#subfooter {
-			background: #fff;
-			h3 { color: @body-color; }
-			p { color: rgba(0,0,0,0.6); border-color: rgba(0,0,0,0.2); }
-		}
-	}
-	&.inverted {
-		background-color: lighten(@bg-color,5%);
-		#logo { opacity: 0.8; }
-		#header {
-			background-color: transparent;
-			.button {
-				color: rgba(255,255,255,0.6);
-				&.login { border-color: rgba(255,255,255,0.16); }
-			}
-			.nav {
-				.col-2 > a, .link {
-					color: rgba(255,255,255,0.8);
-					border-color: rgba(255,255,255,0.16);
-					&:hover {
-						color: #fff;
-						border-color: rgba(255,255,255,0.32);
-						i { color: #fff; }
-						&:before { color: rgba(255,255,255,0.4); }
-					}
-					&:before { color: rgba(255,255,255,0.2); }
-				}
-				i { color: rgba(255,255,255,0.7); }
-			}
-		}
-		#subheader {
-			h1 { color: rgba(255,255,255,0.8); }
-			.fleuron {
-				& > div:before, & > div:after { border-color: #fff; }
-			}
-		}
-		#footer {
-			color: rgba(255,255,255,0.4);
-			h3 {
-				color: rgba(255,255,255,0.8);
-				border-top-color: rgba(255,255,255,0.16);
-				&:after { color: rgba(255,255,255,0.2); }
-			}
-			a {
-				color: rgba(255,255,255,0.6);
-				&:hover { color: #fff; }
-			}
-		}
-	}
-	&.blue {
-		background-color: @blue-color;
 	}
 }
 a:hover { outline: none; }

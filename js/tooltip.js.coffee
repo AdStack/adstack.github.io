@@ -7,7 +7,7 @@ class Tooltip
 	constructor: (params) ->
 		if typeof params == 'object'
 			@$this = $ params.element
-			@title = @$this.attr 'title'
+			@title = if typeof @$this.attr('data-title') == 'string' then @$this.attr 'data-title' else @$this.attr 'title'
 			@$boundingBox = @$this.parents(params.boundingBox).first()
 			@arrowSize = params.arrowSize || 17
 

@@ -10,12 +10,20 @@
 	#header {
 		h1 .button { top: 0.34em; }
 	}
+
 	#feature {
 		.row { padding-bottom: 4.1em; }
 		h2 { margin-top: 0.8em; }
 	}
 	#icon-collage {
 		font-size: 0.91em;
+	}
+	.fleuron {
+		& > div {
+			@spacing: 4.4em;
+			&:before { left: @spacing; }
+			&:after { right: @spacing; }
+		}
 	}
 	.row {
 		min-width: 760px;

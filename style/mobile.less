@@ -70,7 +70,10 @@
 	#subheader {
 		h1 {
 			font-size: 2em;
-			margin-top: 0.8em;
+			margin-top: 0.6em;
+		}
+		.fleuron {
+			margin: -0.4em 0 0.2em;
 		}
 		&.product {
 			padding-top: 0;
@@ -79,10 +82,9 @@
 		}
 	}
 	.fleuron {
-		height: 60px;
 		background-size: auto 100%;
 		& > div {
-			@spacing: 50px;
+			@spacing: 3em;
 			&:before { left: @spacing; }
 			&:after { right: @spacing; }
 		}

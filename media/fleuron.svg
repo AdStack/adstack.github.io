@@ -13,8 +13,8 @@
    height="100"
    id="svg6805"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 4">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fleuron.svg">
   <defs
      id="defs6807" />
   <sodipodi:namedview
@@ -25,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="75.220426"
+     inkscape:cx="-51.779574"
      inkscape:cy="24.054347"
      inkscape:document-units="px"
      inkscape:current-layer="g7610"
      showgrid="false"
      inkscape:window-width="1197"
      inkscape:window-height="710"
-     inkscape:window-x="2137"
-     inkscape:window-y="385"
+     inkscape:window-x="1911"
+     inkscape:window-y="312"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata6810">
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,7 +56,7 @@
        id="g7610">
       <g
          id="g7615"
-         transform="matrix(0.55650725,0,0,0.55650725,78.63283,403.87844)">
+         transform="matrix(0.45885747,0,0,0.45885747,82.382106,508.8938)">
         <path
            inkscape:connector-curvature="0"
            id="path1256"

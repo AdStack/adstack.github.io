@@ -58,4 +58,4 @@ ModalFactory = ( params ) ->
 
 # Assign Modal under the AdStack namespace
 window.AdStack = window.AdStack or {}
-AdStack.modal = ModalFactory
+AdStack.Modal = ModalFactory

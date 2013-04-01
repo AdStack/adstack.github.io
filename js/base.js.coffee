@@ -45,7 +45,7 @@ Methods =
 		# signup popup
 		@$document.on 'click', '.signup', ( e ) ->
 			analytics.track 'signup-click'
-			AdStack.modal
+			AdStack.Modal
 				content: $( '#signup-form' ).html()
 				validate: ->
 					emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -66,6 +66,12 @@ Methods =
 							_this.$modal.find( 'input[name="last_name"]' )
 								.val( _this.$modal.find( 'input[name="email"]' ).val() )
 							_this.$modal.find('form').submit()
+
+		# tooltips
+		$('.member [title]').on 'mouseover touchstart', ->
+			new AdStack.Tooltip
+				element: this
+				boundingBox: '.row'
 
 	_bindPages: ->
 		# pricing page fixed header

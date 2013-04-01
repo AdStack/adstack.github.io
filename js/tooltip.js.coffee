@@ -58,10 +58,6 @@ class Tooltip
 		@$this.attr 'title', @$this.attr 'data-title'
 		delete this
 
-
-# DOM bindings
-
-$('.member [title]').on 'mouseover touchstart', ->
-	new Tooltip
-		element: this
-		boundingBox: '.row'
+# Assign Tooltip to AdStack namespace
+window.AdStack = window.AdStack or {}
+AdStack.Tooltip = Tooltip

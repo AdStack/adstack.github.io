@@ -46,7 +46,9 @@ Methods =
 		@$document.on 'click', '.signup', ( e ) ->
 			analytics.track 'signup-click'
 			AdStack.Modal
+
 				content: $( '#signup-form' ).html()
+
 				validate: ->
 					emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 					if @$modal.find( 'input[name="email"]' ).val().match emailRegex
@@ -54,6 +56,7 @@ Methods =
 					else
 						alert 'Please enter a valid email address.'
 						return false
+
 				init: ->
 					_this = this
 					if $( window ).width() >= 1080
@@ -69,6 +72,10 @@ Methods =
 
 		# tooltips
 		$('.member [title]').on 'mouseover touchstart', ->
+
+			analytics.track 'member-mouseover',
+				name: $(this).attr 'alt'
+
 			new AdStack.Tooltip
 				element: this
 				boundingBox: '.row'

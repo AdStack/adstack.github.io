@@ -64,21 +64,23 @@
 		opacity: 0.4; font-size: 1.4em;
 	}
 	h3 {
-		.cutoff; .alt-font;
-		letter-spacing: -0.03em;
-		font-weight: normal; font-size: 1.3em;
+		.cutoff;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		font-weight: normal; font-size: 1.25em;
 		margin: 0 0 0.2em; color: #fff;
 		padding: 0.1em;
 	}
 	p {
-		font-size: 1.1em; line-height: 1.5em;
+		font-size: 1.12em; line-height: 1.5em;
 		color: rgba(255,255,255,0.5);
 		padding-top: 1em; margin-top: 1em;
 		border-top: 1px rgba(255,255,255,0.2) solid;
 	}
 }
 #subsubfooter {
-	background-color: desaturate(darken(@blue-color, 40%), 36%);
+	@bg: desaturate(darken(@blue-color, 40%), 36%);
+	background-color: @bg;
 	padding-top: 3.5em;
 	[class^="col-"] { margin-bottom: 4.3em; }
 	h4 {
@@ -91,7 +93,7 @@
 		color: rgba(255,255,255,0.54);
 		margin: 0 @gutter-width;
 		span {
-			background-color: desaturate(darken(@blue-color, 40%), 36%);
+			background-color: @bg;
 			position: relative; top: -0.82em;
 			padding: 0 0.7em;
 		}

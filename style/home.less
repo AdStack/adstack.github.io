@@ -52,7 +52,7 @@
 }
 
 #subfooter {
-	background-color: desaturate(darken(@blue-color, 38%), 36%);
+	background-color: desaturate(darken(@blue-color, 34%), 36%);
 	[class^="col-"] { margin-bottom: 3.6em; }
 	hr {
 		height: 7px; opacity: 0.15;
@@ -68,24 +68,47 @@
 		margin: 0 0 0.2em; color: #fff;
 		padding: 0.1em;
 	}
-	h4 {
-		.clear;
-		height: 4px; border: 1px rgba(255,255,255,0.2) solid;
-		border-left: 0; border-right: 0;
-		text-align: center; font-size: 1em;
-		font-weight: normal;
-		text-transform: uppercase; letter-spacing: 0.02em;
-		color: rgba(255,255,255,0.6);
-		margin: 0 @gutter-width;
-		span {
-			background-color: #000; position: relative; top: -0.76em;
-			padding: 0 0.7em;
-		}
-	}
 	p {
 		font-size: 1.1em; line-height: 1.5em;
 		color: rgba(255,255,255,0.5);
 		padding-top: 1em; margin-top: 1em;
 		border-top: 1px rgba(255,255,255,0.2) solid;
+	}
+}
+#subsubfooter {
+	background-color: desaturate(darken(@blue-color, 40%), 36%);
+	padding-top: 3.5em;
+	[class^="col-"] { margin-bottom: 4.2em; }
+	h4 {
+		.clear; .alt-font;
+		height: 4px; border: 1px rgba(255,255,255,0.2) solid;
+		border-left: 0; border-right: 0;
+		text-align: center; font-size: 0.9em;
+		font-weight: normal;
+		text-transform: uppercase; letter-spacing: 0.04em;
+		color: rgba(255,255,255,0.54);
+		margin: 0 @gutter-width;
+		span {
+			background-color: desaturate(darken(@blue-color, 40%), 36%);
+			position: relative; top: -0.82em;
+			padding: 0 0.7em;
+		}
+	}
+	.logos {
+		.cf;
+		& > div {
+			margin-top: 1.76em;
+			&:nth-child(1) img { top: 0.68em; }
+			&:nth-child(2) img { width: 70%; }
+			&:nth-child(3) img { top: 0.58em; }
+			&:nth-child(4) img { top: 0.16em; width: 58%; }
+			&:nth-child(5) img { top: 0.46em; width: 66%; }
+			&:nth-child(6) img { top: 0.44em; }
+		}
+		img {
+			display: block; width: 100%;
+			position: relative; margin: auto;
+			opacity: 0.5;
+		}
 	}
 }

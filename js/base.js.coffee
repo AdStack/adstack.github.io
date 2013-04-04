@@ -119,6 +119,7 @@ Methods =
 			rowCount = [0..$( '.member-row' ).first().children().length - 1]
 
 			# cut off the blank one
+			$last = $members.eq(-1).clone()
 			$members = $members.not $members.eq -1
 
 			$clone = $members.clone()
@@ -136,6 +137,8 @@ Methods =
 				$this.empty()
 				for z in rowCount
 					$this.append $clone.eq randomArray[t * rowCount.length + z]
+
+			$( '.member-row' ).last().append $last
 
 
 window.AdStack = window.AdStack or {}

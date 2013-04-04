@@ -72,7 +72,7 @@ Methods =
 							_this.$modal.find('form').submit()
 
 		# tooltips
-		$('.member [title]').on 'mouseover touchstart', ->
+		$(document).on 'mouseover touchstart', '.member [title]', ->
 
 			analytics.track 'member-mouseover',
 				name: $(this).attr 'alt'

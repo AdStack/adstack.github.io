@@ -3,7 +3,7 @@
  */
 
 #feature {
-	background-color: lighten(@blue-color,4%);
+	background-color: lighten(@blue-color, 4%);
 	overflow: hidden;
 	.row {
 		padding-bottom: 6.8em;
@@ -11,7 +11,8 @@
 	h2 {
 		.alt-font;
 		font-weight: normal;
-		color: #fff; letter-spacing: -0.03em;
+		color: #fff;
+		letter-spacing: -0.03em;
 		margin: 1.8em 0 0.52em; font-size: 3.4em; line-height: 1.3em;
 		position: relative; z-index: 3;
 	}
@@ -53,7 +54,7 @@
 }
 
 #subfooter {
-	background-color: desaturate(darken(@blue-color, 34%), 36%);
+	background-color: desaturate(darken(@blue-color, 28%), 30%);
 	[class^="col-"] { margin-bottom: 3.6em; }
 	hr {
 		height: 7px; opacity: 0.15;
@@ -79,7 +80,7 @@
 	}
 }
 #subsubfooter {
-	@bg: desaturate(darken(@blue-color, 40%), 36%);
+	@bg: desaturate(darken(@blue-color, 36%), 36%);
 	background-color: @bg;
 	padding-top: 3.5em;
 	[class^="col-"] { margin-bottom: 4.3em; }
@@ -94,7 +95,7 @@
 		margin: 0 @gutter-width;
 		span {
 			background-color: @bg;
-			position: relative; top: -0.82em;
+			position: relative; top: -0.8em;
 			padding: 0 0.7em;
 		}
 	}

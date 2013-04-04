@@ -22,6 +22,7 @@ Methods =
 		@$dropdowns = $ '.dropdown'
 		@$pricingLabel = $ '#pricing-label'
 		@$pricing = $ '#pricing'
+		@$about = $ '#about'
 		@$productImages = $ '#product-images'
 
 	_bindEvents: ->
@@ -81,6 +82,7 @@ Methods =
 				boundingBox: '.row'
 
 	_bindPages: ->
+
 		# pricing page fixed header
 		if @$pricingLabel.length
 			headerPosition = 0
@@ -102,6 +104,7 @@ Methods =
 					$pricingLabel.removeClass 'fixed'
 					$pricing.css 'marginTop', 0
 			).trigger 'scroll'
+
 		# liveoptimizer page height ratio
 		if @$productImages.length
 			$imageContainer = @$productImages.find '.image-container'
@@ -109,6 +112,30 @@ Methods =
 				width = $imageContainer.width()
 				$imageContainer.css 'height', ( width * 0.204 ) + 'px'
 			).trigger 'resize'
+
+		# randomize team member order
+		if @$about.length
+			$members = $ '.member'
+			rowCount = [0..$( '.member-row' ).first().children().length - 1]
+
+			# cut off the blank one
+			$members = $members.not $members.eq -1
+
+			$clone = $members.clone()
+
+			# fisher-yates algorithm
+			randomArray = [0..$members.length - 1]
+			for i in randomArray
+				r = Math.floor Math.random() * $members.length
+				e = randomArray[i]
+				randomArray[i] = randomArray[r]
+				randomArray[r] = e
+
+			$( '.member-row' ).each (t) ->
+				$this = $ this
+				$this.empty()
+				for z in rowCount
+					$this.append $clone.eq randomArray[t * rowCount.length + z]
 
 
 window.AdStack = window.AdStack or {}

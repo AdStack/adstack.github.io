@@ -114,6 +114,7 @@ Methods =
 			).trigger 'resize'
 
 		# randomize team member order
+		###
 		if @$about.length
 			$members = $ '.member'
 			rowCount = [0..$( '.member-row' ).first().children().length - 1]
@@ -139,6 +140,7 @@ Methods =
 					$this.append $clone.eq randomArray[t * rowCount.length + z]
 
 			$( '.member-row' ).last().append $last
+		###
 
 
 window.AdStack = window.AdStack or {}

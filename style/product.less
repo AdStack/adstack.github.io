@@ -238,6 +238,13 @@
 			h3 { margin-left: 3.8em; }
 		}
 	}
+	.hiring {
+		position: absolute; z-index: 20;
+		bottom: 0; right: @gutter-width;
+		width: 240px; height: 80px; padding: 35px 0 0 43px;
+		color: desaturate(lighten(@blue-color, 14%), 4%);
+		a { text-decoration: underline; }
+	}
 }
 
 /* the point of no scaling */
@@ -247,7 +254,7 @@
 			width: 120%; height: auto;
 			margin-left: -10%; margin-right: -10%;
 		}
-		h2, .label, .overlay {
+		h2, .label, .overlay, .hiring {
 			display: none;
 		}
 	}

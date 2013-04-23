@@ -181,7 +181,7 @@
 #adstack-stack {
 	@img-top: -0.2em;
 	background-color: #547e9d;
-	position: relative;
+	position: relative; overflow: hidden;
 	.row { position: relative; }
 	h2 {
 		position: absolute; top: @img-top + 3.2em; left: 100% / 3;
@@ -191,7 +191,7 @@
 		color: lighten(@blue-color, 4%);
 	}
 	img {
-		display: block; margin: @img-top auto 0.2em;
+		display: block; margin: @img-top auto -0.6em;
 		height: 46em;
 	}
 	.overlay {
@@ -218,7 +218,37 @@
 		&.ui { top: @img-top + 7.8em; left: 0; }
 		&.eng { top: @img-top + 10.8em; left: 100% * 2 / 3; }
 		&.cdn { top: @img-top + 28.5em; left: 0; }
-		&.ppl { top: @img-top + 33.7em; left: 100% * 2 / 3; }
+		&.dev, &.geo, &.mob {
+			width: auto; left: 100% / 2;
+			h3 {
+				color: rgba(0, 0, 0, 0.24); background: none;
+			}
+		}
+		&.geo {
+			top: @img-top + 29.22em;
+			h3 { margin-left: 15.1em; }
+		}
+		&.dev {
+			top: @img-top + 33.7em;
+			h3 { margin-left: 8.8em; }
+		}
+		&.mob {
+			top: @img-top + 37.9em;
+			h3 { margin-left: 3.8em; }
+		}
+	}
+}
+
+/* the point of no scaling */
+@media only screen and (max-width: 936px) {
+	#adstack-stack {
+		img {
+			width: 120%; height: auto;
+			margin-left: -10%; margin-right: -10%;
+		}
+		h2, .label, .overlay {
+			display: none;
+		}
 	}
 }
 

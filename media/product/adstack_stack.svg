@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="462.81029"
-     inkscape:cy="175.50186"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="326.97538"
+     inkscape:cy="275.90409"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -727,6 +727,48 @@
          style="fill-rule:evenodd;stroke:#a6f091;stroke-width:1.0pt;fill:#a6f091"
          transform="scale(0.2) translate(7.4, 1)" />
     </marker>
+    <marker
+       inkscape:stockid="DotS0G"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotS0G-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path12816-9"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#a6f091;fill-rule:evenodd;stroke:#a6f091;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotSQ2"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotSQ2-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path12819-0"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#a6f091;fill-rule:evenodd;stroke:#a6f091;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="DotSuK"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotSuK-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path12813-0"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#a6f091;fill-rule:evenodd;stroke:#a6f091;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)" />
+    </marker>
   </defs>
   <metadata
      id="metadata7">
@@ -751,9 +793,7 @@
        width="800"
        height="600"
        x="0"
-       y="457.30154"
-       rx="4.3057704"
-       ry="2.5661001" />
+       y="452.36218" />
     <g
        id="g8298"
        transform="matrix(0.33793101,-0.23891723,0.33793101,0.23891723,-123.61,799.65621)"
@@ -1710,7 +1750,7 @@
     <path
        id="path8253"
        transform="translate(0,452.36218)"
-       style="fill:none;stroke:#68b952;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25490198;stroke-dasharray:none"
+       style="fill:none;stroke:#ffffff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.00392157;stroke-dasharray:none"
        d="M 400,86.842 596,324.194 400,462.766 204,324.194 400,86.842 l 0,375.9235"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />

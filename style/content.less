@@ -60,6 +60,18 @@ a:hover { outline: none; }
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 		background-color: @blue-color; color: #fff;
 	}
+	&.green {
+		background-color: lighten(@green-color, 34%);
+		border-bottom-color: desaturate(lighten(@green-color, 26%), 18%);
+		border-width: 2px;
+		color: desaturate(darken(@green-color, 20%), 24%);
+	}
+	&.dark-green {
+		background-color: desaturate(darken(@green-color, 4%), 24%);
+		border-bottom-color: desaturate(darken(@green-color, 16%), 24%);
+		border-width: 2px;
+		color: desaturate(lighten(@green-color, 32%), 16%);
+	}
 	&.yellow {
 		border-bottom-color: rgba(0, 0, 0, 0.12);
 		border-width: 2px;
@@ -88,16 +100,16 @@ a:hover { outline: none; }
 		color: lighten(@body-color, 22%);
 	}
 	.fleuron {
-		margin: 0.2em 0 0.8em;
+		margin: 0 0 0.82em;
 	}
 }
 
 .fleuron {
 	overflow: hidden; opacity: 0.16;
-	height: 4.2em; position: relative;
+	height: 3.2em; position: relative;
 	& > div {
 		position: absolute; top: 50%; left: 50%;
-		@spacing: 4em;
+		@spacing: 1.2em;
 		&:before, &:after {
 			content: " "; display: block;
 			position: absolute; top: -2px; left: @spacing;

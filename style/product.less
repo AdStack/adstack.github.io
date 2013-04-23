@@ -178,8 +178,52 @@
 	}
 }
 
+#adstack-stack {
+	@img-top: -0.2em;
+	background-color: #547e9d;
+	position: relative;
+	.row { position: relative; }
+	h2 {
+		position: absolute; top: @img-top + 3.2em; left: 100% / 3;
+		width: 100% / 3; text-align: center;
+		text-transform: uppercase; letter-spacing: 0.02em;
+		font-size: 1.25em; font-weight: normal;
+		color: lighten(@blue-color, 4%);
+	}
+	img {
+		display: block; margin: @img-top auto 0.2em;
+		height: 46em;
+	}
+	.overlay {
+		position: absolute; top: @img-top; left: 0;
+		width: 100%;
+		img {
+			margin: auto;
+		}
+	}
+	.label {
+		position: absolute; z-index: 10;
+		width: 100% / 3; padding: 0 @gutter-width;
+		h3 {
+			text-transform: uppercase; letter-spacing: 0.02em;
+			font-size: 1.25em; font-weight: normal;
+			color: #a6f091; background-color: #547e9d;
+			display: inline-block; padding: 0 0.8em;
+			margin-left: -0.8em;
+		}
+		p {
+			margin-top: 0.2em;
+			color: desaturate(lighten(@blue-color, 14%), 4%);
+		}
+		&.ui { top: @img-top + 7.8em; left: 0; }
+		&.eng { top: @img-top + 10.8em; left: 100% * 2 / 3; }
+		&.cdn { top: @img-top + 28.5em; left: 0; }
+		&.ppl { top: @img-top + 33.7em; left: 100% * 2 / 3; }
+	}
+}
+
 #product-subfeatures {
-	background-color: desaturate(darken(@blue-color, 28%), 32%);
+	background-color: desaturate(darken(@blue-color, 32%), 34%);
 	text-align: center; color: rgba(255,255,255,0.6);
 	.row {
 		padding: 3em 0 3.2em;

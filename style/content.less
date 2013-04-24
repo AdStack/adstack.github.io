@@ -88,10 +88,10 @@ a:hover { outline: none; }
 		background-color: darken(#fff, 8%);
 		.linear-gradient(darken(#fff, 12%),darken(#fff, 2%));
 	}
-	&.orange {
-		border-bottom-color: rgba(0, 0, 0, 0.12);
-		border-width: 2px;
-		background-color: @yellow-color; color: #151515;
+	&.clear {
+		color: rgba(0,0,0,0.36);
+		border: 2px rgba(0, 0, 0, 0.06) solid;
+		&:hover { color: rgba(0,0,0,0.48); }
 	}
 }
 
@@ -112,7 +112,7 @@ a:hover { outline: none; }
 	height: 3.2em; position: relative;
 	& > div {
 		position: absolute; top: 50%; left: 50%;
-		@spacing: 2.8em;
+		@spacing: 3.2em;
 		&:before, &:after {
 			content: " "; display: block;
 			position: absolute; top: -2px; left: @spacing;

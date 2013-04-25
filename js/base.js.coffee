@@ -52,11 +52,16 @@ Methods =
 
 				validate: ->
 					emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-					if @$modal.find( 'input[name="email"]' ).val().match emailRegex
-						return true
-					else
+					if !@$modal.find( 'input[name="name"]' ).val().length || !@$modal.find( 'input[name="name"]' ).val().match(/\ /g)
+						alert 'Please enter your full name.'
+						return false
+					if !@$modal.find( 'input[name="email"]' ).val().match emailRegex
 						alert 'Please enter a valid email address.'
 						return false
+					if !@$modal.find( 'input[name="company"]' ).val().length
+						alert 'Please enter your company.'
+						return false
+					true
 
 				init: ->
 					_this = this
@@ -67,8 +72,11 @@ Methods =
 						_this.close()
 					@$modal.find( '.send' ).on 'click', ->
 						if _this.params.validate.call _this
+							nameArray = _this.$modal.find( 'input[name="name"]' ).val().split(' ')
+							_this.$modal.find( 'input[name="first_name"]' )
+								.val( nameArray[0] )
 							_this.$modal.find( 'input[name="last_name"]' )
-								.val( _this.$modal.find( 'input[name="email"]' ).val() )
+								.val( nameArray[1] )
 							_this.$modal.find('form').submit()
 
 		# tooltips

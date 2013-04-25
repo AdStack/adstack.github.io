@@ -93,16 +93,12 @@
 	
 
 	// home
-	#icon-collage {
-		bottom: -1.4em; font-size: 1.07em;
-		.icon-presentation { right: 5.08em; top: -3.66em; }
-		.icon-phone { right: 4.06em; top: -2.1em; }
-		.icon-target-2 { font-size: 5em; right: 5em; top: -3.44em; }
-		.icon-envelope-2 { font-size: 6.2em; right: 5.04em; top: -2.06em; }
-	}
 	#feature {
 		text-align: center;
-		.row { padding-bottom: 1.6em; }
+		.row {
+			background-size: auto 170%;
+			& > div { margin-bottom: 2.7em; }
+		}
 		[class^="col-"] { padding: 0 @gutter-width / 2; }
 		h2 {
 			margin-top: 1.2em; font-size: 1.7em;
@@ -110,6 +106,7 @@
 		}
 		.cta {
 			font-size: 1.2em;
+			&.clear { display: none; }
 		}
 	}
 	#subsubfooter {

@@ -60,25 +60,26 @@ a:hover { outline: none; }
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 		background-color: @blue-color; color: #fff;
 	}
-	&.green {
+	&.light-green {
 		background-color: lighten(@green-color, 32%);
 		border-bottom-color: desaturate(lighten(@green-color, 26%), 18%);
 		border-width: 2px;
 		color: desaturate(darken(@green-color, 20%), 24%);
 		&:hover { background-color: lighten(@green-color, 34%); }
 	}
+	&.green {
+		background-color: saturate(lighten(@green-color, 10%), 4%);
+		border-bottom-color: lighten(@green-color, 2%);
+		border-width: 2px;
+		color: #fff;
+		&:hover { background-color: saturate(lighten(@green-color, 13%), 4%); }
+	}
 	&.dark-green {
-		background-color: desaturate(darken(@green-color, 4%), 24%);
-		border-bottom-color: desaturate(darken(@green-color, 16%), 24%);
+		background-color: desaturate(darken(@green-color, 4%), 18%);
+		border-bottom-color: desaturate(darken(@green-color, 16%), 18%);
 		border-width: 2px;
 		color: desaturate(lighten(@green-color, 32%), 8%);
-		&:hover { background-color: desaturate(@green-color, 24%); }
-	}
-	&.yellow {
-		border-bottom-color: rgba(0, 0, 0, 0.12);
-		border-width: 2px;
-		background-color: @yellow-color; color: #151515;
-		&:hover { background-color: lighten(@yellow-color, 8%); }
+		&:hover { background-color: desaturate(@green-color, 18%); }
 	}
 	&.grey {
 		border: 1px rgba(0, 0, 0, 0.1) solid;
@@ -90,8 +91,8 @@ a:hover { outline: none; }
 	}
 	&.clear {
 		color: rgba(0,0,0,0.36);
-		border: 2px rgba(0, 0, 0, 0.06) solid;
-		&:hover { color: rgba(0,0,0,0.48); }
+		border: 2px rgba(0, 0, 0, 0.08) solid;
+		&:hover { color: rgba(0,0,0,0.42); border-color: rgba(0, 0, 0, 0.12); }
 	}
 }
 

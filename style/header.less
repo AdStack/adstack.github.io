@@ -57,6 +57,13 @@
 				display: block; line-height: 1.3em;
 				content: "\2014"; font-weight: normal;
 			}
+			&.current {
+				color: lighten(@body-color, 25%);
+				&:hover {
+					border-bottom-color: lighten(@body-color, 40%);
+					&:before { color: lighten(@body-color, 40%); }
+				}
+			}
 		}
 		.link a { display: none; }
 		i {

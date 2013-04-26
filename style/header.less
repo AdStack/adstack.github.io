@@ -58,7 +58,9 @@
 				content: "\2014"; font-weight: normal;
 			}
 			&.current {
-				color: lighten(@body-color, 25%);
+				color: lighten(@body-color, 20%);
+				border-bottom-color: lighten(@body-color, 50%);
+				&:before { color: lighten(@body-color, 50%); }
 				&:hover {
 					border-bottom-color: lighten(@body-color, 40%);
 					&:before { color: lighten(@body-color, 40%); }

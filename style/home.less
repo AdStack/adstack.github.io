@@ -3,7 +3,7 @@
  */
 
 #feature {
-	background-color: lighten(@blue-color, 4%);
+	background-color: lighten(saturate(@blue-color, 4%), 4%);
 	overflow: hidden;
 	.row > div {
 		margin-bottom: 7.6em;
@@ -27,7 +27,7 @@
 }
 
 #subfooter {
-	background-color: desaturate(darken(@blue-color, 34%), 34%);
+	background-color: desaturate(darken(@blue-color, 34%), 30%);
 	[class^="col-"] { margin-bottom: 3.6em; }
 	hr {
 		height: 7px; opacity: 0.15;

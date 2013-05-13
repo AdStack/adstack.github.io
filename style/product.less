@@ -151,7 +151,7 @@
 }
 
 #product-features {
-	background-color: lighten(@blue-color, 4%);
+	background-color: lighten(saturate(@blue-color, 4%), 4%);
 	position: relative; z-index: 10;
 	.row {
 		padding-bottom: 3.8em;
@@ -188,7 +188,7 @@
 		width: 100% / 3; text-align: center;
 		text-transform: uppercase; letter-spacing: 0.02em;
 		font-size: 1.25em; font-weight: normal;
-		color: lighten(@blue-color, 4%);
+		color: lighten(saturate(@blue-color, 4%), 4%);
 	}
 	img {
 		display: block; margin: @img-top auto -0.6em;
@@ -214,7 +214,7 @@
 		}
 		p {
 			margin-top: 0.2em;
-			color: desaturate(lighten(@blue-color, 14%), 4%);
+			color: desaturate(lighten(@blue-color, 18%), 4%);
 		}
 		&.ui { top: @img-top + 10.5em; left: 0; }
 		&.eng { top: @img-top + 10.5em; left: 100% * 2 / 3; }

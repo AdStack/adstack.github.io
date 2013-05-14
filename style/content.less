@@ -45,6 +45,21 @@ body {
 			}
 		}
 	}
+	&.home {
+		#header {
+			background: lighten(saturate(@blue-color, 4%), 4%);
+			.top {
+				background: #fff;
+			}
+			.nav {
+				.col-2 > a, .link {
+					color: #fff;
+					border-color: rgba(255, 255, 255, 0.4);
+					&:before { color: rgba(255, 255, 255, 0.5); }
+				}
+			}
+		}
+	}
 }
 a:hover { outline: none; }
 

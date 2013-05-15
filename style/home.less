@@ -3,7 +3,7 @@
  */
 
 #feature {
-	background-color: lighten(saturate(@blue-color, 4%), 4%);
+	background-color: lighten(saturate(@blue-color, 8%), 36%);
 	overflow: hidden;
 	.row > div {
 		margin-bottom: 8em;
@@ -11,7 +11,7 @@
 	h2 {
 		.alt-font;
 		font-weight: normal;
-		color: #fff;
+		color: darken(desaturate(@blue-color, 28%), 30%);
 		letter-spacing: -0.014em;
 		margin: 2.4em 0 1.1em; font-size: 2.8em; line-height: 1.4em;
 		position: relative; z-index: 3;
@@ -21,7 +21,7 @@
 		font-weight: normal; text-transform: uppercase;
 		border-radius: 5px; padding: 0 0.7em;
 		position: relative; z-index: 3;
-		letter-spacing: 0.03em; margin-right: 0.4em;
+		letter-spacing: 0.05em; margin-right: 0.4em;
 		i { margin-left: 0.5em; position: relative; top: 0.12em; }
 	}
 }

@@ -1,10 +1,10 @@
 ---
 layout: single
-title: It's Been Ahwile, Let's Catch Up
+title: It's Been Awhile, Let's Catch Up
 ---
 It has been a busy and an exciting time for AdStack. The executive team has been attending events and expanding the team while engineering has made new strides in product design and development. In this month alone AdStack CEO, Evan Reiser, attended the Email Insider Summit on Amelia Island in Florida, two new hires were made and a new version of the AdStack app was launched.   
 
-On Saturday May 4th, Evan spoke on the “real-time inbox” panel at MediaPosts’ Email Insider Summit in Florida. Moderated by Alyssa Nahatis, Director of Deliverability at Neolane, the panel focused on the importance of using technology to make decisions in real-time to improve email engagement. Other panelists include Jordan Cohen, VP of Marketing at Movable Ink, Paige Henke, Manager of Digital CRM at Verizon Wireless and Geri Weltz, Director of Email Marketing at Beyond.com. The majority of the discussion focused on current technology opportunities, like AdStack, which allows email content to change based on end users interaction. Although marketers know this technology exists and has a proven ROI, adoption rates have been slow. To watch the panel discussion, [click here](https://www.youtube.com/watch?v=PX1nWiFzDBU).
+On Saturday May 4th, Evan spoke on the “real-time inbox” panel at MediaPosts’ Email Insider Summit in Florida. Moderated by Alyssa Nahatis, Director of Deliverability at Neolane, the panel focused on the importance of using technology to make decisions in real-time to improve email engagement. Other panelists included Jordan Cohen, VP of Marketing at Movable Ink, Paige Henke, Manager of Digital CRM at Verizon Wireless and Geri Weltz, Director of Email Marketing at Beyond.com. The majority of the discussion focused on current technology opportunities, like AdStack, which allows email content to change based on end users interaction. Although marketers know this technology exists and has a proven ROI, adoption rates have been slow. To watch the panel discussion, [click here](https://www.youtube.com/watch?v=PX1nWiFzDBU).
 
 ![Real-Time Inbox Panel](http://i.imgur.com/8CUbq17.png)
 

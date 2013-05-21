@@ -4,7 +4,7 @@ module.exports = function ( grunt ) {
 		uglify: {
 			dist: {
 				src: [ 'dist/adstack.js' ],
-				dest: 'dist/adstack.js'
+				dest: 'dist/adstack.min.js'
 			}
 		},
 		less: {

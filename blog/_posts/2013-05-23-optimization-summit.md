@@ -9,8 +9,8 @@ Featured speakers at the conference included Peter Doucette from The Boston Glob
 Dan sat down one-on-one with marketers and gave them the following tips to help with conversion optimization:
 
 * It is critical to build a large sales funnel. Email marketing campaigns can be a great way to acquire more customers and grow your funnel.
-* Make sure you A/B/n test everything in your email: test CTA’s, test hero images, test copy, test images above the fold, test images below the fold
-* Make sure you A/B/n test everything in your Landing pages: make the CTA clear, know your audience, make signups and checkouts simple and easy
+* Make sure you A/B/n test everything in your email: test CTA’s, test hero images, test copy, test images above the fold, test images below the fold.
+* Make sure you A/B/n test everything in your Landing pages: make the CTA clear, know your audience, make signups and checkouts simple and easy.
 * After you do all this, test, test, and test again! 
 
 If you need any help with conversion optimization don’t hesitate to contact us!

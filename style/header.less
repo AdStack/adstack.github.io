@@ -1,14 +1,13 @@
-/*
+/**
  *  Header
  */
-
 #header {
 	background-color: #fff;
 	.row {
 		padding-top: 0.76em;
 	}
 	h1 {
-		color: @black-color; letter-spacing: -0.02em;
+		letter-spacing: -0.02em;
 		font-size: 2.8em; padding-bottom: 0.2em; line-height: 1.28em;
 		.button {
 			position: absolute; top: 0.62em; right: @gutter-width;
@@ -110,6 +109,6 @@
 
 body.no-svg {
 	#logo {
-		background-image: none; color: @black-color;
+		background-image: none; color: lighten(@black-color, 16%);
 	}
 }

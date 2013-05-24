@@ -1,6 +1,7 @@
 ---
 layout: single
 title: It's Been Awhile, Let's Catch Up
+author: Lauren Keeley
 ---
 It has been a busy and an exciting time for AdStack. The executive team has been attending events and expanding the team while engineering has made new strides in product design and development. In this month alone AdStack CEO, Evan Reiser, attended the Email Insider Summit on Amelia Island in Florida, two new hires were made and a new version of the AdStack app was launched.   
 

@@ -1,8 +1,9 @@
 ---
 layout: single
-title: AdStack Sponsored the Optimization Summit 2013!
+title: We Sponsored the Optimization Summit 2013!
+author: Lauren Keeley
 ---
-This week AdStack traveled to the [Optimization Summit 2013](http://www.meclabs.com/training/marketing-summit/optimization-summit-2013/overview)in Boston where our COO, Dan Quintero coached a few sessions on conversion optimization. The Optimization Summit, organized by Marketing Sherpa, is a conference where marketers gather to learn, test, analyze and optimize their entire online marketing funnel. During the four days of hands-on training marketers learned how to create an optimization project plan, how to optimize web assets for more conversions, how to communicate clear and consistent values across all marketing channels and how to test long-term success. 
+This week AdStack traveled to the [Optimization Summit 2013](http://www.meclabs.com/training/marketing-summit/optimization-summit-2013/overview) in Boston where our COO, Dan Quintero coached a few sessions on conversion optimization. The Optimization Summit, organized by Marketing Sherpa, is a conference where marketers gather to learn, test, analyze and optimize their entire online marketing funnel. During the four days of hands-on training marketers learned how to create an optimization project plan, how to optimize web assets for more conversions, how to communicate clear and consistent values across all marketing channels and how to test long-term success. 
 
 Featured speakers at the conference included Peter Doucette from The Boston Globe, Toby Fallsgraff and Amelia Showalter from Obama for America and Shawn Burns from SAP. In addition to speakers, the optimization summit has hands-on sessions and coaching clinics. AdStack’s very own COO participated and conducted daily coaching sessions educating marketers on how to optimize email campaigns for more conversions. 
 

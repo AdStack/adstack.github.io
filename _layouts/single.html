@@ -9,7 +9,8 @@
 		<div class="col-8">
 			<h2>{{ page.date | date: "%e %B %Y" }}</h2>
 			{{ content }}
-			{% if page.author %}<p>&mdash; {{ page.author }}</p>{% endif %}
+			{% if page.author %}<p class="date">&mdash; {{ page.author }}</p>{% endif %}
+			<div id="disqus_thread"></div>
 			<script>
 				var disqus_shortname = 'adstack';
 				(function() {

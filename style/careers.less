@@ -12,8 +12,8 @@
 		font-size: 1.2em; line-height: 1.4em;
 		margin-bottom: 0.6em;
 		span {
-			font-weight: normal; float: right;
-			color: lighten(@body-color,60%);
+			font-weight: normal; margin-left: 1.2em;
+			color: lighten(@body-color, 50%);
 			display: inline-block; font-size: 0.8em;
 		}
 	}
@@ -23,9 +23,6 @@
 		height: @gutter-width;
 		border-bottom: 1px darken(@white-color,8%) dotted;
 		margin-bottom: @gutter-width;
-	}
-	[class^="col-"]:nth-of-type(1) {
-		h3, p { margin-right: @gutter-width / 2; }
 	}
 	.tags {
 		margin: -0.2em 0 0.5em;

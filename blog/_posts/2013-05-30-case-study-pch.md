@@ -1,6 +1,7 @@
 ---
 layout: single
-title: Case Study- AdStack and Publisher Clearing House
+title: Case Study: Publishers Clearing House
+author: Lauren Keeley 
 ---
 Publishers Clearing House, a well-known direct marketer, provides sweepstakes for customers hoping to win millions of dollars. Email marketing, an important channel for the company, helps PCH build marketing lists and spread the word about their sweepstakes.  PCH typically partners with online publishers who have strong loyal audiences. This way they can to tap into these publishers email lists to help promote their sweepstakes and connect winners with large cash prizes. 
 
@@ -10,4 +11,4 @@ Vicky decided to use LiveOptimizer because of AdStack’s guarantee. When Vicky 
 
 For PCH AdStack ran automatic tests, selected the winners and displayed an optimized email to each subscriber without effort from the team. Once subscribers began opening emails, the system instantly used device, browser and location data to identify optimal image content and deliver it in real time. AdStack was able to increase the average clickthrough rate of PCH’s emails by 33.9% helping them to earn more than 612,000 additional clicks. 
 
-To read about the case study in more detail, please download the white paper here.  
+Read morea bout the Publishers Clearing House case study in our white paper.  

@@ -11,4 +11,4 @@ Vicky decided to use LiveOptimizer because of AdStack’s guarantee. When Vicky 
 
 For PCH AdStack ran automatic tests, selected the winners and displayed an optimized email to each subscriber without effort from the team. Once subscribers began opening emails, the system instantly used device, browser and location data to identify optimal image content and deliver it in real time. AdStack was able to increase the average clickthrough rate of PCH’s emails by 33.9% helping them to earn more than 612,000 additional clicks. 
 
-Read more about the Publishers Clearing House case study in our [white paper (pdf)](/media/case_study_pch.pdf).  
+Read more about the Publishers Clearing House case study in our [white paper (pdf)](mailto:sales@adstack.com?subject=PCH%20Case%20Study).  

@@ -14,7 +14,7 @@
 	}
 }
 
-.signup-form {
+.signup-form, .mailto-form {
 	width: 560px; padding: @gutter-width;
 	@input-height: 2em;
 	label, input, textarea {
@@ -62,5 +62,20 @@
 		.button {
 			float: right; margin-left: @gutter-width - 5px;
 		}
+	}
+}
+
+.mailto-form {
+	& > p {
+		margin: 0 -@gutter-width @gutter-width;
+		padding: 0 @gutter-width @gutter-width;
+		border-bottom: 1px darken(@white-color, 8%) solid;
+		color: lighten(@body-color, 30%);
+	}
+	input {
+		border-style: dotted;
+	}
+	hr {
+		height: @gutter-width;
 	}
 }

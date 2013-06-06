@@ -27,6 +27,7 @@ Methods =
 
 	_bindEvents: ->
 		_this = this
+		_emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 		# suppress blank hash links
 		@$document.on 'click', 'a[href="#"]', ( e ) ->
@@ -43,6 +44,34 @@ Methods =
 		@$document.on 'click', ->
 			$dropdowns.removeClass 'open'
 
+		# mailto form
+		@$document.on 'click', 'a[href^="#mailto:"]', ( e ) ->
+			analytics.track 'mailto-click'
+			subject = decodeURIComponent( $( this ).attr( 'href' ).split( '?' )[ 1 ] )
+				.split( '=' )[ 1 ]
+
+			AdStack.Modal
+
+				content: $( '#mailto-form' ).html()
+
+				validate: ->
+					if !@$modal.find('input[name="email"]').val().match _emailRegex
+						alert 'Please enter a valid email address.'
+						return false
+					true
+
+				init: ->
+					_this = this
+					if $( window ).width() >= 1080
+						@$modal.find( 'input[type="text"]' ).first().focus()
+						@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
+						@$modal.find( '.cancel' ).on 'click', ->
+							_this.close()
+						@$modal.find( '.send' ).on 'click', ->
+							if _this.params.validate.call _this
+								_this.$modal.find('input[name="company"]').val(subject)
+								_this.$modal.find('form').submit()
+
 		# signup popup
 		@$document.on 'click', '.signup', ( e ) ->
 			analytics.track 'signup-click'
@@ -51,11 +80,10 @@ Methods =
 				content: $( '#signup-form' ).html()
 
 				validate: ->
-					emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 					if !@$modal.find( 'input[name="name"]' ).val().length || !@$modal.find( 'input[name="name"]' ).val().match(/\ /g)
 						alert 'Please enter your full name.'
 						return false
-					if !@$modal.find( 'input[name="email"]' ).val().match emailRegex
+					if !@$modal.find( 'input[name="email"]' ).val().match _emailRegex
 						alert 'Please enter a valid email address.'
 						return false
 					if !@$modal.find( 'input[name="company"]' ).val().length

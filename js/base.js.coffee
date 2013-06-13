@@ -46,6 +46,7 @@ Methods =
 
 		# mailto form
 		@$document.on 'click', 'a[href^="#mailto:"]', ( e ) ->
+			e.preventDefault()
 			analytics.track 'mailto-click'
 			subject = decodeURIComponent( $( this ).attr( 'href' ).split( '?' )[ 1 ] )
 				.split( '=' )[ 1 ]

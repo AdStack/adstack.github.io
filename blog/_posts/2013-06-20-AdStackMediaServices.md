@@ -1,9 +1,9 @@
 ---
-layout: Did you know that AdStack is more than an email technology company? We provide media services too!
+layout: Did you know that AdStack is more than just an email technology company? We provide media services too!
 author: Lauren Keeley
 ---
 
-While most have heard of AdStack’s LiveOptimizer product, the tool that lets marketers optimize email’s after they’ve been sent, AdStack also provides media services to help client’s acquire more users. Whether you are looking for someone to think of a creative email marketing campaign, need help building optimized emails and landing pages or just want to be connected to premium publishers; AdStack provides end-to-end full email marketing services. 
+While most have heard of AdStack’s LiveOptimizer product, the tool that lets marketers optimize emails after they’ve been sent, AdStack also provides media services to help clients acquire more users. Whether you are looking for someone to think of a creative email marketing campaign, need help building optimized emails and landing pages or just want to be connected to premium publishers; AdStack provides end-to-end full email marketing services. 
 
 Please find a summary below of all the services we offer our clients:
 
@@ -17,6 +17,6 @@ We have a seasoned team of email experts with over 6 years of experience in emai
 
 User Acquisition Through Premium Publishers Dedicated Email Blasts
 
-Dedicated email blasts are a great way to drive user acquisition. AdStack has pre-existing relationships with hundreds of premium online publishers that have available dedicated email blasts for purchase. Send us the details of your campaign and we will send you a curated site list with competitive pricing options.  Sending dedicated email blasts has extremely high performance in comparison to other digital media, out ranking standard display and rich media. 
+Dedicated email blasts are a great way to drive user acquisition. AdStack has pre-existing relationships with hundreds of premium online publishers that have available dedicated email blasts for purchase. Send us the details of your campaign and we will send you a curated site list with competitive pricing options.  Sending dedicated email blasts are a great way to get extremely high performance on your current campaigns. In comparison to other digital media, email out ranks standard display and rich media in performance. 
 
 If you are interested in any of the services that AdStack provides please contact us at lauren@adstack.com. 

@@ -1,10 +1,11 @@
-<div id="header">
+<div id="header"{% if page.title == 'AdStack' %} class="home"{% endif %}>
 	<div class="row">
 		<h1 class="col-12">
 			<a href="/" id="logo">AdStack</a>
 			<span class="button clear signup">Sign Up</span>
 			<a href="https://app.adstack.com/" class="button clear login"><i class="icon-key"></i>Log In</a>
 		</h1>
+		{% if page.title != 'AdStack' %}
 		<hr>
 		<div class="nav">
 			<!--<div class="col-2">
@@ -33,5 +34,6 @@
 				<a href="/contact/"{% if page.title == 'Contact' %} class="current"{% endif %}>Contact</a>
 			</div>
 		</div>
+		{% endif %}
 	</div>
 </div>

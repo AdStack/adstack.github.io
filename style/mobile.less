@@ -20,7 +20,9 @@
 		border-bottom: 1px #ddd solid;
 		.button.signup { display: none; }
 		.nav { display: none; }
-		.row { padding-top: 0.76em; }
+		.row {
+			padding-top: 0.76em;
+		}
 		h1 {
 			font-size: 2.2em;
 			margin-bottom: 0.2em;
@@ -30,6 +32,9 @@
 			}
 		}
 		hr { display: none; }
+		&.home {
+			.row { padding-bottom: 0.1em; }
+		}
 	}
 	#subfooter {
 		[class^="col-"] {

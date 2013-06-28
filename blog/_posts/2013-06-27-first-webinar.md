@@ -1,6 +1,6 @@
 ---
 layout: single
-title: AdStack to host its first Webinar! 9:30am PST Tuesday, July 16th
+title: We Are Hosting Our First Webinar!
 author: Lauren Keeley
 ---
 

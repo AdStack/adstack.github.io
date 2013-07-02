@@ -4,6 +4,10 @@
 
 @media only screen and (max-width: 760px) {
 	.row { min-width: 320px; }
+	html, body {
+		font-size: @body-size - 2px;
+		line-height: 1.5em;
+	}
 	body.light {
 		#logo { opacity: 1; }
 		#header .button { color: @body-color; }
@@ -42,7 +46,7 @@
 			margin-bottom: 2.2em;
 		}
 		hr {
-			margin-bottom: 0.7em;
+			margin-bottom: 1.1em;
 		}
 		h3 {
 			font-size: 1.4em;
@@ -266,6 +270,27 @@
 	}
 	#product-images {
 		.image-container .image .label { display: none; }
+	}
+	#how-to {
+		h2 {
+			padding-left: @gutter-width;
+			padding-right: @gutter-width;
+		}
+		i {
+			padding: 0;
+		}
+		.row:before {
+			display: none;
+		}
+		.container {
+			padding-bottom: 0.8em;
+			margin-bottom: @gutter-width;
+		}
+		.row [class^="col-"] {
+			width: 50%;
+			padding: 0 @gutter-width;
+			margin-bottom: 2.2em;
+		}
 	}
 	#product-features {
 		.row { padding-bottom: 0; }

@@ -105,6 +105,7 @@
 }
 
 #subheader {
+	text-align: center;
 	&.product {
 		padding-top: 2.2em;
 		h3 {
@@ -116,6 +117,17 @@
 			width: 100% * 2 / 3;
 		}
 	}
+	.button {
+		text-transform: uppercase;
+		font-weight: normal;
+		letter-spacing: 0.06em;
+		font-size: 4em / 3;
+		margin: 1.2em auto 0;
+		i {
+			position: relative;
+			top: 0.1em;
+		}
+	}
 }
 
 #product-images {
@@ -123,7 +135,10 @@
 		height: 15.4em;
 		.image {
 			display: block; position: absolute; bottom: 0;
-			img { display: block; width: 100%; height: auto; }
+			img {
+				display: block; width: 100%; height: auto;
+				opacity: 0.85;
+			}
 			.label {
 				position: absolute; width: 100%; bottom: 100%; left: 0;
 				white-space: nowrap;
@@ -139,13 +154,67 @@
 						em { font-style: normal; }
 					}
 				}
+				&.disabled {
+					opacity: 3 / 5;
+					span:nth-of-type(2) strong { color: @red-color; }
+				}
 			}
-			&:nth-of-type(1) { bottom: -9%; left: @gutter-width; width: 15%; background-color: spin(darken(@yellow-color, 30%), -4%); }
-			&:nth-of-type(2) { bottom: -3%; left: 11%; width: 22%; background-color: spin(lighten(@blue-color, 30%), -2%); }
+			&:nth-of-type(1) { bottom: -11%; left: @gutter-width; width: 15%; background-color: spin(lighten(@yellow-color, 20%), 34%); }
+			&:nth-of-type(2) { bottom: -4%; left: 11%; width: 22%; background-color: spin(lighten(@blue-color, 30%), -2%); }
 			&:nth-of-type(3) { bottom: -4%; left: 28%; width: 18%; background-color: spin(lighten(@blue-color, 10%), 20%); }
-			&:nth-of-type(4) { bottom: -6%; left: 42%; width: 26%; background-color: spin(lighten(@blue-color, 20%), -6%); }
-			&:nth-of-type(5) { bottom: -1%; left: 65%; width: 22%; z-index: 1; background-color: spin(lighten(@yellow-color, 4%), -10%); }
-			&:nth-of-type(6) { bottom: -8%; right: @gutter-width; width: 16%; z-index: 2; background-color: spin(lighten(@blue-color, 10%), 36%); }
+			&:nth-of-type(4) { bottom: -5%; left: 42%; width: 26%; background-color: spin(lighten(@blue-color, 20%), -6%); }
+			&:nth-of-type(5) { bottom: -1%; left: 65%; width: 20%; z-index: 1; background-color: spin(lighten(@blue-color, 10%), 36%); }
+			&:nth-of-type(6) { bottom: -4%; right: @gutter-width; width: 16%; z-index: 2; background-color: spin(lighten(@yellow-color, 4%), -10%); }
+		}
+	}
+}
+
+#how-to {
+	@bg: lighten(saturate(@blue-color, 8%), 8%);
+	background-color: lighten(saturate(@blue-color, 4%), 4%);
+	position: relative; z-index: 10;
+	text-align: center;
+	h2 {
+		font-size: 5em / 4;
+		line-height: 1.5em;
+		color: rgba(255, 255, 255, 3 / 4);
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		padding: 2em 0 1.5em;
+	}
+	i {
+		background-color: @bg;
+		font-size: 4em;
+		padding: 0 0.52em;
+		text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+		&.icon-envelope-2 { color: lighten(desaturate(@yellow-color, 52%), 18%); }
+		&.icon-pictures { color: lighten(desaturate(spin(@blue-color, -20%), 12%), 24%); }
+		&.icon-target-2 { color: lighten(desaturate(spin(@red-color, 12%), 16%), 24%); }
+		&.icon-checkmark-circle { color: lighten(desaturate(@green-color, 12%), 24%); }
+	}
+	p {
+		margin: 1em 0 0;
+		color: rgba(0, 0, 0, 0.44);
+	}
+	.container {
+		.cf;
+		margin: 0 @gutter-width 4.8em;
+		background-color: @bg;
+		padding-bottom: 3em;
+		border-radius: 0.3em;
+	}
+	.row {
+		[class^="col-"] {
+			padding: 0 @gutter-width * 2;
+		}
+		&:before {
+			.funnel;
+			opacity: 1 / 2;
+			content: ' '; display: block;
+			position: absolute;
+			left: 100% / 8; top: 8em;
+			width: 100% * 3 / 4; height: 7px;
 		}
 	}
 }
@@ -166,13 +235,13 @@
 	}
 	h3 {
 		.cutoff; text-transform: uppercase;
-		font-size: 1.25em; font-weight: normal;
+		font-size: 5em / 4; font-weight: normal;
 		margin: 0 0 0.2em; color: #fff;
 		padding: 0.1em 0 0 0.03em;
-		letter-spacing: 0.02em;
+		letter-spacing: 0.06em;
 	}
 	p {
-		color: rgba(0,0,0,0.52);
+		color: rgba(0,0,0,0.5);
 		padding-top: 1em; margin-top: 1em;
 		border-top: 1px rgba(255,255,255,0.2) solid;
 	}
@@ -186,7 +255,7 @@
 	h2 {
 		position: absolute; top: @img-top + 6em; left: 100% / 3;
 		width: 100% / 3; text-align: center;
-		text-transform: uppercase; letter-spacing: 0.02em;
+		text-transform: uppercase; letter-spacing: 0.06em;
 		font-size: 1.25em; font-weight: normal;
 		color: lighten(saturate(@blue-color, 4%), 4%);
 	}
@@ -205,7 +274,7 @@
 		position: absolute; z-index: 10;
 		width: 100% / 3; padding: 0 @gutter-width;
 		h3 {
-			text-transform: uppercase; letter-spacing: 0.03em;
+			text-transform: uppercase; letter-spacing: 0.06em;
 			font-size: 1.25em; font-weight: normal;
 			line-height: 1.5em;
 			color: #a6f091; background-color: #547e9d;

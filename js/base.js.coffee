@@ -147,7 +147,7 @@ Methods =
 			$imageContainer = @$productImages.find '.image-container'
 			$( window ).on( 'resize', ->
 				width = $imageContainer.width()
-				$imageContainer.css 'height', ( width * 0.204 ) + 'px'
+				$imageContainer.css 'height', ( width * 0.21 ) + 'px'
 			).trigger 'resize'
 
 		# randomize team member order

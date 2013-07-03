@@ -2,31 +2,18 @@
  *  Contact
  */
 
-#contact, #about, #careers, #blog {
-	max-width: @max-width; margin: auto;
-	a {
-		color: darken(@blue-color,4%);
-		float: right;
-		&:hover { text-decoration: underline; }
-	}
+#contact {
 	.row {
-		display: table; width: 100%;
-		background-color: #fff;
 		border-radius: 5px 5px 0 0;
-	}
-	h2 {
-		.alt-font; font-weight: normal; letter-spacing: -0.02em;
-		font-size: 1.3em; line-height: 1.2em;
-		padding: 0 @gutter-width @gutter-width;
-		margin: 0 -@gutter-width @gutter-width;
-		border-bottom: 1px darken(@white-color,8%) solid;
+		border-bottom: 0;
 	}
 	[class^="col-"] {
-		.cf;
-		display: table-cell; height: 100%; float: none;
-		border-left: 1px darken(@white-color,8%) solid;
-		padding: @gutter-width @gutter-width @gutter-width * 2;
-		&:first-of-type { border-left: 0; }
+		background-color: #fff;
+		p, ul, ol { color: @black-color; }
+		h2 { color: @black-color; }
+	}
+	a {
+		float: right;
 	}
 	.contact p {
 		.cutoff;
@@ -50,12 +37,8 @@
 		&:first-of-type { padding-right: @gutter-width / 2; }
 		&:last-of-type { padding-left: @gutter-width / 2; }
 	}
-	i {
-		position: relative; margin-right: 0.4em; top: 0.03em;
-		&.icon-envelope { top: 0.1em; margin-right: 0.6em; }
-		&.icon-location { top: 0.1em; margin-right: 0.3em; }
-	}
 }
+
 #map {
 	margin-bottom: 1.3em;
 	.row {

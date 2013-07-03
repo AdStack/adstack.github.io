@@ -1,0 +1,97 @@
+#email-dsp {
+	@border-color: darken(@white-color,8%);
+	color: lighten(@body-color,20%);
+	margin-bottom: 1.2em;
+	.row {
+		margin-top: @gutter-width;
+		overflow: hidden;
+	}
+	[class^="col-"] {
+		&:nth-of-type(1) {
+			& > h1 {
+				.alt-font; font-size: 3.4em; line-height: 1.4em;
+				font-weight: normal;
+				color: lighten(@body-color,25%);
+				.cutoff;
+			}
+			& > h2 {
+				.alt-font; font-size: 1.52em; line-height: 1.4em;
+				font-weight: normal; font-style: italic;
+				color: darken(@white-color,20%);
+				.cutoff;
+			}
+		}
+	}
+	.box {
+		margin-top: 1.5em;
+		h3 {
+			color: lighten(@body-color,25%);
+			font-weight: normal; font-size: 1em;
+			line-height: 1.5em; padding: 1em 0 0;
+			margin-bottom: 1em;
+			border-top: 1px darken(@border-color,6%) dotted;
+			height: 4.3em; overflow: hidden;
+			i {
+				color: lighten(@body-color,70%);
+				float: left; font-size: 2.6em; line-height: 1.4em;
+				margin-right: 0.3em;
+			}
+		}
+		.button {
+			width: 100%; padding: 0;
+			margin: 0.3em 0 0;
+			font-weight: normal; font-size: 1.3em;
+			text-transform: uppercase; text-align: center;
+			line-height: 2.6em; letter-spacing: 0.03em;
+			i { position: relative; top: 0.12em; margin-left: 0.3em; }
+		}
+	}
+	.publisher-box {
+		color: lighten(@body-color,35%);
+		border-radius: 5px; border-bottom: 2px @border-color solid;
+		overflow: auto; height: 34.4em;
+		.publisher, .header {
+			.cf;
+			background-color: #fff; border-bottom: 1px @border-color dotted;
+			& > div {
+				float: left;
+				padding: @gutter-width - 3px @gutter-width @gutter-width - 5px;
+				border-right: 1px @border-color solid;
+				&:nth-of-type(1) {
+					width: 72%;
+					h4 { font-weight: bold; }
+				}
+				&:nth-of-type(2), &:nth-of-type(3) {
+					width: 14%; text-align: center; padding-left: 0; padding-right: 0;
+				}
+				&:last-of-type { border-right: 0; }
+			}
+			img {
+				float: left; width: 3em; height: 3em;
+				border-radius: 3px; margin-right: 0.8em;
+				border: 1px @border-color solid;
+				padding: 3px;
+			}
+			h4 {
+				font-size: 1.1em; line-height: 1.4em; color: @body-color;
+				font-weight: normal;
+			}
+			.button {
+				position: relative; top: 0.56em; margin: -1em 0 0;
+				font-weight: bold; line-height: 1em;
+				font-size: 1.4em; padding: 0.3em 0.7em 0.4em;
+			}
+			&:last-of-type { border-bottom: 0; }
+		}
+		.header {
+			.alt-font; color: @body-color;
+			border-bottom-style: solid;
+		}
+	}
+}
+
+#email-dsp-bg {
+	position: absolute; top: 0; left: 0; z-index: -1;
+	background-color: @white-color;
+	width: 100%; height: 21.8em;
+}

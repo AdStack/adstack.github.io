@@ -1,0 +1,45 @@
+#countdown-timer-features {
+	@bg: desaturate(darken(@blue-color, 32%), 34%);
+	position: relative;
+	background-color: @bg;
+	padding: 3em 0 5em;
+	h2 {
+		color: rgba(255, 255, 255, 3 / 4);
+		font-size: 5em / 4;
+		font-weight: normal;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		margin: 0 0 2em;
+		position: relative;
+		overflow: hidden;
+		span {
+			position: relative; z-index: 10;
+			background-color: @bg;
+			padding: 0 0.8em;
+		}
+		&:before {
+			display: block; content: ' ';
+			position: absolute; z-index: 0;
+			top: 0.52em; left: 0;
+			width: 100%; height: 2px;
+			border: 1px rgba(255, 255, 255, 1/4) solid;
+			border-left: 0; border-right: 0;
+		}
+	}
+	h3 {
+		font-size: 5em / 4;
+		color: rgba(255, 255, 255, 3 / 4);
+	}
+	i {
+		color: rgba(255, 255, 255, 1 / 4);
+		font-size: 6.5em;
+		float: left;
+		margin: 0 0.3em 0 0;
+		&.icon-money-bag { margin: 0 0.1em 0 0; }
+	}
+	p {
+		margin: 0.4em 0 0;
+		color: rgba(255, 255, 255, 1 / 2);
+	}
+}

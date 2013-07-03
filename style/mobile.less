@@ -89,7 +89,7 @@
 			h1 { font-size: 1.8em !important; }
 			h3 { width: 100%; }
 		}
-		&.product:not(.liveshots) {
+		&.product:not(.liveshots):not(.countdown-timer) {
 			padding-top: 0;
 			.button { display: none; }
 		}
@@ -311,14 +311,21 @@
 			padding: 0 @gutter-width 2em;
 		}
 	}
-	#liveshots-features {
+	#liveshots-features, #countdown-timer-features {
 		h2 {
 			margin-bottom: 0.4em;
 			&:before { display: none; }
 		}
-		[class^="col-"] {
+		.col-3 {
 			width: 100% / 2;
 			margin-top: 3em;
+		}
+		.col-6 {
+			width: 100%;
+			margin-top: 3em;
+			i {
+				margin: 0 0.2em 0 0;
+			}
 		}
 	}
 

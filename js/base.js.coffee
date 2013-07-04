@@ -75,8 +75,10 @@ Methods =
 
 		# signup popup
 		@$document.on 'click', '.signup', ( e ) ->
+
 			analytics.track 'signup-click',
 				page: window.location.href
+
 			AdStack.Modal
 
 				content: $( '#signup-form' ).html()

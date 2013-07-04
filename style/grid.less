@@ -3,13 +3,14 @@
  */
 
 @max-width: 1260px;
-@min-width: 1080px;
+@tablet-width: 1080px;
+@mobile-width: 760px;
 @gutter-width: 20px;
 @columns: 12;
 
 .row {
 	.cf; position: relative; margin: auto;
-	max-width: @max-width; min-width: @min-width;
+	max-width: @max-width;
 }
 
 [class^="col-"] {
@@ -19,8 +20,7 @@
 }
 
 .grid(@index) when (@index > 0) {
-	(~".col-@{index}") { width: ( 100% / @columns ) * @index; }
+	.col-@{index} { width: ( 100% / @columns ) * @index; }
 	.grid(@index - 1);
 }
-.grid(0) {}
 .grid(@columns);

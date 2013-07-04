@@ -2,19 +2,9 @@
  *  Tablet layout
  */
 
-@media only screen and (max-width:1080px) {
-	html, body {
-		font-size: @body-size - 2px;
-		line-height: 1.5em;
-	}
+@media only screen and (max-width: @tablet-width) {
 	#header {
 		h1 .button { top: 0.34em; }
-	}
-
-	#feature {
-		.row {
-			background-size: auto 166%;
-		}
 	}
 	
 	.fleuron {
@@ -26,7 +16,7 @@
 	}
 	
 	.row {
-		min-width: 760px;
+		min-width: @mobile-width;
 	}
 	#about, #careers, #contact, #pricing-label, #map, #pricing, #live-optimizer, #blog, #thanks {
 		.row { border-radius: 0; }

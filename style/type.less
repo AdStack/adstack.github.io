@@ -13,3 +13,18 @@ html, body {
 	line-height: 1.5em;
 }
 a { color: inherit; text-decoration: inherit; }
+
+.scale-size(@width) when (@width > @mobile-width) {
+	@size: round(@body-size * @width / @max-width, 1);
+	@last-size: round(@body-size * (@width + 1) / @max-width, 1);
+	.set-size(@size) when (@size < @last-size) {
+		@media screen and (~"max-width: @{width}") {
+			body {
+				font-size: @size;
+			}
+		}
+	}
+	.set-size(@size);
+	.scale-size(@width - 1);
+}
+.scale-size(@max-width);

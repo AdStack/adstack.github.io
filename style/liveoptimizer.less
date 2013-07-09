@@ -3,6 +3,7 @@
 }
 
 #subheader {
+	@letter-spacing: 0.04em;
 	&.product {
 		padding: 2em 0 1em;
 		text-align: center;
@@ -44,7 +45,7 @@
 		//float: right;
 		text-transform: uppercase;
 		font-weight: normal;
-		letter-spacing: 0.06em;
+		letter-spacing: @letter-spacing;
 		line-height: 2.6em;
 		font-size: 1.1em;
 		//margin: 1.3em 0 0 1.8em;
@@ -98,6 +99,7 @@
 }
 
 #how-to {
+	@letter-spacing: 0.04em;
 	@bg: lighten(saturate(@blue-color, 8%), 8%);
 	background-color: lighten(saturate(@blue-color, 4%), 4%);
 	position: relative; z-index: 10;
@@ -108,7 +110,7 @@
 		color: rgba(255, 255, 255, 3 / 4);
 		font-weight: normal;
 		text-transform: uppercase;
-		letter-spacing: 0.06em;
+		letter-spacing: @letter-spacing;
 		padding: 2.2em 0 1.8em;
 	}
 	i {
@@ -148,6 +150,7 @@
 }
 
 #product-features {
+	@letter-spacing: 0.04em;
 	background-color: lighten(saturate(@blue-color, 4%), 4%);
 	position: relative; z-index: 10;
 	.row {
@@ -166,7 +169,7 @@
 		font-size: 1.1em; font-weight: normal;
 		margin: 0 0 0.2em; color: #fff;
 		padding: 0.1em 0 0 0.03em;
-		letter-spacing: 0.06em;
+		letter-spacing: @letter-spacing;
 	}
 	p {
 		color: rgba(0,0,0,0.5);
@@ -176,6 +179,7 @@
 }
 
 #adstack-stack {
+	@letter-spacing: 0.04em;
 	@img-top: -3em;
 	background-color: #547e9d;
 	position: relative; overflow: hidden;
@@ -183,7 +187,7 @@
 	h2 {
 		position: absolute; top: @img-top + 6em; left: 100% / 3;
 		width: 100% / 3; text-align: center;
-		text-transform: uppercase; letter-spacing: 0.06em;
+		text-transform: uppercase; letter-spacing: @letter-spacing;
 		font-size: 1.25em; font-weight: normal;
 		color: lighten(saturate(@blue-color, 4%), 4%);
 	}
@@ -202,7 +206,7 @@
 		position: absolute; z-index: 10;
 		width: 100% / 3; padding: 0 @gutter-width;
 		h3 {
-			text-transform: uppercase; letter-spacing: 0.06em;
+			text-transform: uppercase; letter-spacing: @letter-spacing;
 			font-size: 1.25em; font-weight: normal;
 			line-height: 1.5em;
 			color: #a6f091; background-color: #547e9d;
@@ -260,6 +264,7 @@
 }
 
 #product-subfeatures {
+	@letter-spacing: 0.04em;
 	background-color: desaturate(darken(@blue-color, 32%), 34%);
 	text-align: center; color: rgba(255,255,255,0.6);
 	.row {
@@ -286,7 +291,7 @@
 	}
 	.button {
 		font-weight: normal; text-transform: uppercase;
-		font-size: 1.5em; letter-spacing: 0.06em; line-height: 2.2em;
+		font-size: 1.5em; letter-spacing: @letter-spacing; line-height: 2.2em;
 		i { position: relative; top: 0.1em; left: 0.1em; margin-left: 0.3em; }
 	}
 }

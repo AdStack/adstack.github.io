@@ -11,14 +11,14 @@
 	[class^="col-"] {
 		background-color: #fff;
 		padding-bottom: @gutter-width * 3 / 2;
-		p, ul, ol { color: @black-color; }
+		p, ul, ol {
+			color: @black-color;
+			margin-right: 0;
+		}
 		h2 { color: @black-color; border-color: darken(@white-color, 8%); }
 	}
 	a {
 		float: right;
-	}
-	p {
-		font-size: 0.9em;
 	}
 	.contact p {
 		.cutoff;
@@ -36,11 +36,17 @@
 			border-bottom: 1px darken(@white-color, 8%) dotted;
 		}
 	}
-	.location p {
-		.cutoff;
-		width: 50%; float: left;
-		&:first-of-type { padding-right: @gutter-width / 2; }
-		&:last-of-type { padding-left: @gutter-width / 2; }
+	.location {
+		strong { letter-spacing: 0; }
+		p {
+			.cutoff;
+			width: 50%; float: left;
+			&:first-of-type { padding-right: @gutter-width / 2; }
+			&:last-of-type { padding-left: @gutter-width / 2; }
+		}
+		span {
+			letter-spacing: -0.04em;
+		}
 	}
 }
 

@@ -13,20 +13,22 @@
 			position: absolute; top: 0.56em; right: @gutter-width;
 			font-size: 1em / 2.8; letter-spacing: 0; font-weight: normal;
 			line-height: 2.3em;
+			border-radius: 0.5em;
+			i {
+				opacity: 0.3;
+				margin-right: 0.5em;
+				position: relative; top: 0.08em;
+			}
 			&.clear {
 				&:hover { color: darken(@blue-color,10%); }
 			}
-			&.signup {
-				border: 2px transparent solid;
-				right: 8.1em;
-			}
 			&.login {
+				border: 2px transparent solid;
+				right: 7.2em;
+			}
+			&.signup {
 				border: 2px rgba(0,0,0,0.1) solid;
-				border-radius: 0.5em;
 				border-color: desaturate(lighten(@blue-color, 28%), 16%);
-				i {
-					margin-right: 0.5em; position: relative; top: 0.08em;
-				}
 			}
 		}
 	}

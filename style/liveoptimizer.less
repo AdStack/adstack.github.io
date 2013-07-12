@@ -100,14 +100,14 @@
 
 #how-to {
 	@letter-spacing: 0.04em;
-	@bg: lighten(saturate(@blue-color, 8%), 8%);
-	background-color: lighten(saturate(@blue-color, 4%), 4%);
+	@bg: lighten(saturate(@blue-color, 4%), 4%);
+	background-color: @bg;
 	position: relative; z-index: 10;
 	text-align: center;
 	h2 {
 		font-size: 1.1em;
 		line-height: 1.5em;
-		color: rgba(255, 255, 255, 3 / 4);
+		color: rgba(255, 255, 255, 1);
 		font-weight: normal;
 		text-transform: uppercase;
 		letter-spacing: @letter-spacing;
@@ -125,14 +125,14 @@
 	}
 	p {
 		margin: 1em 0 0;
-		color: rgba(0, 0, 0, 0.44);
+		color: rgba(0, 0, 0, 0.5);
 	}
 	.container {
 		.cf;
-		margin: 0 @gutter-width 4.8em;
+		margin: 0 @gutter-width 1.2em;
 		background-color: @bg;
 		padding-bottom: 3em;
-		border-radius: 0.3em;
+		border-top: 2px rgba(255, 255, 255, 0.2) solid;
 	}
 	.row {
 		[class^="col-"] {

@@ -1,20 +1,25 @@
-# AdStack
-# Base include
-# Requires: jQuery
-# Author: Dali Zheng
+###
+AdStack
+Requires: Zepto
+Author: Dali Zheng
+###
 
-Methods =
+class AdStack
+	_emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-	init: ->
+
+	constructor: ->
 		@_detectSVG()
 		@_cacheSelectors()
 		@_bindEvents()
 		@_bindPages()
 
+
 	_detectSVG: ->
 		svg = !!( 'createElementNS' of document and
 		document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 		if !svg then document.body.className += ' no-svg'
+
 
 	_cacheSelectors: ->
 		@$document = $ document
@@ -25,15 +30,39 @@ Methods =
 		@$about = $ '#about'
 		@$productImages = $ '#product-images'
 
-	_bindEvents: ->
-		_this = this
-		_emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-		# suppress blank hash links
+	_bindEvents: ->
+		@suppressAnchors()
+		@bindDropdowns()
+		@bindMailto()
+		@bindSignup()
+		@bindTooltips()
+
+
+	_bindPages: ->
+
+		# pricing page fixed header
+		if @$pricingLabel.length
+			@setupPricing()
+
+		# liveoptimizer page height ratio
+		if @$productImages.length
+			@setupProduct()
+
+		# randomize team member order
+		###
+		if @$about.length
+			@setupAbout()
+		###
+
+
+	suppressAnchors: ->		
+		# suppress empty anchor links
 		@$document.on 'click', 'a[href="#"]', ( e ) ->
 			e.preventDefault()
 
-		# dropdowns
+
+	bindDropdowns: ->
 		$dropdowns = @$dropdowns
 		$dropdowns.click ( e ) ->
 			e.preventDefault()
@@ -44,149 +73,147 @@ Methods =
 		@$document.on 'click', ->
 			$dropdowns.removeClass 'open'
 
-		# mailto form
+
+	bindMailto: ->
+		_this = this
+		config =
+			content: $( '#mailto-form' ).html()
+
+			validate: ->
+				if !@$modal.find('input[name="email"]').val().match _this._emailRegex
+					alert 'Please enter a valid email address.'
+					return false
+				true
+
+			init: ->
+				_this = this
+				if $( window ).width() >= 1080
+					@$modal.find( 'input[type="text"]' ).first().focus()
+					@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
+					@$modal.find( '.cancel' ).on 'click', ->
+						_this.close()
+					@$modal.find( '.send' ).on 'click', ->
+						if _this.params.validate.call _this
+							_this.$modal.find('input[name="company"]').val(subject)
+							_this.$modal.find('form').submit()
+
 		@$document.on 'click', 'a[href^="#mailto:"]', ( e ) ->
 			e.preventDefault()
 			analytics.track 'mailto-click'
 			subject = decodeURIComponent( $( this ).attr( 'href' ).split( '?' )[ 1 ] )
 				.split( '=' )[ 1 ]
 
-			AdStack.Modal
+			new window.Modal config
 
-				content: $( '#mailto-form' ).html()
 
-				validate: ->
-					if !@$modal.find('input[name="email"]').val().match _emailRegex
-						alert 'Please enter a valid email address.'
-						return false
-					true
+	bindSignup: ->
+		_this = this
+		config =
+			content: $( '#signup-form' ).html()
 
-				init: ->
-					_this = this
-					if $( window ).width() >= 1080
-						@$modal.find( 'input[type="text"]' ).first().focus()
-						@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
-						@$modal.find( '.cancel' ).on 'click', ->
-							_this.close()
-						@$modal.find( '.send' ).on 'click', ->
-							if _this.params.validate.call _this
-								_this.$modal.find('input[name="company"]').val(subject)
-								_this.$modal.find('form').submit()
+			validate: ->
+				if !@$modal.find( 'input[name="name"]' ).val().length || !@$modal.find( 'input[name="name"]' ).val().match(/\ /g)
+					alert 'Please enter your full name.'
+					return false
+				if !@$modal.find( 'input[name="email"]' ).val().match _this._emailRegex
+					alert 'Please enter a valid email address.'
+					return false
+				if !@$modal.find( 'input[name="company"]' ).val().length
+					alert 'Please enter your company.'
+					return false
+				true
 
-		# signup popup
+			init: ->
+				_this = this
+				if $( window ).width() >= 1080
+					@$modal.find( 'input[type="text"]' ).first().focus()
+				@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
+				@$modal.find( '.cancel' ).on 'click', ->
+					_this.close()
+				@$modal.find( '.send' ).on 'click', ->
+					if _this.params.validate.call _this
+						nameArray = _this.$modal.find( 'input[name="name"]' ).val().split(' ')
+						_this.$modal.find( 'input[name="first_name"]' )
+							.val( nameArray[0] )
+						_this.$modal.find( 'input[name="last_name"]' )
+							.val( nameArray[1] )
+						_this.$modal.find('form').submit()
+
 		@$document.on 'click', '.signup', ( e ) ->
 
 			analytics.track 'signup-click',
 				page: window.location.href
 
-			AdStack.Modal
+			new window.Modal config
 
-				content: $( '#signup-form' ).html()
 
-				validate: ->
-					if !@$modal.find( 'input[name="name"]' ).val().length || !@$modal.find( 'input[name="name"]' ).val().match(/\ /g)
-						alert 'Please enter your full name.'
-						return false
-					if !@$modal.find( 'input[name="email"]' ).val().match _emailRegex
-						alert 'Please enter a valid email address.'
-						return false
-					if !@$modal.find( 'input[name="company"]' ).val().length
-						alert 'Please enter your company.'
-						return false
-					true
-
-				init: ->
-					_this = this
-					if $( window ).width() >= 1080
-						@$modal.find( 'input[type="text"]' ).first().focus()
-					@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
-					@$modal.find( '.cancel' ).on 'click', ->
-						_this.close()
-					@$modal.find( '.send' ).on 'click', ->
-						if _this.params.validate.call _this
-							nameArray = _this.$modal.find( 'input[name="name"]' ).val().split(' ')
-							_this.$modal.find( 'input[name="first_name"]' )
-								.val( nameArray[0] )
-							_this.$modal.find( 'input[name="last_name"]' )
-								.val( nameArray[1] )
-							_this.$modal.find('form').submit()
-
-		# tooltips
+	bindTooltips: ->
 		$(document).on 'mouseover touchstart', '.member [title]', ->
 
 			analytics.track 'member-mouseover',
 				name: $(this).attr 'alt'
 
-			new AdStack.Tooltip
+			new window.Tooltip
 				element: this
 				boundingBox: '.row'
 
-	_bindPages: ->
 
-		# pricing page fixed header
-		if @$pricingLabel.length
-			headerPosition = 0
-			headerHeight = 0
-			$pricingLabel = @$pricingLabel
-			$pricing = @$pricing
-			$window = @$window
-			$window.on( 'resize orientationchange', ->
-				headerHeight = $pricingLabel.height()
-				if !$pricingLabel.hasClass 'fixed'
-					headerPosition = $pricingLabel.offset().top
-			).trigger 'resize'
-			$window.on( 'scroll touchmove', ->
-				if $window.scrollTop() > headerPosition
-					$window.trigger 'resize'
-					$pricingLabel.addClass 'fixed'
-					$pricing.css 'marginTop', headerHeight + 'px'
-				else
-					$pricingLabel.removeClass 'fixed'
-					$pricing.css 'marginTop', 0
-			).trigger 'scroll'
-
-		# liveoptimizer page height ratio
-		if @$productImages.length
-			$imageContainer = @$productImages.find '.image-container'
-			$( window ).on( 'resize', ->
-				width = $imageContainer.width()
-				$imageContainer.css 'height', ( width * 0.208 ) + 'px'
-			).trigger 'resize'
-
-		# randomize team member order
-		###
-		if @$about.length
-			$members = $ '.member'
-			rowCount = [0..$( '.member-row' ).first().children().length - 1]
-
-			# cut off the blank one
-			$last = $members.eq(-1).clone()
-			$members = $members.not $members.eq -1
-
-			$clone = $members.clone()
-
-			# fisher-yates algorithm
-			randomArray = [0..$members.length - 1]
-			for i in randomArray
-				r = Math.floor Math.random() * $members.length
-				e = randomArray[i]
-				randomArray[i] = randomArray[r]
-				randomArray[r] = e
-
-			$( '.member-row' ).each (t) ->
-				$this = $ this
-				$this.empty()
-				for z in rowCount
-					$this.append $clone.eq randomArray[t * rowCount.length + z]
-
-			$( '.member-row' ).last().append $last
-		###
+	setupPricing: ->
+		headerPosition = 0
+		headerHeight = 0
+		$pricingLabel = @$pricingLabel
+		$pricing = @$pricing
+		$window = @$window
+		$window.on( 'resize orientationchange', ->
+			headerHeight = $pricingLabel.height()
+			if !$pricingLabel.hasClass 'fixed'
+				headerPosition = $pricingLabel.offset().top
+		).trigger 'resize'
+		$window.on( 'scroll touchmove', ->
+			if $window.scrollTop() > headerPosition
+				$window.trigger 'resize'
+				$pricingLabel.addClass 'fixed'
+				$pricing.css 'marginTop', headerHeight + 'px'
+			else
+				$pricingLabel.removeClass 'fixed'
+				$pricing.css 'marginTop', 0
+		).trigger 'scroll'
 
 
-window.AdStack = window.AdStack or {}
+	setupProduct: ->
+		$imageContainer = @$productImages.find '.image-container'
+		$( window ).on( 'resize', ->
+			width = $imageContainer.width()
+			$imageContainer.css 'height', ( width * 0.208 ) + 'px'
+		).trigger 'resize'
 
-for i of Methods
-	AdStack[i] = Methods[i]
+
+	setupAbout: ->
+		$members = $ '.member'
+		rowCount = [0..$( '.member-row' ).first().children().length - 1]
+
+		# cut off the blank one
+		$last = $members.eq(-1).clone()
+		$members = $members.not $members.eq -1
+
+		$clone = $members.clone()
+
+		# fisher-yates algorithm
+		randomArray = [0..$members.length - 1]
+		for i in randomArray
+			r = Math.floor Math.random() * $members.length
+			e = randomArray[i]
+			randomArray[i] = randomArray[r]
+			randomArray[r] = e
+
+		$( '.member-row' ).each (t) ->
+			$this = $ this
+			$this.empty()
+			for z in rowCount
+				$this.append $clone.eq randomArray[t * rowCount.length + z]
+
+		$( '.member-row' ).last().append $last
+
 
 $ ->
-	AdStack.init()
+	window.AdStack = new AdStack

@@ -1,6 +1,6 @@
-# ============
-# Modal dialog
-# ============
+###
+Modal dialog
+###
 
 class Modal
 
@@ -52,10 +52,5 @@ class Modal
 	unbindEvents: ->
 		$( window ).off '.modal'
 
-# convenience method to instantiate modal objects
-ModalFactory = ( params ) ->
-	new Modal params
-
-# Assign Modal under the AdStack namespace
-window.AdStack = window.AdStack or {}
-AdStack.Modal = ModalFactory
+# expose Modal
+window.Modal = Modal

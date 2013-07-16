@@ -1,6 +1,6 @@
-# =======
-# tooltip
-# =======
+###
+Tooltip
+###
 
 class Tooltip
 
@@ -58,6 +58,5 @@ class Tooltip
 		@$this.attr 'title', @$this.attr 'data-title'
 		delete this
 
-# Assign Tooltip to AdStack namespace
-window.AdStack = window.AdStack or {}
-AdStack.Tooltip = Tooltip
+# expose Tooltip
+window.Tooltip = Tooltip

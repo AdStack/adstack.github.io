@@ -13,7 +13,7 @@
 		font-weight: normal;
 		color: darken(desaturate(@blue-color, 30%), 20%);
 		letter-spacing: -0.014em;
-		margin: 1.8em 0 0.6em; font-size: 2.8em; line-height: 1.4em;
+		margin: 1.4em 0 0.6em; font-size: 2.8em; line-height: 1.4em;
 		position: relative; z-index: 3;
 	}
 	ul {
@@ -64,18 +64,19 @@
 }
 
 #subsubfooter {
-	@bg: desaturate(darken(@blue-color, 44%), 42%);
+	@bg: desaturate(darken(@blue-color, 32%), 32%);
 	background-color: @bg;
 	padding-top: 2.5em;
 	[class^="col-"] { margin-bottom: 3.3em; }
 	h4 {
 		.clear; .alt-font;
-		height: 4px; border: 1px rgba(255,255,255,0.2) solid;
+		height: 4px;
+		border: 1px darken(desaturate(@blue-color, 40%), 10%) solid;
 		border-left: 0; border-right: 0;
 		text-align: center; font-size: 0.9em;
 		font-weight: normal;
 		text-transform: uppercase; letter-spacing: 0.04em;
-		color: rgba(255,255,255,0.54);
+		color: lighten(desaturate(@blue-color, 20%), 20%);
 		margin: 0 @gutter-width;
 		span {
 			background-color: @bg;
@@ -97,7 +98,7 @@
 		img {
 			display: block; width: 100%;
 			position: relative; margin: auto;
-			opacity: 0.4;
+			//opacity: 0.4;
 		}
 	}
 }

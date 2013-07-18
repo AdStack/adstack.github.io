@@ -6,6 +6,7 @@ Author: Dali Zheng
 
 class AdStack
 	_emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	mobileWidth: 1080
 
 
 	constructor: ->
@@ -86,16 +87,16 @@ class AdStack
 				true
 
 			init: ->
-				_this = this
-				if $( window ).width() >= 1080
+				modal = this
+				if $( window ).width() >= _this.mobileWidth
 					@$modal.find( 'input[type="text"]' ).first().focus()
 					@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
 					@$modal.find( '.cancel' ).on 'click', ->
-						_this.close()
+						modal.close()
 					@$modal.find( '.send' ).on 'click', ->
-						if _this.params.validate.call _this
-							_this.$modal.find('input[name="company"]').val(subject)
-							_this.$modal.find('form').submit()
+						if modal.params.validate.call modal
+							modal.$modal.find('input[name="company"]').val(subject)
+							modal.$modal.find('form').submit()
 
 		@$document.on 'click', 'a[href^="#mailto:"]', ( e ) ->
 			e.preventDefault()
@@ -124,20 +125,20 @@ class AdStack
 				true
 
 			init: ->
-				_this = this
-				if $( window ).width() >= 1080
+				modal = this
+				if $( window ).width() >= _this.mobileWidth
 					@$modal.find( 'input[type="text"]' ).first().focus()
 				@$modal.find( 'input[name="lead_source"]' ).val window.location || ''
 				@$modal.find( '.cancel' ).on 'click', ->
-					_this.close()
+					modal.close()
 				@$modal.find( '.send' ).on 'click', ->
-					if _this.params.validate.call _this
-						nameArray = _this.$modal.find( 'input[name="name"]' ).val().split(' ')
-						_this.$modal.find( 'input[name="first_name"]' )
+					if modal.params.validate.call modal
+						nameArray = modal.$modal.find( 'input[name="name"]' ).val().split(' ')
+						modal.$modal.find( 'input[name="first_name"]' )
 							.val( nameArray[0] )
-						_this.$modal.find( 'input[name="last_name"]' )
+						modal.$modal.find( 'input[name="last_name"]' )
 							.val( nameArray[1] )
-						_this.$modal.find('form').submit()
+						modal.$modal.find('form').submit()
 
 		@$document.on 'click', '.signup', ( e ) ->
 
@@ -184,7 +185,8 @@ class AdStack
 		$imageContainer = @$productImages.find '.image-container'
 		$( window ).on( 'resize', ->
 			width = $imageContainer.width()
-			$imageContainer.css 'height', ( width * 0.208 ) + 'px'
+			magicRatio = 0.208
+			$imageContainer.css 'height', ( width * magicRatio ) + 'px'
 		).trigger 'resize'
 
 

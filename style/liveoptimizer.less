@@ -116,12 +116,9 @@
 	i {
 		background-color: @bg;
 		font-size: 4em;
-		padding: 0 0.52em;
-		text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-		&.icon-envelope-2 { color: lighten(desaturate(@yellow-color, 52%), 18%); }
-		&.icon-pictures { color: lighten(desaturate(spin(@blue-color, -20%), 12%), 24%); }
-		&.icon-target-2 { color: lighten(desaturate(spin(@red-color, 12%), 16%), 24%); }
-		&.icon-checkmark-circle { color: lighten(desaturate(@green-color, 12%), 24%); }
+		padding: 0 0.3em;
+		//text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+		color: lighten(saturate(@blue-color, 20%), 20%);
 	}
 	p {
 		margin: 1em 0 0;
@@ -129,22 +126,22 @@
 	}
 	.container {
 		.cf;
-		margin: 0 @gutter-width 1.2em;
+		margin: 0 0 1.2em;
 		background-color: @bg;
 		padding-bottom: 3em;
-		border-top: 2px rgba(255, 255, 255, 0.2) solid;
+		hr {
+			border-top: 2px rgba(255, 255, 255, 0.3) solid;
+			margin: 0 @gutter-width;
+		}
 	}
 	.row {
-		[class^="col-"] {
-			padding: 0 @gutter-width * 2;
-		}
 		&:before {
 			.funnel;
 			opacity: 1 / 2;
 			content: ' '; display: block;
 			position: absolute;
-			left: 100% / 8; top: 8em;
-			width: 100% * 3 / 4; height: 7px;
+			left: 100% / 12; top: 8em;
+			width: 100% * 5 / 6; height: 7px;
 		}
 	}
 }

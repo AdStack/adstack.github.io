@@ -45,6 +45,24 @@ body {
 			}
 		}
 	}
+	&.home {
+		background-color: desaturate(darken(@blue-color, 32%), 32%);
+		#header {
+			background-color: #fff;
+			.button { color: lighten(@body-color, 15%); }
+		}
+		#footer {
+			h3 {
+				color: desaturate(@blue-color, 40%);
+				border-top-color: darken(desaturate(@blue-color, 40%), 20%);
+				&:after { color: darken(desaturate(@blue-color, 40%), 20%); }
+			}
+			a {
+				color: desaturate(@blue-color, 40%);
+				&:hover { color: #fff; }
+			}
+		}
+	}
 }
 a:hover { outline: none; }
 

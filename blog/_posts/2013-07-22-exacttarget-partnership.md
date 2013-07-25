@@ -1,6 +1,6 @@
 ---
 layout: single
-title: We Have Joined the ExactTarget Family
+title: AdStack LiveOptimizer is now a part of ExactTarget HubExchange!
 author: Lauren Keeley
 ---
 

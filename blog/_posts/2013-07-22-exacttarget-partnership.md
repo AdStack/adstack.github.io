@@ -10,4 +10,4 @@ Through A/B/n and multivariate tests that analyze recipient engagement with emai
 
 Even ExactTarget's Vice President of Platform, and Developer Community, Ian Murdock, was excited over the news, “Together with companies like AdStack, ExactTarget is transforming digital marketing, providing marketers around the world with a powerful platform and ecosystem of integrated applications to create customer experiences that build loyalty and drive results.”
 
-You can view the full press release [here](http://www.prweb.com/releases/2013/7/prweb10947489.htm). 
+You can [view the full press release here](http://www.prweb.com/releases/2013/7/prweb10947489.htm). 

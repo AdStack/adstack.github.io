@@ -13,7 +13,7 @@ This is the full source for the public-facing site of AdStack.
 Assuming you have met all of the system requirements:
 
 ```
-npm install && grunt && jekyll --server
+$ npm install && grunt && jekyll --server
 ```
 
 Then point your browser to `localhost:4000`.

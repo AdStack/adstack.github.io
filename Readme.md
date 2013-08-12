@@ -21,7 +21,3 @@ Then point your browser to `localhost:4000`.
 ### Build Process and Development
 
 While developing, use `grunt watch` to let grunt automagically compile production assets when files change. Production assets go in the `dist` folder.
-
-### Styles and Layout
-
-The layout uses a custom grid system that is loosely based on Twitter Bootstrap's 12-column grid.

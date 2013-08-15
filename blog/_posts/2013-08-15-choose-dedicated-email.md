@@ -22,4 +22,4 @@ Dedicated blasts are still sold on a CPM basis and can reach a very sizeable aud
 
 Unlike other forms of digital marketing, email guarantees more valuable long-term customers. At AdStack, many of our clients have found that through dedicated sends the quality of a customer acquired is much higher. Often times customers acquired via email continue to spend over a six-month period. 
 
-If you have any questions about dedicated email and the value it can bring your customer don’t hesitate to contact lauren@adstack.com. 
+If you have any questions about dedicated email and the value it can bring your customer do not hesitate to contact lauren@adstack.com. 

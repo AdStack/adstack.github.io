@@ -1,6 +1,6 @@
 ---
-layout:single
-title: Do Gmail’s inbox changes mean death for email marketing?
+layout: single
+title: Do Gmail's inbox changes mean death for email marketing?
 author: Lauren Keeley
 ---
 

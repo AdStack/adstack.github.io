@@ -1,5 +1,5 @@
 ---
-layout:single
+layout: single
 title: Dedicated Email Equals Valuable Customers
 author: Lauren Keeley
 ---

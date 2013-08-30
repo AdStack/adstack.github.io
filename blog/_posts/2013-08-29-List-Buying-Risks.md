@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Is list buying beneficial for user acquisition?
+title: Is List Buying Beneficial for User Acquisition?
 author: Lauren Keeley
 ---
 Often clients come to us wanting a quick and easy fix to expand their list size so that they can grow their user base and increase their revenue. They have an idea that buying a list will cheaply get them the users they want. The reality is that lists that are cheap are cheap for a reason, and you can actually incur more of a risk by using your own email service provider to blast out a marketing message to a bunch of unknown email addresses. While some lists may be beneficial, often times they can lead to disaster. 
